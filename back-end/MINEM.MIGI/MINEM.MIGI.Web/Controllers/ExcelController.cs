@@ -500,6 +500,7 @@ namespace MINEM.MIGI.Web.Controllers
         {
             BusquedaBE objBusqueda = new BusquedaBE();
             objBusqueda.LISTA_PALABRAS = (List<PalabraClaveBE>)Session["lista_palabras"];
+            objBusqueda.LISTA_PALABRAS_CANTIDAD = (List<PalabraClaveCantidadBE>)Session["lista_palabras_cantidad"];
             objBusqueda.LISTA_ANIOS = (List<AnioBE>)Session["lista_anios"];
             int tipoBusqueda = (int)Session["tipo_busqueda"];
             List<BusquedaBE> lista = new List<BusquedaBE>();
