@@ -1,0 +1,31 @@
+﻿@using MINEM.MIGI.Web.Models
+@model ExcelViewModel
+
+@section scripts_footer {
+    <script src="@Url.Content("~/Scripts/plugins/alert.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/migi_resultado.js")"></script>
+}
+
+<div class="container margin-top-excel">
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3>Lista de resultados</h3>
+        </div>
+    </div>
+    <div class="container mt-2">
+        <div class="row">
+            <table id="tbl-excel" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>DESCRIPCIÓN</th>
+                        <th>FECHA</th>
+                        <th>GESTIÓN</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+﻿@using MINEM.MIGI.Web.Models
+@model ExcelViewModel
+
+@{
+    ViewBag.Title = "Ver resultado";
+    ViewBag.Carousel = false;
+    int idresultado = (int)ViewData["idresultado"];
+}
+
+@section scripts_header{
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+}
+
+@section scripts_footer {
+    <script>
+        google.charts.load("current", { packages: ["corechart"] });
+        var idresultado = @idresultado;
+    </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/migi_verresultado.js")"></script>
+}
+
+<div class="container margin-top-excel">
+
+    <div class="row d-none" id="seccion-btn">
+        <div class="col-4">
+            <div class="form-group">
+                <div class="input-group">
+                    <a class="btn btn-primary w-100 inhabilitar" href="javascript:void(0)" id="btn-exportar">Exportar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+        </div>
+        <div class="col-4">
+        </div>
+        <div class="col-4">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 alert-add"></div>
+    </div>
+    <div class="row mt-2 mb-2">
+        <div class="col-12">
+            <span id="preload"></span>
+        </div>
+    </div>
+
+    <div class="container" mt-2>
+        <div class="row">
+            <div class="col-6 mostrar d-none">
+                <h4 class="text-center mb-3">RESULTADO BIENES POR AÑOS</h4>
+                <table id="tbl-gf1-bienes" class="table table-hover">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-6 mostrar d-none">
+                <div id="pie-gn1-bienes" style="height: 600px;"></div>
+            </div>
+            <div class="col-6 mostrar d-none">
+                <h4 class="text-center mb-3">RESULTADO SERVICIOS POR AÑOS</h4>
+                <table id="tbl-gf1-servicios" class="table table-hover">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-6 mostrar d-none">
+                <div id="pie-gn1-servicios" style="height: 600px;"></div>
+            </div>
+            <div class="col-6 mostrar d-none">
+                <h4 class="text-center mb-3">RESUMEN POR AÑOS</h4>
+                <table id="tbl-gf1-resumen" class="table table-hover">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-6 mostrar d-none">
+                <div id="piechartGN1" style="height: 600px;"></div>
+            </div>
+        </div>
+        <div class="row" id="seccion-cant-estimada">
+
+        </div>
+    </div>
+
+
+</div>

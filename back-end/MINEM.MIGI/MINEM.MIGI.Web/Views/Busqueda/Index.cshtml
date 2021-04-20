@@ -1,0 +1,200 @@
+﻿@using MINEM.MIGI.Web.Models
+@model ExcelViewModel
+
+@{
+    ViewBag.Title = "Inicio - Búsqueda";
+    ViewBag.Carousel = false;
+}
+
+@section scripts_header{
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+}
+
+@section scripts_footer {
+    <script>
+            google.charts.load("current", { packages: ["corechart"] });
+    </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/migi_busqueda.js")"></script>    
+}
+
+<div class="container margin-top-excel">
+    <div class="row mb-3">
+        <div class="col-3">
+            <div class="form-group mb-2">
+                <label for="mls-palabras">Tipo de búsqueda<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione un tipo de búqueda"></i></label>
+                <div class="input-group">
+                    <select id="tipo-busqueda" class="form-control">
+                        <option value="0">Seleccione un tipo de búqueda</option>
+                        <option value="1">Menor a 8 UIT</option>
+                        <option value="2">Mayor o igual a 8 UIT</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group mb-2">
+                <label for="mls-palabras">Equipo<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione un tipo de búqueda"></i></label>
+                <div class="input-group">
+                    <select id="cbo-equipo" class="form-control">
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mls-palabras">Filtrar información<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione un tipo de búqueda"></i></label>
+                <div class="input-group">
+                    <a class="btn btn-primary w-100" href="javascript:void(0)" id="filtrar-datos">Procesar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="mls-palabras">Palabras claves<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione una o varias palabras claves"></i></label>
+                <div class="input-group custom-control custom-checkbox custom-checkbox d-inline-block pl-3 mb-2" onclick="fn_habilitarTodo();">
+                    <input class="custom-control-input" type="checkbox" id="chk-todos-palabras">
+                    <label class="custom-control-label" for="chk-todos-palabras">&nbsp;Seleccionar todos</label>
+                </div>
+                <div class="input-group">
+                    @*<div class="input-group-prepend"><span class="input-group-text" id="inputGroup9"><i class="fas fa-landmark"></i></span></div>*@
+                    <div class="form-control" style="height:160px; overflow-y: auto;" id="lista-palabras">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="mls-palabras">Años<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione una o varias palabras claves"></i></label>
+                <div class="input-group custom-control custom-checkbox custom-checkbox d-inline-block pl-3 mb-2" onclick="fn_habilitarTodo();">
+                    <input class="custom-control-input" type="checkbox" id="chk-todos-anios">
+                    <label class="custom-control-label" for="chk-todos-anios">&nbsp;Seleccionar todos</label>
+                </div>
+                <div class="input-group">
+                    @*<div class="input-group-prepend"><span class="input-group-text" id="inputGroup9"><i class="fas fa-landmark"></i></span></div>*@
+                    <div class="form-control" style="height:160px; overflow-y: auto;" id="lista-anios">
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="col-3">
+            <div class="form-group">
+                <label for="mls-palabras">Palabras claves cantidad<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione una o varias palabras claves cantidad"></i></label>
+                <div class="input-group custom-control custom-checkbox custom-checkbox d-inline-block pl-3 mb-2" onclick="fn_habilitarTodo();">
+                    <input class="custom-control-input" type="checkbox" id="chk-todos-palabras-cantidad">
+                    <label class="custom-control-label" for="chk-todos-palabras-cantidad">&nbsp;Seleccionar todos</label>
+                </div>
+                <div class="input-group">
+                    @*<div class="input-group-prepend"><span class="input-group-text" id="inputGroup9"><i class="fas fa-landmark"></i></span></div>*@
+                    <div class="form-control" style="height:160px; overflow-y: auto;" id="lista-palabras-cantidad">
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+    <div class="row d-none" id="seccion-btn">
+        <div class="col-4">
+            <div class="form-group">
+                <div class="input-group">
+                    <a class="btn btn-primary w-100 inhabilitar" href="javascript:void(0)" id="btn-exportar">Exportar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <div class="input-group">
+                    <a class="btn btn-primary w-100 inhabilitar" href="javascript:void(0)" id="btn-guardar">Guardar resultado</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <div class="input-group">
+                    <a class="btn btn-primary w-100 inhabilitar" href="javascript:void(0)" id="btn-nuevo">Nueva búsqueda</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 alert-add"></div>
+    </div>
+    <div class="row mt-2 mb-2">
+        <div class="col-12">
+            <span id="preload"></span>
+        </div>
+    </div> 
+    @*<div class="container mt-2">
+        <div class="row">
+            <table id="tbl-busqueda" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ENTIDAD</th>
+                        <th>RUC ENTIDAD</th>
+                        <th>ORDEN</th>
+                        <th>DESCRIPCIÓN ORDEN</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>*@
+
+    @*<div class="container mt-2">
+        <div class="row">
+            <table id="tbl-grafico-n1" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>HALLAZGO</th>
+                        <th>TIPO REQUERIMIENTO</th>
+                        <th>CANTIDAD</th>
+                        <th>AÑO</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>*@
+
+    <div class="container" mt-2>
+        <div class="row">
+            <div class="col-6 mostrar d-none">
+                <h4 class="text-center mb-3">RESULTADO BIENES POR AÑOS</h4>
+                <table id="tbl-gf1-bienes" class="table table-hover">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-6 mostrar d-none">
+                <div id="pie-gn1-bienes" style="height: 600px;"></div>
+            </div>
+            <div class="col-6 mostrar d-none">
+                <h4 class="text-center mb-3">RESULTADO SERVICIOS POR AÑOS</h4>
+                <table id="tbl-gf1-servicios" class="table table-hover">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-6 mostrar d-none">
+                <div id="pie-gn1-servicios" style="height: 600px;"></div>
+            </div>
+            <div class="col-6 mostrar d-none">
+                <h4 class="text-center mb-3">RESUMEN POR AÑOS</h4>
+                <table id="tbl-gf1-resumen" class="table table-hover">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-6 mostrar d-none">
+                <div id="piechartGN1" style="height: 600px;"></div>
+            </div>
+        </div>
+        <div class="row" id="seccion-cant-estimada">
+            @*<div class="col-12 mostrar d-none">
+                <h4 class="text-center mb-3">RESUMEN CANTIDAD ESTIMADA</h4>
+                <table id="tbl-gf3-resumen" class="table table-hover">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>*@
+        </div>
+    </div>
+    
+
+</div>

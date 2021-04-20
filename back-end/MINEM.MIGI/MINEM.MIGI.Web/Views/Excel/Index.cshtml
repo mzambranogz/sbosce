@@ -1,0 +1,97 @@
+﻿@using MINEM.MIGI.Web.Models
+@model ExcelViewModel
+
+@{
+    ViewBag.Title = "Inicio - Login";
+    ViewBag.Carousel = false;
+    List<SelectListItem> lstItemMes = new List<SelectListItem>();
+    lstItemMes.Add(new SelectListItem { Text = "Seleccione un mes", Value = "0", Selected = true });
+    lstItemMes.Add(new SelectListItem { Text = "Enero", Value = "1", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Febrero", Value = "2", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Marzo", Value = "3", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Abril", Value = "4", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Mayo", Value = "5", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Junio", Value = "6", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Julio", Value = "7", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Agosto", Value = "8", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Setiembre", Value = "9", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Octubre", Value = "10", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Noviembre", Value = "11", Selected = false });
+    lstItemMes.Add(new SelectListItem { Text = "Diciembre", Value = "12", Selected = false });
+
+    List<SelectListItem> lstItemAnio = new List<SelectListItem>();
+    lstItemAnio.Add(new SelectListItem { Text = "Seleccione un anio", Value = "0", Selected = true });
+    lstItemAnio.Add(new SelectListItem { Text = "2015", Value = "2015", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2016", Value = "2016", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2017", Value = "2017", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2018", Value = "2018", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2019", Value = "2019", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2020", Value = "2020", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2021", Value = "2021", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2022", Value = "2022", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2023", Value = "2023", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2024", Value = "2024", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2025", Value = "2025", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2026", Value = "2026", Selected = false });
+}
+
+@section scripts_footer {
+    <script src="@Url.Content("~/Scripts/plugins/alert.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/migi_excel.js")"></script>
+}
+
+<div class="container margin-top-excel">
+        @using (Html.BeginForm("Leer", "Excel", FormMethod.Post, new { id = "form-excel", enctype = "multipart/form-data", role = "form", @class = "text-left" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row mt-5">
+                <div class="col-3">
+                    <div class="form-group align-left">
+                        @Html.LabelFor(m => m.excel)
+                        @Html.TextBoxFor(m => m.excel, new { type = "file", @class = "form-control form-control-sm mb-2" })
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group align-left">
+                        @Html.LabelFor(m => m.anio)
+                        @Html.DropDownListFor(m => m.anio, new SelectList(lstItemAnio, "Value", "Text"), new { @class = "form-control form-control-sm mb-2" })
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group align-left">
+                        @Html.LabelFor(m => m.mes)
+                        @Html.DropDownListFor(m => m.mes, new SelectList(lstItemMes, "Value", "Text"), new { @class = "form-control form-control-sm mb-2" })
+                    </div>
+                </div>                
+                <div class="col-3">
+                    <div class="form-group align-left">
+                        <label>Cargar excel</label>
+                        <input type="button" id="btnExcel" class="w-100 btn btn-lg btn-primary btn-sm" value="Procesar">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 alert-add"></div>
+            </div>
+            <div class="row mt-2 mb-2">
+                <div class="col-12">
+                    <span id="preload"></span>
+                </div>
+            </div> 
+        }
+    <div class="container">
+        <div class="row">
+            <table id="tbl-excel" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>NOMBRE EXCEL</th>
+                        <th>AÑO</th>
+                        <th>MES</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>

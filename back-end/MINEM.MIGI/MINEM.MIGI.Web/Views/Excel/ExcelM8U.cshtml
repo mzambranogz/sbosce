@@ -1,0 +1,53 @@
+﻿@using MINEM.MIGI.Web.Models
+@model ExcelViewModel
+
+@section scripts_footer {
+    <script src="@Url.Content("~/Scripts/plugins/alert.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/migi_excel_m8u.js")"></script>
+}
+
+<div class="container margin-top-excel">
+    @using (Html.BeginForm("LeerExcelM8U", "Excel", FormMethod.Post, new { id = "form-excel", enctype = "multipart/form-data", role = "form", @class = "text-left" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row mt-5">
+            <div class="col-3">
+                <div class="form-group align-left">
+                    @Html.LabelFor(m => m.excel)
+                    @Html.TextBoxFor(m => m.excel, new { type = "file", @class = "form-control form-control-sm mb-2" })
+                </div>
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-3">
+                <div class="form-group align-left">
+                    <label>Cargar excel</label>
+                    <input type="button" id="btnExcel" class="w-100 btn btn-lg btn-primary btn-sm" value="Procesar">
+                </div>
+            </div>
+        </div>
+            <div class="row mt-3">
+                <div class="col-12 alert-add"></div>
+            </div>
+            <div class="row mt-2 mb-2">
+                <div class="col-12">
+                    <span id="preload"></span>
+                </div>
+            </div>
+    }
+    <div class="container">
+        <div class="row">
+            <table id="tbl-excel" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>NOMBRE EXCEL</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>

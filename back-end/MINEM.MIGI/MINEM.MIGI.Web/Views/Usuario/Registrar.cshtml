@@ -1,0 +1,50 @@
+﻿@using MINEM.MIGI.Web.Models
+@model UsuarioViewModel
+
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<div class="container mt-5">
+    <main class="form-registrar">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger summary-form " })
+        @using (Html.BeginForm("Registrar", "Usuario", FormMethod.Post, new { role = "form", @class = "text-left" }))
+        {
+            @Html.AntiForgeryToken()
+            @*<img class="mb-4" src="@Url.Content("~/images/logo.png")" alt="" width="85" height="85">*@
+            <h1 class="h3 mb-3 fw-normal">Registro de Usuario</h1>
+            <div class="form-group align-left">
+                @Html.LabelFor(m => m.CORREO)
+                @Html.TextBoxFor(m => m.CORREO, new { placeholder = "Correo electrónico", @class = "form-control mb-2" })
+                @Html.ValidationMessageFor(m => m.CORREO, "", new { @Class = "text-danger small" })
+            </div>
+
+            <div class="form-group align-left">
+                @Html.LabelFor(m => m.NOMBRES)
+                @Html.TextBoxFor(m => m.NOMBRES, new { placeholder = "Ingrese sus nombres", @class = "form-control mb-2" })
+                @Html.ValidationMessageFor(m => m.NOMBRES, "", new { @Class = "text-danger small" })
+            </div>
+
+            <div class="form-group align-left">
+                @Html.LabelFor(m => m.APELLIDOS)
+                @Html.TextBoxFor(m => m.APELLIDOS, new { placeholder = "Ingrese sus apellidos", @class = "form-control mb-2" })
+                @Html.ValidationMessageFor(m => m.APELLIDOS, "", new { @Class = "text-danger small" })
+            </div>
+
+            <div class="form-group align-left">
+                @Html.LabelFor(m => m.CONTRASENA)
+                @Html.PasswordFor(m => m.CONTRASENA, new { placeholder = "Ingrese una contraseña", @class = "form-control mb-2" })
+                @Html.ValidationMessageFor(m => m.CONTRASENA, "", new { @Class = "text-danger small" })
+            </div>
+
+            <div class="form-group align-left">
+                @Html.LabelFor(m => m.CONFIRMAR_CONTRASENA)
+                @Html.PasswordFor(m => m.CONFIRMAR_CONTRASENA, new { placeholder = "Repetir contraseña", @class = "form-control mb-2" })
+                @Html.ValidationMessageFor(m => m.CONFIRMAR_CONTRASENA, "", new { @Class = "text-danger small" })
+            </div>
+
+            <input type="submit" class="w-100 btn btn-lg btn-primary" value="Registrar" />
+        }
+
+    </main>
+</div>
