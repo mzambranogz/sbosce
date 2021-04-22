@@ -3,6 +3,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using MINEM.MIGI.Entidad;
 using MINEM.MIGI.Logica;
+using MINEM.MIGI.Web.Helper;
 using MINEM.MIGI.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,7 @@ namespace MINEM.MIGI.Web.Controllers
             if (v)
             {
                 Session["user"] = objUsuario;
+                SessionHelper.AddUserToSession(objUsuario.ID_USUARIO.ToString());
                 return Json(new { success = true, tipo = "Ok", message = "Busqueda/Index" });
             }
             else

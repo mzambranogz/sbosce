@@ -142,11 +142,15 @@ var eliminar = () => {
     let init = { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) };
     let url = `${baseUrl}Mantenimiento/EliminarPalabraClaveCantidad`;
     fetch(url, init)
-        .then(r => r.json())
-        .then(j => {
-            if (j.success) { $('#btnConsultar')[0].click(); $("#modal-confirmacion").modal('hide'); }
-            else alert('Ocurrió un problema al momento de eliminar el registro')
-        });
+    .then(r => r.json())
+    .then(j => {
+        if (j.success) { $('#btnConsultar')[0].click(); $("#modal-confirmacion").modal('hide'); }
+        else alert('Ocurrió un problema al momento de eliminar el registro')
+    })
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
 }
 
 var consultarDatos = (element) => {
@@ -162,7 +166,11 @@ var consultarDatos = (element) => {
     .then(r => r.json())
     .then(j => {
         cargarDatos(j.obj);
-    });
+    })
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
 }
 
 var cargarDatos = (data) => {
@@ -197,7 +205,11 @@ var guardar = () => {
         if (j.success) { $('#btnGuardar').hide(); $('#btnGuardar').next().html('Cerrar'); }
         j.success ? $('.alert-add').alertSuccess({ type: 'success', title: 'BIEN HECHO', message: 'Los datos fueron guardados correctamente.', close: { time: 1000 }, url: `` }) : $('.alert-add').alertError({ type: 'danger', title: 'ERROR', message: 'Inténtelo nuevamente por favor.' });
         if (j.success) $('#btnConsultar')[0].click();
-    });
+    })
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
 }
 
 var nuevo = () => {

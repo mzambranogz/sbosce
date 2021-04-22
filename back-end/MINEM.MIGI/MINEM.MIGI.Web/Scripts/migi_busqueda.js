@@ -19,6 +19,10 @@ var exportarExcel = () => {
         let urlBlob = window.URL.createObjectURL(j);
         window.open(urlBlob, '_blank');
     })
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
     .finally(() => {
         $("#preload").html('')
         $('.inhabilitar').removeClass('disabled-etiqueta-a')
@@ -38,6 +42,10 @@ var guardarResultado = () => {
         } else {
             alert("Ocurrió un problema al guardar los resultados, inténtelo nuevamente")
         }
+    })
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
     })
     .finally(() => {
         $("#preload").html('')
@@ -253,6 +261,10 @@ var filtrarInformacion = () => {
     fetch(url, init)
     .then(r => r.json())
     .then(estructurarFiltro)
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
     .finally(() => {
         $('.inhabilitar').removeClass('disabled-etiqueta-a')
         //$('#filtrar-datos').removeClass('disabled-etiqueta-a')

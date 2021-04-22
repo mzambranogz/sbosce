@@ -58,7 +58,9 @@ $("#form-excel").submit(function () {
                 alert(r.mensaje)
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                alert(errorThrown);
+                //alert(errorThrown);
+                console.log('Hubo un problema con la petición Fetch:' + errorThrown.message);
+                location.href = `${baseUrl}Inicio/Index`
             },
             beforeSend: function () {
                 $('#excel').prop('disabled', true)

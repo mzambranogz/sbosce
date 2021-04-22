@@ -1,5 +1,6 @@
 ﻿using MINEM.MIGI.Entidad;
 using MINEM.MIGI.Logica;
+using MINEM.MIGI.Web.Filter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MINEM.MIGI.Web.Controllers
 {
+    [Autenticado]
     public class ResultadoController : Controller
     {
         // GET: Resultado

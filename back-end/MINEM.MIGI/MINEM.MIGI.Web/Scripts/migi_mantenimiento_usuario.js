@@ -159,7 +159,11 @@ var consultarUsuario = (element) => {
 
     fetch(urlUsuario)
     .then(r => r.json())
-    .then(cargarDatosUsuario);
+    .then(cargarDatosUsuario)
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
 }
 
 var cargarDatosUsuario = (r) => {
@@ -233,5 +237,9 @@ var guardarUsuario = () => {
         if (j.success) { $('#btnGuardar').hide(); $('#btnGuardar').next().html('Cerrar'); }
         j.success ? $('.alert-add').alertSuccess({ type: 'success', title: 'BIEN HECHO', message: 'Los datos fueron guardados correctamente.', close: { time: 1000 }, url: `` }) : $('.alert-add').alertError({ type: 'danger', title: 'ERROR', message: 'Inténtelo nuevamente por favor.' });
         if (j.success) $('#btnConsultar')[0].click();
-    });
+    })
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
 }

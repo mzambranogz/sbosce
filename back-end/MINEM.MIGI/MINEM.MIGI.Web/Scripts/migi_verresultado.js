@@ -14,6 +14,10 @@ var exportarExcel = () => {
         let urlBlob = window.URL.createObjectURL(j);
         window.open(urlBlob, '_blank');
     })
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
     .finally(() => {
         $("#preload").html('')
         $('.inhabilitar').removeClass('disabled-etiqueta-a')
@@ -36,7 +40,6 @@ var cargarResultado = () => {
 }
 
 var estructurarFiltro = (data) => {
-    debugger
     if (data == null) return
     let tb = data.ID_TIPO_BUSQUEDA
     $.each((data.LISTA_ANIOS), (x, y) => {

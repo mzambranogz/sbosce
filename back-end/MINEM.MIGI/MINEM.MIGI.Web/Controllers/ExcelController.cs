@@ -3,6 +3,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using MINEM.MIGI.Entidad;
 using MINEM.MIGI.Logica;
+using MINEM.MIGI.Web.Filter;
 using MINEM.MIGI.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ using System.Web.Mvc;
 
 namespace MINEM.MIGI.Web.Controllers
 {
+    [Autenticado]
     public class ExcelController : BaseController
     {
         // GET: Excel

@@ -145,6 +145,8 @@
     <Compile Include="Controllers\ExcelController.cs" />
     <Compile Include="Controllers\MantenimientoController.cs" />
     <Compile Include="Controllers\ResultadoController.cs" />
+    <Compile Include="Filter\AutenticadoAttribute.cs" />
+    <Compile Include="Helper\SessionHelper.cs" />
     <Compile Include="Models\ExcelViewModel.cs" />
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -196,6 +198,10 @@
     <ProjectReference Include="..\MINEM.MIGI.Logica\MINEM.MIGI.Logica.csproj">
       <Project>{E42693DF-2B47-44B5-A37E-FBAE2940E78E}</Project>
       <Name>MINEM.MIGI.Logica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MINEM.MIGI.Util\MINEM.MIGI.Util.csproj">
+      <Project>{e8b7b2b3-228a-4f23-9e2c-441f721446cd}</Project>
+      <Name>MINEM.MIGI.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

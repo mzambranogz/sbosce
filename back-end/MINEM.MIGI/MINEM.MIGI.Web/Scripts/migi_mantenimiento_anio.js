@@ -143,14 +143,18 @@ var cambiarEstado = (element) => {
     let url = `${baseUrl}Mantenimiento/EliminarAnio`;
 
     fetch(url, init)
-        .then(r => r.json())
-        .then(j => {
-            if (j.success) {
-                $('#btnConsultar')[0].click();
-            } else {
-                alert('Ocurrió un problema al momento de eliminar el registro')
-            }
-        });
+    .then(r => r.json())
+    .then(j => {
+        if (j.success) {
+            $('#btnConsultar')[0].click();
+        } else {
+            alert('Ocurrió un problema al momento de eliminar el registro')
+        }
+    })
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
 };
 
 var nuevo = () => {
@@ -194,7 +198,11 @@ var consultarEntidad = (element) => {
     .then(r => r.json())
     .then(j => {
         cargarDatos(j.obj);
-    });
+    })
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
 }
 
 var cargarDatos = (data) => {
@@ -231,5 +239,9 @@ var guardar = () => {
             j.success ? $('.alert-add').alertSuccess({ type: 'success', title: 'BIEN HECHO', message: 'Los datos fueron guardados correctamente.', close: { time: 1000 }, url: `` }) : $('.alert-add').alertError({ type: 'danger', title: 'ERROR', message: 'Inténtelo nuevamente por favor.' });
             if (j.success) $('#btnConsultar')[0].click();
         }
-    });
+    })
+    .catch(error => {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        location.href = `${baseUrl}Inicio/Index`
+    })
 }
