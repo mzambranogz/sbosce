@@ -111,5 +111,25 @@ namespace MINEM.MIGI.Datos
 
             return lista;
         }
+
+        public bool EliminarResultado(ResultadoBE obj, OracleConnection db)
+        {
+            bool seGuardo = false;
+
+            try
+            {
+                string sp = $"{Package.Resultado}USP_DEL_ELIMINAR_RESULTADO";
+                var p = new OracleDynamicParameters();
+                p.Add("PI_ID_RESULTADO", obj.ID_RESULTADO);
+                p.Add("PI_ID_USUARIO", obj.UPD_USUARIO);
+                p.Add("PO_ROWAFFECTED", dbType: OracleDbType.Int32, direction: ParameterDirection.Output);
+                db.Execute(sp, p, commandType: CommandType.StoredProcedure);
+                int filasAfectadas = (int)p.Get<dynamic>("PO_ROWAFFECTED").Value;
+                seGuardo = filasAfectadas > 0;
+            }
+            catch (Exception ex) { Log.Error(ex); }
+
+            return seGuardo;
+        }
     }
 }

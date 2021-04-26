@@ -40,7 +40,12 @@
             @Html.ValidationMessageFor(m => m.CONTRASENA, "", new { @Class = "text-danger" })
 
             <button id="btnIniciar" class="g-recaptcha w-100 btn btn-lg btn-primary mt-2" data-sitekey="@ViewData["keySiteCaptcha"]" data-action='submit'>Acceder</button>
-        }        
+        } 
+        <div class="row">
+            <div class="col-12">
+                <a class="" id="btn-olvidar" href="@Url.Action("OlvidarContrasena","Inicio")">¿Olvidó su contraseña?</a>
+            </div>
+        </div>       
     </main>
 </div>
 

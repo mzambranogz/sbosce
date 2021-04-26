@@ -1,6 +1,7 @@
 ﻿
 $(document).ready(() => {
     $('#btnIniciar').on('click', onSubmit)
+    $('#btn-olvidar').on('click', olvidarContrasena())
 })
 
 function onSubmit(token) {
@@ -30,3 +31,4 @@ $("#form-login").submit(function () {
     }
     return false;
 })
+

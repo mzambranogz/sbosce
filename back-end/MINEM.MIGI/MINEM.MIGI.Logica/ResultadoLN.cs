@@ -44,5 +44,20 @@ namespace MINEM.MIGI.Logica
             }
             return obj;
         }
+
+        public bool EliminarResultado(ResultadoBE entidad)
+        {
+            bool seGuardo = false;
+            try
+            {
+                cn.Open();
+                seGuardo = ResultadoDA.EliminarResultado(entidad, cn);
+            }
+            finally
+            {
+                if (cn.State == ConnectionState.Open) cn.Close();
+            }
+            return seGuardo;
+        }
     }
 }

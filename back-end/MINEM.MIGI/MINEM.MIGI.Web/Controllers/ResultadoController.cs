@@ -46,5 +46,12 @@ namespace MINEM.MIGI.Web.Controllers
             jsonResult.MaxJsonLength = int.MaxValue;
             return jsonResult;
         }
+
+        public JsonResult EliminarResultado(ResultadoBE entidad) {
+            bool v = ResultadoLN.EliminarResultado(entidad);
+            var jsonResult = Json(v, JsonRequestBehavior.AllowGet);
+            jsonResult.MaxJsonLength = int.MaxValue;
+            return jsonResult;
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace MINEM.MIGI.Web.Filter
             try
             {
                 base.OnActionExecuting(filterContext);
+                HttpSessionStateBase session = filterContext.HttpContext.Session;
                 if (!SessionHelper.ExistUserInSession())
                 {
                     filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
@@ -42,8 +43,8 @@ namespace MINEM.MIGI.Web.Filter
             try
             {
                 base.OnActionExecuting(filterContext);
-
-                if (SessionHelper.ExistUserInSession())
+                HttpSessionStateBase session = filterContext.HttpContext.Session;
+                if (session["user"] != null)
                 {
                     filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
                     {

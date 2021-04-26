@@ -91,5 +91,36 @@ namespace MINEM.MIGI.Logica
 
             return valor;
         }
+
+        public UsuarioBE ObtenerUsuarioPorCorreo(string correo)
+        {
+            UsuarioBE item = null;
+
+            try
+            {
+                cn.Open();
+                item = usuarioDA.GetUsuarioByCorreo(correo, cn);
+            }
+            finally { if (cn.State == ConnectionState.Open) cn.Close(); }
+
+            return item;
+        }
+
+        public int NuevaContrasena(UsuarioBE usuario)
+        {
+            int estado = 0;
+            bool cambio = false;
+            try
+            {
+                cn.Open();
+                if (estado == 0)
+                {
+                    cambio = usuarioDA.CambiarContrasena(usuario.ID_USUARIO, usuario.CONTRASENA_NUEVO, cn);
+                    estado = cambio ? 2 : 1;
+                }
+            }
+            finally { if (cn.State == ConnectionState.Open) cn.Close(); }
+            return estado;
+        }
     }
 }

@@ -3,9 +3,11 @@ using MINEM.MIGI.Entidad;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace MINEM.MIGI.Logica
 {
@@ -84,6 +86,14 @@ namespace MINEM.MIGI.Logica
             finally { if (cn.State == ConnectionState.Open) cn.Close(); }
 
             return lista;
+        }
+
+        public static byte[] ObtenerPlantillaExportar(string nomArchivo)
+        {
+            var fileName = Path.Combine(HttpContext.Current.ApplicationInstance.Server.MapPath("~/App_Data"), nomArchivo);
+
+            var archivoBytes = System.IO.File.ReadAllBytes(fileName);
+            return archivoBytes;
         }
     }
 }

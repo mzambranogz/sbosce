@@ -13,6 +13,7 @@ namespace MINEM.MIGI.Entidad
         public string NOMBRES { get; set; }
         public string APELLIDOS { get; set; }
         public string CONTRASENA { get; set; }
+        public string CONTRASENA_NUEVO { get; set; }
         public int ID_ROL { get; set; }
         public string FLAG_ESTADO { get; set; }
     }
