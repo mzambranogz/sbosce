@@ -1,0 +1,38 @@
+﻿@using MINEM.MIGI.Web.Models
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Inicio - Login";
+    ViewBag.Carousel = false;
+}
+
+@section scripts_footer {
+    <script src="@Url.Content("~/Scripts/plugins/alert.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/migi_olvidar_contrasena.js")"></script>
+}
+
+<div class="content-body">
+    <main class="form-signin">
+        <div class="row">
+            <div class="col-12 wow fadeIn">
+                <div class="h4 estilo-03">¿Olvidó su contraseña? <br><small class="text-muted estilo-02">Ingresa su correo electrónico</small></div>
+                <form class="pt-4" id="frmLogin" action="" autocomplete="off">
+                    <div class="form-group">
+                        <label class="estilo-01" for="txt-user">Correo electrónico</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text" id="inputGroup1"><i class="fas fa-envelope"></i></span></div>
+                            <input class="form-control estilo-01" type="email" id="txt-user" placeholder="Ingresar correo electrónico" aria-describedby="inputGroup1" maxlength="50" pattern="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@("@")[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$" title="Ingrese una dirección de correo válida." autocomplete="new-user" required="">
+                        </div>
+                    </div>
+                    <button class="btn-lg btn-primary w-100 mb-3" id="btn-enviar" type="submit"><i class="fas fa-undo px-1"></i>Recuperar</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div id="alerta"></div>
+        </div>
+    </main>
+</div>
+
+
+

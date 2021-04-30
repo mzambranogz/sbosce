@@ -1,0 +1,14 @@
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\MINEM.MIGI.Logica.dll
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\MINEM.MIGI.Logica.pdb
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\MINEM.MIGI.Datos.dll
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\MINEM.MIGI.Entidad.dll
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\MINEM.MIGI.Util.dll
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\Oracle.DataAccess.dll
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\Dapper.dll
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\MINEM.MIGI.Datos.pdb
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\MINEM.MIGI.Entidad.pdb
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\MINEM.MIGI.Util.pdb
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\bin\Release\Dapper.xml
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\obj\Release\MINEM.MIGI.Logica.csprojResolveAssemblyReference.cache
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\obj\Release\MINEM.MIGI.Logica.dll
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Logica\obj\Release\MINEM.MIGI.Logica.pdb

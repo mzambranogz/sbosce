@@ -1,0 +1,70 @@
+﻿@using MINEM.MIGI.Entidad
+@{
+    UsuarioBE usuario = Session["user"] == null ? null : (UsuarioBE)Session["user"];
+}
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="@Url.Action("Index", "Inicio")">
+                @*<img src="@Url.Content("~/images/logo.png")" alt="" width="30" height="24" class="d-inline-block align-text-top">*@
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    @if (usuario == null)
+                    {
+                        <li class="nav-item">
+                            @Html.ActionLink("Inicio", "Index", "Inicio", null, new { target = "", @class = "nav-link active", role = "button" })
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            @Html.ActionLink("Bandeja principal", "Index", "Busqueda", null, new { target = "", @class = "nav-link active", role = "button" })
+                        </li>
+                        @*<li class="nav-item">
+                            @Html.ActionLink("Cargar excel", "Index", "Excel", null, new { target = "", @class = "nav-link active", role = "button" })
+                        </li>*@
+                        <li class="nav-item">
+                            @Html.ActionLink("Mantenimiento", "Index", "Mantenimiento", null, new { target = "", @class = "nav-link active", role = "button" })
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cargar excel
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @Html.ActionLink("Excel menor a 8 UIT", "Index", "Excel", null, new { target = "", @class = "dropdown-item", role = "button" })
+                                @Html.ActionLink("Excel mayor o igual a 8 UIT", "ExcelM8U", "Excel", null, new { target = "", @class = "dropdown-item", role = "button" })
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Resultados", "Index", "Resultado", null, new { target = "", @class = "nav-link active", role = "button" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Salir", "Salir", "Inicio", null, new { target = "", @class = "nav-link active", role = "button" })
+                        </li>
+                    }
+                </ul>
+                <div class="d-flex">
+                    @*@if (objUsuario == null)
+                    {
+                        @Html.ActionLink("Ingresar", "Index", "Login", null, new { target = "", @class = "btn btn-outline-secondary me-2", role = "button" })
+                        @Html.ActionLink("Registrar", "Registrar", "Usuario", null, new { target = "", @class = "btn btn-outline-secondary", role = "button" })
+                    }
+                    else
+                    {
+                        <div class="p-2 me-2 font-weight-bold"><span>@objUsuario.Nombres&nbsp;@objUsuario.Apellidos</span></div>
+                        @Html.ActionLink("Salir", "Logout", "Login", null, new { target = "", @class = "btn btn-outline-secondary", role = "button" })
+                    }*@
+
+                    @*@Html.ActionLink("Ingresar", "Index", "Login", null, new { target = "", @class = "btn btn-outline-secondary me-2", role = "button" })
+                    @Html.ActionLink("Registrar", "Registrar", "Usuario", null, new { target = "", @class = "btn btn-outline-secondary", role = "button" })*@
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

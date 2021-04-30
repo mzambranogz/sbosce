@@ -1,0 +1,11 @@
+﻿@using MINEM.MIGI.Entidad
+@{ 
+    UsuarioBE usuario = Session["user"] == null ? null : (UsuarioBE)Session["user"];
+}
+
+<script type="text/javascript">
+    const baseUrl = '@Url.Content("~")';
+    const idUsuarioLogin = @(usuario == null ? "null" : usuario.ID_USUARIO.ToString());
+    const idRolLogin = @(usuario == null ? "null" : usuario.ID_ROL.ToString());
+</script>
+

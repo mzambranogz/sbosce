@@ -1,0 +1,53 @@
+﻿@using MINEM.MIGI.Web.Models
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Inicio - Login";
+    ViewBag.Carousel = false;
+}
+
+@section scripts_header{
+    <script src="https://www.google.com/recaptcha/api.js"></script>    
+}
+
+@section scripts_footer {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/migi_login.js")"></script>
+}
+
+<div class="content-body">
+    <main class="form-signin">
+        @*@if (TempData["Mensaje"] != null)
+        {
+            <div class="text-success summary-form">
+                <ul>
+                    <li>@TempData["Mensaje"].ToString()</li>
+                </ul>
+            </div>
+        }*@
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger summary-form " })
+        @Html.ValidationMessage("CustomError")
+        @using (Html.BeginForm("InicioSesion", "Inicio", FormMethod.Post, new { id = "form-login", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <h1 class="h3 mb-3 fw-normal">Inicia sesión</h1>
+
+            @*<label for="" class="visually-hidden">Correo electrónico</label>*@
+            @Html.TextBoxFor(m => m.CORREO, new { placeholder = "Correo electrónico", @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CORREO, "", new { @Class = "text-danger small" })
+            @*<label for="inputPassword" class="visually-hidden">Contraseña</label>*@
+            @Html.PasswordFor(m => m.CONTRASENA, new { placeholder = "Contraseña", @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CONTRASENA, "", new { @Class = "text-danger" })
+
+            <button id="btnIniciar" class="g-recaptcha w-100 btn btn-lg btn-primary mt-2" data-sitekey="@ViewData["keySiteCaptcha"]" data-action='submit'>Acceder</button>
+        } 
+        <div class="row">
+            <div class="col-12">
+                <a class="" id="btn-olvidar" href="@Url.Action("OlvidarContrasena","Inicio")">¿Olvidó su contraseña?</a>
+            </div>
+        </div>       
+    </main>
+</div>
+
+
+

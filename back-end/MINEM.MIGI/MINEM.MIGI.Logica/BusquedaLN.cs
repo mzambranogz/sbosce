@@ -143,13 +143,43 @@ namespace MINEM.MIGI.Logica
                                         string seccionrestante = palabraEvaluar.Substring(lastIndex + 2); //Se suma 2 corra una letra mas y para que salte el espacio
                                         if (seccionrestante.Length > 2)
                                         {
+                                            int cantidad = 0;
                                             string[] result = seccionrestante.Split(' ');
                                             if (result.Length > 0)
                                             {
                                                 int n;
                                                 bool v = Int32.TryParse(result[0], out n);
                                                 if (v)
+                                                {
                                                     gfn3.CANTIDAD += Convert.ToInt32(result[0]);
+                                                }
+                                                else if (ValidarNumeroParent(result[0], out cantidad))
+                                                {
+                                                    gfn3.CANTIDAD += cantidad;
+                                                }
+                                                else
+                                                {
+                                                    int numero = 0;
+                                                    int num_millones = 0;
+                                                    foreach (string item in result)
+                                                    {
+                                                        int num = Conversion.LetrasANumero(quitarAcentos(item.Trim().ToLower()).ToUpper());
+                                                        if (num == 0) break;
+                                                        else if (num == -1) numero += 0;
+                                                        else if (num > 0)
+                                                        {
+                                                            if (num == 1000000)
+                                                            {
+                                                                num_millones = numero == 0 ? num : numero * num;
+                                                                numero = 0;
+                                                            }
+                                                            else if (num == 1000) numero = numero == 0 ? num : numero * num;
+                                                            else numero += num;
+                                                        }
+                                                    }
+                                                    numero += num_millones;
+                                                    gfn3.CANTIDAD += numero;
+                                                }
                                             }
                                         }
                                     }
@@ -168,6 +198,41 @@ namespace MINEM.MIGI.Logica
             finally { if (cn.State == ConnectionState.Open) cn.Close(); }
 
             return entidad;
+        }
+
+        private bool ValidarNumeroParent(string result, out int cantidad)
+        {
+            bool valido = false;
+            //string[] result = "(45) unidades".Split(' ');
+            int tamnio = result.Trim().Length;
+            cantidad = 0;
+            for (int i = 0; i < tamnio; i++)
+            {
+                string dato = result.Substring(i, 1);
+                switch (dato)
+                {
+                    case "(":
+                        int fin, tamaniocontenido;
+                        string contenido;
+                        fin = result.IndexOf(")", i);
+                        if (fin != -1)
+                        {
+                            tamaniocontenido = fin - i - 1;
+                            contenido = result.Substring(i + 1, tamaniocontenido);
+                            bool v = Int32.TryParse(contenido, out cantidad);
+                            if (v)
+                            {
+                                cantidad = Convert.ToInt32(contenido);
+                                valido = true;
+                            }
+                            i = fin;
+                        }
+
+                        break;
+                    default: break;
+                }
+            }
+            return valido;
         }
 
         private string quitarAcentos(string inputString) {

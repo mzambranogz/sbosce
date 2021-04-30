@@ -1,0 +1,48 @@
+﻿@using MINEM.MIGI.Web.Models
+@model ExcelViewModel
+
+@section scripts_footer {
+    <script src="@Url.Content("~/Scripts/plugins/alert.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/migi_resultado.js")"></script>
+}
+
+<div class="container margin-top-excel">
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3>Lista de resultados</h3>
+        </div>
+    </div>
+    <div class="container mt-2">
+        <div class="row">
+            <table id="tbl-excel" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>DESCRIPCIÓN</th>
+                        <th>FECHA</th>
+                        <th>GESTIÓN</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-confirmacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-sres-azul text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmar acción</h5>
+                <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body medidas-modal">
+                <p>¿ Desea eliminar este registro ?</p>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-primary" type="button" id="btnConfirmar">Si</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>

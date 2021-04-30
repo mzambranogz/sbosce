@@ -1,0 +1,5 @@
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Util\bin\Release\MINEM.MIGI.Util.dll
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Util\bin\Release\MINEM.MIGI.Util.pdb
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Util\obj\Release\MINEM.MIGI.Util.csprojResolveAssemblyReference.cache
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Util\obj\Release\MINEM.MIGI.Util.dll
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Util\obj\Release\MINEM.MIGI.Util.pdb

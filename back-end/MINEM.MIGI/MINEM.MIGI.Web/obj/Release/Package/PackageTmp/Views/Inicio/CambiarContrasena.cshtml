@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Titulo = "Cambiar contraseña";
+    int idusuario = (int)ViewData["idusuario"];
+}
+
+@section scripts_footer{
+    <script src="@Url.Content("~/Scripts/plugins/alert.js")"></script>
+    <script type="text/javascript"> var idusuario = @idusuario; </script>
+    <script src="@Url.Content("~/Scripts/migi_cambiarcontrasena.js")"></script>
+}
+
+<div class="container-fluid my-5">
+    <div class="container">
+        <main class="form-signin">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 mb-5 mb-lg-0">
+                    <div class="row">
+                        <div class="col-12 wow fadeIn">
+                            <div class="h4 estilo-03">Cambiar contraseña <br><small class="text-muted estilo-02">Confirme su nueva contraseña</small></div>
+                            <form class="pt-4" id="frm" action="./bandeja-postulante.html" autocomplete="off">
+                                <div class="form-group">
+                                    <label class="estilo-01" for="txt-pswd">Contraseña nueva</label><span class="text-danger font-weight-bold">&nbsp;(*)&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="top" title="Su contraseña debe incluir 6 caracteres como mínimo."></i></span>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-key"></i></span></div><input class="form-control estilo-01 sin-espacio" type="password" name="txt-pswd" id="txt-pswd" maxlength="20" placeholder="Ingrese su contraseña" autocomplete="new-password">
+                                        <div class="input-group-append">
+                                            <label class="input-group-text cursor-pointer ver-clave"><i class="fas fa-eye mr-1"></i>Mostrar</label>
+                                        </div>
+                                    </div>
+                                    <div class="nivelSeguridad">
+                                        <small class="text-primary">
+                                            <div class="fas fa-shield-alt"></div>&nbsp; Nivel de seguridad: &nbsp;<span class="text-primary font-weight-bold" id="nivelseguridad">bajo</span>
+                                            <div class="nivelesColores">
+                                                <div class="spanNivelesColores"></div>
+                                            </div>
+                                        </small>
+                                        <div class="NivelesColores"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="estilo-01" for="txt-con">Confirmar contraseña nueva</label><span class="text-danger font-weight-bold">&nbsp;(*)&nbsp;</span>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-key"></i></span></div>
+                                        <input class="form-control estilo-01 sin-espacio" type="password" name="txt-con" id="txt-con" maxlength="20" placeholder="Confirmar su contraseña">
+                                        <div class="input-group-append">
+                                            <label class="input-group-text cursor-pointer ver-clave"><i class="fas fa-eye mr-1"></i>Mostrar</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="alert-add"></div>
+                                </div>
+                                <button class="btn-lg btn-primary w-100 mb-3" id="btn-cambiar" type="submit"><i class="fas fa-sync px-1"></i>Cambiar</button>
+                            </form>
+                            @*<p class="pt-4 mb-0 text-center estilo-01">¿No tienes una cuenta?&nbsp;<a class="text-sres-verde estilo-01" href="./registro.html">Regístrese ahora <br></a><a class="text-sres-verde estilo-01" href="./recuperar.html">¿Olvidó su contraseña?</a></p>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>        
+    </div>
+</div>

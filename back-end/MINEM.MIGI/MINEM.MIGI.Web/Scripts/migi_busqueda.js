@@ -6,8 +6,29 @@ $(document).ready(() => {
     $('#btn-exportar').on('click', (e) => exportarExcel())
     $('#btn-guardar').on('click', (e) => guardarResultado())
     $('#btn-nuevo').on('click', (e) => nuevaBusqueda())
+    $('#chk-todos-palabras').on('change', (e) => todosPalabras())
+    $('#chk-todos-palabras-cantidad').on('change', (e) => todosPalabrasCantidad())
+    $('#chk-todos-anios').on('change', (e) => todosAnios())
     cargarComponentes()
 });
+
+var todosPalabras = () => {
+    let t = $('#chk-todos-palabras').prop('checked')
+    if (t) $('#lista-palabras input[type="checkbox"]').prop('checked', true)
+    else $('#lista-palabras input[type="checkbox"]').prop('checked', false)
+}
+
+var todosPalabrasCantidad = () => {
+    let t = $('#chk-todos-palabras-cantidad').prop('checked')
+    if (t) $('#lista-palabras-cantidad input[type="checkbox"]').prop('checked', true)
+    else $('#lista-palabras-cantidad input[type="checkbox"]').prop('checked', false)
+}
+
+var todosAnios = () => {
+    let t = $('#chk-todos-anios').prop('checked')
+    if (t) $('#lista-anios input[type="checkbox"]').prop('checked', true)
+    else $('#lista-anios input[type="checkbox"]').prop('checked', false)
+}
 
 var exportarExcel = () => {
     $('.inhabilitar').addClass('disabled-etiqueta-a')
@@ -76,7 +97,7 @@ var nuevaBusqueda = () => {
 
 var cambiarTipoBusqueda = () => {
     let tipobusqueda = $('#tipo-busqueda').val()
-    if (tipobusqueda == 1 || tipobusqueda == 0){
+    if (tipobusqueda == 1 || tipobusqueda == 0){        
         $('#lista-palabras-cantidad input[type="checkbox"]').prop('disabled', false)        
         $('#chk-todos-palabras-cantidad').prop('disabled', false)
         $('#lista-palabras-cantidad').parent().parent().removeClass('d-none')
@@ -177,6 +198,7 @@ var filtrarPalabras = () => {
             $(y).parent().parent().addClass('d-none')
             $(y).prop('checked', false)
         })
+        $('#chk-todos-palabras').prop('checked', false)
         return
     }
 

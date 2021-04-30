@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Mantenimiento";
+}
+
+@section scripts_footer {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/migi_mantenimiento.js")"></script>
+}
+
+<div class="container-fluid margin-top-excel">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="estilo-03 text-sres-azul">Mantenimiento de Tablas</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="form-group">
+                    <label for="txt-buscar">Buscar&nbsp;</label>
+                    <div class="input-group">
+                        @*<div class="input-group-prepend"><span class="input-group-text" id="inputGroup1"><i class="fas fa-table"></i></span></div>*@
+                        <select class="form-control estilo-01 text-sres-oscuro" id="cbo-tabla-mantenimiento" required>
+                            <option value="0" data-url="">-Seleccione una Tabla de Mantenimiento-</option>
+                            <option value="1" data-url="Mantenimiento/Usuario">Mantenimiento de Usuarios</option>
+                            <option value="2" data-url="Mantenimiento/Equipo">Mantenimiento de Equipos</option>
+                            <option value="3" data-url="Mantenimiento/PalabraClave">Mantenimiento de Palabras Claves</option>
+                            <option value="4" data-url="Mantenimiento/PalabraClaveCantidad">Mantenimiento de Palabras Claves Cantidad</option>
+                            <option value="5" data-url="Mantenimiento/Anio">Mantenimiento de Años</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-12 col-md-6 col-lg-6">&nbsp;</div>
+                    <div class="col-sm-12 col-md-6 col-lg-6"><a class="btn btn-primary w-100 mb-2" href="#" id="ir-mantenimiento">Ir al mantenimiento</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
