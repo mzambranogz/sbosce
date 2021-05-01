@@ -441,6 +441,12 @@ namespace MINEM.MIGI.Web.Controllers
             return esNuevo;
         }
 
+        public string ObtenerLetra(int num)
+        {
+            List<string> Letters = new List<string>() { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+            return Letters[num - 1];
+        }
+
         private bool verificarCelda(string celda, int index) {
             //string cadena = "AB8";
             bool validar;
@@ -836,9 +842,9 @@ namespace MINEM.MIGI.Web.Controllers
             Formula = 3
         }
 
-        public ActionResult ExportarExcel()
+        public ActionResult ExportarExcel(BusquedaBE objBusqueda)
         {
-            BusquedaBE objBusqueda = new BusquedaBE();
+            //BusquedaBE objBusqueda = new BusquedaBE();
             objBusqueda.LISTA_PALABRAS = (List<PalabraClaveBE>)Session["lista_palabras"];
             objBusqueda.LISTA_PALABRAS_CANTIDAD = (List<PalabraClaveCantidadBE>)Session["lista_palabras_cantidad"];
             objBusqueda.LISTA_ANIOS = (List<AnioBE>)Session["lista_anios"];
@@ -854,7 +860,7 @@ namespace MINEM.MIGI.Web.Controllers
                 documentStream.Position = 0;
 
                 PaginaN1(documentStream, lista, tipoBusqueda);
-                //PaginaN2(documentStream);
+                PaginaN2(documentStream, objBusqueda);
 
                 //using (SpreadsheetDocument spreadSheet = SpreadsheetDocument.Open(documentStream, true))
                 //{
@@ -970,71 +976,325 @@ namespace MINEM.MIGI.Web.Controllers
             }
         }
 
-        private void PaginaN2(MemoryStream documentStream)
+        private void PaginaN2(MemoryStream documentStream, BusquedaBE obj)
         {
             using (SpreadsheetDocument spreadSheet2 = SpreadsheetDocument.Open(documentStream, true))
             {
-                Stylesheet stylesheet = spreadSheet2.WorkbookPart.WorkbookStylesPart.Stylesheet;
-                spreadSheet2.WorkbookPart.Workbook.CalculationProperties.ForceFullCalculation = true;
-                spreadSheet2.WorkbookPart.Workbook.CalculationProperties.FullCalculationOnLoad = true;
+                //Stylesheet stylesheet = spreadSheet2.WorkbookPart.WorkbookStylesPart.Stylesheet;
+                //spreadSheet2.WorkbookPart.Workbook.CalculationProperties.ForceFullCalculation = true;
+                //spreadSheet2.WorkbookPart.Workbook.CalculationProperties.FullCalculationOnLoad = true;
 
-                var estilos2 = ConfigurarEstilos(spreadSheet2, stylesheet);
+                //var estilos2 = ConfigurarEstilos(spreadSheet2, stylesheet);
 
                 var sheetName = "Resultado";
 
-                WorksheetPart worksheetPart2 = ObtenerHoja(spreadSheet2.WorkbookPart, "Reporte2", sheetName);
+                WorksheetPart worksheetPart = ObtenerHoja(spreadSheet2.WorkbookPart, "Reporte2", sheetName);
 
                 //Definicion de columnas estáticas
                 DocumentFormat.OpenXml.Spreadsheet.Columns columns2 = new DocumentFormat.OpenXml.Spreadsheet.Columns();
-                SheetData sd2 = worksheetPart2.Worksheet.Elements<SheetData>().FirstOrDefault();
+                SheetData sd2 = worksheetPart.Worksheet.Elements<SheetData>().FirstOrDefault();
                 if ((sd2 != null))
                 {
-                    columns2 = worksheetPart2.Worksheet.InsertBefore(new DocumentFormat.OpenXml.Spreadsheet.Columns(), sd2);
+                    columns2 = worksheetPart.Worksheet.InsertBefore(new DocumentFormat.OpenXml.Spreadsheet.Columns(), sd2);
                 }
                 else
                 {
                     columns2 = new DocumentFormat.OpenXml.Spreadsheet.Columns();
-                    worksheetPart2.Worksheet.Append(columns2);
+                    worksheetPart.Worksheet.Append(columns2);
                 }
 
                 //Contenedor de Merge de columnas
                 MergeCells mergeCells2 = new MergeCells();
 
                 //TITULO DEL REPORTE
-                SetCellValueOperacion(worksheetPart2, "A", 1, TipoDato.Cadena, "OSCE - Resultados en tablas", string.Empty, estilos2.INDICE_TITULO);
+                //SetCellValueOperacion(worksheetPart2, "A", 1, TipoDato.Cadena, "OSCE - Resultados en tablas", string.Empty, estilos2.INDICE_TITULO);
+                SetCellValueOperacion(worksheetPart, "A", 1, TipoDato.Cadena, "OSCE - Resultados en tablas", string.Empty);
                 mergeCells2.Append(new MergeCell() { Reference = "A1:G1" });
 
-                AgregarFormatoColuma(columns2);
+                AgregarFormatoColumaTablas(columns2);
+                SheetData sheetData = worksheetPart.Worksheet.GetFirstChild<SheetData>();
 
-                int k = 2;
+                int fila = 4;
+                tablaBienes(obj.TABLA_BIENES, obj.ARR_ANIOS, worksheetPart, sheetData, fila);
+                tablaServicios(obj.TABLA_SERVICIOS, obj.ARR_ANIOS, worksheetPart, sheetData, fila);
+                TablaResumen(obj.TABLA_RESUMEN, obj.ARR_ANIOS, worksheetPart, sheetData, fila);
+                TablaEstimado(obj.TABLA_ESTIMADO, obj.ARR_ANIOS, worksheetPart, sheetData, fila);
 
-                SetCellValueOperacion(worksheetPart2, "A", k, TipoDato.Cadena, "ENTIDAD", string.Empty, estilos2.INDICE_CABECERA);
-                SetCellValueOperacion(worksheetPart2, "B", k, TipoDato.Cadena, "RUC_ENTIDAD", string.Empty, estilos2.INDICE_CABECERA);
-                SetCellValueOperacion(worksheetPart2, "C", k, TipoDato.Cadena, "FECHA_REGISTRO", string.Empty, estilos2.INDICE_CABECERA);
-                SetCellValueOperacion(worksheetPart2, "D", k, TipoDato.Cadena, "FECHA_DE_EMISION", string.Empty, estilos2.INDICE_CABECERA);
-                SetCellValueOperacion(worksheetPart2, "E", k, TipoDato.Cadena, "FECHA_COMPROMISO_PRESUPUESTAL", string.Empty, estilos2.INDICE_CABECERA);
-                SetCellValueOperacion(worksheetPart2, "F", k, TipoDato.Cadena, "FECHA_DE_NOTIFICACION", string.Empty, estilos2.INDICE_CABECERA);
-                SetCellValueOperacion(worksheetPart2, "G", k, TipoDato.Cadena, "TIPOORDEN", string.Empty, estilos2.INDICE_CABECERA);
-
-                SheetData sheetData2 = worksheetPart2.Worksheet.GetFirstChild<SheetData>();
-
-                Row newRow2 = new Row();
-                Cell cell = new Cell();
-
-                // A - ENTIDAD
-                cell = new Cell();
-                cell.DataType = CellValues.String;
-                cell.CellValue = new CellValue("Fila");
-                cell.StyleIndex = uint.Parse(estilos2.INDICE_DATOS.ToString());
-                newRow2.AppendChild(cell);
-
-                sheetData2.AppendChild(newRow2);
-
-                PageMargins pageMargins2 = worksheetPart2.Worksheet.GetFirstChild<PageMargins>();
-                worksheetPart2.Worksheet.InsertBefore(mergeCells2, pageMargins2);
-                //worksheetPart2.Worksheet.Save();
+                PageMargins pageMargins2 = worksheetPart.Worksheet.GetFirstChild<PageMargins>();
+                worksheetPart.Worksheet.InsertBefore(mergeCells2, pageMargins2);
                 spreadSheet2.Close();
             }
+        }
+
+        private int tablaBienes(List<GraficoN1BE> lista, int[] anios, WorksheetPart worksheetPart, SheetData sheetData, int fila)
+        {
+            SetCellValueOperacion(worksheetPart, "A", fila-1, TipoDato.Cadena, "RESULTADO BIENES POR AÑOS", string.Empty);
+            SetCellValueOperacion(worksheetPart, "A", fila, TipoDato.Cadena, "HALLAZGO", string.Empty);
+            SetCellValueOperacion(worksheetPart, "B", fila, TipoDato.Cadena, "BIENES", string.Empty);
+            int i;
+            for (i = 0; i < anios.Count(); i++)
+            {
+                SetCellValueOperacion(worksheetPart, ObtenerLetra(i+3), fila, TipoDato.Cadena, anios[i], string.Empty);
+            }
+            SetCellValueOperacion(worksheetPart, ObtenerLetra(i+3), fila, TipoDato.Cadena, "TOTAL", string.Empty);
+
+            fila++;
+            foreach (var item in lista)
+            {
+                Row newRow = new Row();
+                Cell cell = new Cell();
+                fila++;
+
+                cell = new Cell();
+                cell.DataType = CellValues.String;
+                cell.CellValue = new CellValue(item.HALLAZGO);
+                newRow.AppendChild(cell);
+
+                cell = new Cell();
+                cell.DataType = CellValues.String;
+                cell.CellValue = new CellValue(item.TIPO_REQUERIMIENTO);
+                newRow.AppendChild(cell);
+
+                for (int j = 0; j < item.ANIOS.Count(); j++)
+                {
+                    cell = new Cell();
+                    cell.DataType = CellValues.Number;
+                    cell.CellValue = new CellValue(item.ANIOS[j]);
+                    newRow.AppendChild(cell);
+                }
+
+                cell = new Cell();
+                cell.DataType = CellValues.Number;
+                cell.CellValue = new CellValue(item.TOTAL);
+                newRow.AppendChild(cell);
+
+                sheetData.AppendChild(newRow);
+            }
+
+            return fila;
+        }
+
+        private int tablaServicios(List<GraficoN1BE> lista, int[] anios, WorksheetPart worksheetPart, SheetData sheetData, int fila)
+        {
+            Row newRowVacio = new Row();
+            sheetData.AppendChild(newRowVacio);
+
+            Row newRowtitulo = new Row();
+            Cell celltitulo = new Cell();
+
+            celltitulo = new Cell();
+            celltitulo.DataType = CellValues.String;
+            celltitulo.CellValue = new CellValue("RESULTADO SERVICIOS POR AÑOS");
+            newRowtitulo.AppendChild(celltitulo);
+            sheetData.AppendChild(newRowtitulo);
+
+            Row newRowCabecera= new Row();
+            Cell cellCabecera = new Cell();
+
+            cellCabecera = new Cell();
+            cellCabecera.DataType = CellValues.String;
+            cellCabecera.CellValue = new CellValue("HALLAZGO");
+            newRowCabecera.AppendChild(cellCabecera);
+
+            cellCabecera = new Cell();
+            cellCabecera.DataType = CellValues.String;
+            cellCabecera.CellValue = new CellValue("SERVICIOS");
+            newRowCabecera.AppendChild(cellCabecera);
+
+            int i;
+            for (i = 0; i < anios.Count(); i++)
+            {
+                cellCabecera = new Cell();
+                cellCabecera.DataType = CellValues.String;
+                cellCabecera.CellValue = new CellValue(anios[i]);
+                newRowCabecera.AppendChild(cellCabecera);
+            }
+
+            cellCabecera = new Cell();
+            cellCabecera.DataType = CellValues.String;
+            cellCabecera.CellValue = new CellValue("TOTAL");
+            newRowCabecera.AppendChild(cellCabecera);
+
+            sheetData.AppendChild(newRowCabecera);
+
+            fila++;
+            foreach (var item in lista)
+            {
+                Row newRow = new Row();
+                Cell cell = new Cell();
+                fila++;
+
+                cell = new Cell();
+                cell.DataType = CellValues.String;
+                cell.CellValue = new CellValue(item.HALLAZGO);
+                newRow.AppendChild(cell);
+
+                cell = new Cell();
+                cell.DataType = CellValues.String;
+                cell.CellValue = new CellValue(item.TIPO_REQUERIMIENTO);
+                newRow.AppendChild(cell);
+
+                for (int j = 0; j < item.ANIOS.Count(); j++)
+                {
+                    cell = new Cell();
+                    cell.DataType = CellValues.Number;
+                    cell.CellValue = new CellValue(item.ANIOS[j]);
+                    newRow.AppendChild(cell);
+                }
+
+                cell = new Cell();
+                cell.DataType = CellValues.Number;
+                cell.CellValue = new CellValue(item.TOTAL);
+                newRow.AppendChild(cell);
+
+                sheetData.AppendChild(newRow);
+            }
+
+            return fila;
+        }
+
+        private void TablaResumen(List<GraficoN1BE> lista, int[] anios, WorksheetPart worksheetPart, SheetData sheetData, int fila) {
+            Row newRowVacio = new Row();
+            sheetData.AppendChild(newRowVacio);
+
+            Row newRowtitulo = new Row();
+            Cell celltitulo = new Cell();
+
+            celltitulo = new Cell();
+            celltitulo.DataType = CellValues.String;
+            celltitulo.CellValue = new CellValue("RESUMEN POR AÑOS");
+            newRowtitulo.AppendChild(celltitulo);
+            sheetData.AppendChild(newRowtitulo);
+
+            Row newRowCabecera = new Row();
+            Cell cellCabecera = new Cell();
+
+            cellCabecera = new Cell();
+            cellCabecera.DataType = CellValues.String;
+            cellCabecera.CellValue = new CellValue("HALLAZGO");
+            newRowCabecera.AppendChild(cellCabecera);
+
+            int i;
+            for (i = 0; i < anios.Count(); i++)
+            {
+                cellCabecera = new Cell();
+                cellCabecera.DataType = CellValues.String;
+                cellCabecera.CellValue = new CellValue(anios[i]);
+                newRowCabecera.AppendChild(cellCabecera);
+            }
+
+            cellCabecera = new Cell();
+            cellCabecera.DataType = CellValues.String;
+            cellCabecera.CellValue = new CellValue("TOTAL");
+            newRowCabecera.AppendChild(cellCabecera);
+
+            sheetData.AppendChild(newRowCabecera);
+
+            foreach (var item in lista)
+            {
+                Row newRow = new Row();
+                Cell cell = new Cell();
+                fila++;
+
+                cell = new Cell();
+                cell.DataType = CellValues.String;
+                cell.CellValue = new CellValue(item.HALLAZGO);
+                newRow.AppendChild(cell);
+
+                for (int m = 0; m < anios.Count(); m++)
+                {
+                    decimal suma = 0;
+                    for (int j = 0; j < item.ANIOSAR.Count(); j++)
+                    {
+                        if (item.ANIOSAR[j][0] == anios[m]) suma += item.ANIOSAR[j][1];                        
+                    }
+                    cell = new Cell();
+                    cell.DataType = CellValues.Number;
+                    cell.CellValue = new CellValue(suma);
+                    newRow.AppendChild(cell);
+                }
+
+                cell = new Cell();
+                cell.DataType = CellValues.Number;
+                cell.CellValue = new CellValue(item.TOTAL);
+                newRow.AppendChild(cell);
+
+                sheetData.AppendChild(newRow);
+            }
+        }
+
+        private void TablaEstimado(List<GraficoN1BE> lista, int[] anios, WorksheetPart worksheetPart, SheetData sheetData, int fila)
+        {
+            Row newRowVacio = new Row();
+            sheetData.AppendChild(newRowVacio);
+
+            Row newRowtitulo = new Row();
+            Cell celltitulo = new Cell();
+
+            celltitulo = new Cell();
+            celltitulo.DataType = CellValues.String;
+            celltitulo.CellValue = new CellValue("RESUMEN CANTIDAD ESTIMADA");
+            newRowtitulo.AppendChild(celltitulo);
+            sheetData.AppendChild(newRowtitulo);
+
+            Row newRowCabecera = new Row();
+            Cell cellCabecera = new Cell();
+
+            cellCabecera = new Cell();
+            cellCabecera.DataType = CellValues.String;
+            cellCabecera.CellValue = new CellValue("HALLAZGO");
+            newRowCabecera.AppendChild(cellCabecera);
+
+            int i;
+            for (i = 0; i < anios.Count(); i++)
+            {
+                cellCabecera = new Cell();
+                cellCabecera.DataType = CellValues.String;
+                cellCabecera.CellValue = new CellValue(anios[i]);
+                newRowCabecera.AppendChild(cellCabecera);
+            }
+
+            sheetData.AppendChild(newRowCabecera);
+
+            foreach (var item in lista)
+            {
+                Row newRow = new Row();
+                Cell cell = new Cell();
+                fila++;
+
+                cell = new Cell();
+                cell.DataType = CellValues.String;
+                cell.CellValue = new CellValue(item.HALLAZGO);
+                newRow.AppendChild(cell);
+
+                for (int m = 0; m < anios.Count(); m++)
+                {
+                    decimal suma = 0;
+                    for (int j = 0; j < item.ANIOSAR.Count(); j++)
+                    {
+                        if (item.ANIOSAR[j][0] == anios[m]) suma += item.ANIOSAR[j][1];
+                    }
+                    cell = new Cell();
+                    cell.DataType = CellValues.Number;
+                    cell.CellValue = new CellValue(suma);
+                    newRow.AppendChild(cell);
+                }
+
+                sheetData.AppendChild(newRow);
+            }
+        }
+
+        private void AgregarFormatoColumaTablas(DocumentFormat.OpenXml.Spreadsheet.Columns columns1)
+        {
+            columns1.Append(new DocumentFormat.OpenXml.Spreadsheet.Column() { Min = 1U, Max = 1U, Width = 15D, CustomWidth = true });//A
+            columns1.Append(new DocumentFormat.OpenXml.Spreadsheet.Column() { Min = 2U, Max = 2U, Width = 15D, CustomWidth = true });//B
+            columns1.Append(new DocumentFormat.OpenXml.Spreadsheet.Column() { Min = 3U, Max = 3U, Width = 15D, CustomWidth = true });//C
+            columns1.Append(new DocumentFormat.OpenXml.Spreadsheet.Column() { Min = 4U, Max = 4U, Width = 15D, CustomWidth = true });//D
+            columns1.Append(new DocumentFormat.OpenXml.Spreadsheet.Column() { Min = 5U, Max = 5U, Width = 15D, CustomWidth = true });//E
+            columns1.Append(new DocumentFormat.OpenXml.Spreadsheet.Column() { Min = 6U, Max = 6U, Width = 15D, CustomWidth = true });//F
+            columns1.Append(new DocumentFormat.OpenXml.Spreadsheet.Column() { Min = 7U, Max = 7U, Width = 15D, CustomWidth = true });//G
+            columns1.Append(new DocumentFormat.OpenXml.Spreadsheet.Column() { Min = 8U, Max = 8U, Width = 15D, CustomWidth = true });//H
+            columns1.Append(new DocumentFormat.OpenXml.Spreadsheet.Column() { Min = 9U, Max = 9U, Width = 15D, CustomWidth = true });//I
         }
 
         private void AgregarFormatoColuma(DocumentFormat.OpenXml.Spreadsheet.Columns columns1)

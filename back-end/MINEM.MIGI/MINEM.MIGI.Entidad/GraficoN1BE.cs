@@ -12,5 +12,8 @@ namespace MINEM.MIGI.Entidad
         public string TIPO_REQUERIMIENTO { get; set; }
         public int CANTIDAD { get; set; }
         public string ANIO { get; set; }
+        public int[] ANIOS { get; set; }
+        public List<decimal[]> ANIOSAR { get; set; }
+        public decimal TOTAL { get; set; }
     }
 }

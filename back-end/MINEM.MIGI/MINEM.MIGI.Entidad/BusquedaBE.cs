@@ -16,5 +16,10 @@ namespace MINEM.MIGI.Entidad
         public List<OrdenCompraM8UBE> LISTA_ORDENCOMPRAM8U { get; set; }
         public List<GraficoBE> LISTA_GRAFICO { get; set; }
         public List<GraficoBE> LISTA_GRAFICON3 { get; set; }
+        public List<GraficoN1BE> TABLA_BIENES { get; set; }
+        public List<GraficoN1BE> TABLA_SERVICIOS { get; set; }
+        public List<GraficoN1BE> TABLA_RESUMEN { get; set; }
+        public List<GraficoN1BE> TABLA_ESTIMADO { get; set; }
+        public int[] ARR_ANIOS { get; set; }
     }
 }
