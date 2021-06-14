@@ -3,6 +3,10 @@
     UsuarioBE usuario = Session["user"] == null ? null : (UsuarioBE)Session["user"];
 }
 
+<script src="@Url.Content("~/Scripts/script.js")"></script>
+<script src="@Url.Content("~/Scripts/plugins/util.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
 <script type="text/javascript">
     const baseUrl = '@Url.Content("~")';
     const idUsuarioLogin = @(usuario == null ? "null" : usuario.ID_USUARIO.ToString());

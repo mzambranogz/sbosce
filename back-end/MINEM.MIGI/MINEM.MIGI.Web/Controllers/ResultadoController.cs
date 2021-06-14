@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MINEM.MIGI.Web.Controllers
 {
+    [HandleError]
     [Autenticado]
     public class ResultadoController : Controller
     {
@@ -20,8 +21,8 @@ namespace MINEM.MIGI.Web.Controllers
             return View();
         }
 
-        public JsonResult ListaResultado() {
-            List<ResultadoBE> lista = ResultadoLN.ListaResultado();
+        public JsonResult ListaResultado(int registros, int pagina, string columna, string orden) {
+            List<ResultadoBE> lista = ResultadoLN.ListaResultado(registros, pagina, columna, orden);
             var jsonResult = Json(lista, JsonRequestBehavior.AllowGet);
             jsonResult.MaxJsonLength = int.MaxValue;
             return jsonResult;

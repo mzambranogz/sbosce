@@ -20,6 +20,7 @@ using MINEM.MIGI.Util;
 
 namespace MINEM.MIGI.Web.Controllers
 {
+    [HandleError]
     public class InicioController : Controller
     {
         // GET: Inicio

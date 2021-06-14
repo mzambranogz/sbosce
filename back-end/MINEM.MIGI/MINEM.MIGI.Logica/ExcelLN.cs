@@ -74,14 +74,14 @@ namespace MINEM.MIGI.Logica
             return esValido;
         }
 
-        public List<ExcelBE> ListarExcels(int tipoexcel)
+        public List<ExcelBE> ListarExcels(int tipoexcel, int registros, int pagina, string columna, string orden)
         {
             List<ExcelBE> lista = new List<ExcelBE>();
 
             try
             {
                 cn.Open();
-                lista = ExcelDA.ListarExcels(tipoexcel, cn);
+                lista = ExcelDA.ListarExcels(tipoexcel, registros, pagina, columna, orden, cn);
             }
             finally { if (cn.State == ConnectionState.Open) cn.Close(); }
 

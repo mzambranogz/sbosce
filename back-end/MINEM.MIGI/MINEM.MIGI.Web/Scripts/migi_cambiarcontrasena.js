@@ -16,16 +16,26 @@ var sendLogin = (e) => {
     else arr.push("Las contraseñas no coinciden");
 
     if (arr.length > 0) {
-        let error = '';
-        $.each(arr, function (ind, elem) { error += '<li><small class="mb-0">' + elem + '</small></li>'; });
-        error = `<ul>${error}</ul>`;
-        $('.alert-add').alertError({ type: 'danger', title: 'ERROR', message: error });
+        let error = '', tipoerror = 0;
+        if (arr.length > 1) {
+            $.each(arr, function (ind, elem) { error += '<li><small class="mb-0">' + elem + '</small></li>'; });
+            error = `<ul>${error}</ul>`;
+            tipoerror = 2
+        } else {
+            error = arr[0]
+            tipoerror = 1
+        }            
+        
+        $('#seccion-msj').html(mensajeError('Error de cambio', error, 2))
+        setTimeout(() => {
+            $('#seccion-msj').html('')
+        }, 3500);
         return;
     }
 
     let contrasena = $('#txt-pswd').val().trim();
 
-    let url = `${baseUrl}Inicio/NuevaContrasena`; //end point 35
+    let url = `${baseUrl}Inicio/NuevaContrasena`;
     let data = { ID_USUARIO: idusuario, CONTRASENA_NUEVO: contrasena };
     let init = { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) };
 
@@ -37,9 +47,20 @@ var sendLogin = (e) => {
         mensaje = j == 0 ? 'Hubo un problema, inténtelo nuevamente por favor.' : j == 1 ? 'Hubo un problema, inténtelo nuevamente por favor.' : j == 2 ? 'La contraseña se cambio correctamente.' : '';
         $('.alert-add').html('');
         if (j == 2) { $('#btn-cambiar').hide(); }
-        if (j == 2) $('.alert-add').alertSuccess({ type: 'success', title: 'BIEN HECHO', message: mensaje, close: { time: 4000 }, url: `${baseUrl}Inicio` });
-        else $('.alert-add').alertError({ type: 'danger', title: 'ERROR', message: mensaje });
+        if (j == 2) {
+            $('#seccion-msj').html(mensajeSuccess(mensaje))
+            setTimeout(redirigir, 5000);
+        } else {
+            $('#seccion-msj').html(mensajeError('Error de cambio', mensaje, 1))
+            setTimeout(() => {
+                $('#seccion-msj').html('')
+            }, 3500);
+        }            
     });
+}
+
+var redirigir = () => {
+    location.href = `${baseUrl}Inicio`;
 }
 
 $(document).on("keydown", ".sin-espacio", function (e) {

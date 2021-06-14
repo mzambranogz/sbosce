@@ -6,7 +6,7 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/migi_resultado.js")"></script>
 }
 
-<div class="container margin-top-excel">
+@*<div class="container margin-top-excel">
 
     <div class="row mt-5">
         <div class="col-12">
@@ -14,25 +14,163 @@
         </div>
     </div>
     <div class="container mt-2">
-        <div class="row">
-            <table id="tbl-excel" class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>N°</th>
-                        <th>DESCRIPCIÓN</th>
-                        <th>FECHA</th>
-                        <th>GESTIÓN</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="h5">Resultados&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Tabla con los resultados almacenados"></i></div>
+                <div class="table-responsive tabla-principal">
+                    <table class="table table-hover" id="tbl">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th scope="col" width="3%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">N°&nbsp;</div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Número de orden"></i></div>
+                                    </div>
+                                </th>
+                                <th scope="col" width="20%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="pl-1 text-center w-100">DESCRIPCIÓN&nbsp;</div><i class="fas fa-sort columna-filtro" id="ID_RESULTADO"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Descripción del resultado"></i></div>
+                                    </div>
+                                </th>
+                                <th scope="col" width="27%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="pl-1 text-center w-100">FECHA&nbsp;</div><i class="fas fa-sort columna-filtro" id="REG_FECHA"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Fecha de registro"></i></div>
+                                    </div>
+                                </th>
+                                <th scope="col" width="10%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="pl-1 text-center w-100">GESTIÓN&nbsp;</div>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Herramientas y opciones"></i></div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="text-left" colspan="2"><strong>Resultado:&nbsp;</strong><span class="inicio-registros">1</span><span id="view-page-result">-<span class="fin-registros">1</span> de <span class="total-registros">1</span> registros</span></td>
+                                <td class="text-right text-xs-left" colspan="5">
+                                    <strong>Registros por página&nbsp;</strong>
+                                    <select id="catidad-rgistros">
+                                        <option value="10" selected>10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>&nbsp;
+                                    <span class="pagina">1</span> de <span class="total-paginas">75</span> páginas&nbsp;
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(1)"><i class="fas fa-angle-double-left"></i></button>
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(2)"><i class="fas fa-angle-left"></i></button>
+                                        <input id="ir-pagina" class="ir-pagina" type="number" value="1" min="1">
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(3)"><i class="fas fa-angle-right"></i></button>
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(4)"><i class="fas fa-angle-double-right"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
+<div class="container-fluid map-root" id="historia">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Busqueda")">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Resultados</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container-fluid my-4" id="cuerpo">
+    <div class="row m-0">
+        <div class="col-12 cuerpo-interior">
+            <div class="container py-4">
+                <div class="h5">Resultados&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Tabla con los resultados almacenados"></i></div>
+                <div class="table-responsive tabla-principal">
+                    <table class="table table-hover" id="tbl">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th scope="col" width="3%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">N°&nbsp;</div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Número de orden"></i></div>
+                                    </div>
+                                </th>
+                                <th scope="col" width="22%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="pl-1 text-center w-100">DESCRIPCIÓN&nbsp;</div><i class="fas fa-sort columna-filtro" id="ID_RESULTADO"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Descripción del resultado"></i></div>
+                                    </div>
+                                </th>
+                                <th scope="col" width="27%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="pl-1 text-center w-100">FECHA&nbsp;</div><i class="fas fa-sort columna-filtro" id="REG_FECHA"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Fecha de registro"></i></div>
+                                    </div>
+                                </th>
+                                <th scope="col" width="8%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="pl-1 text-center w-100">GESTIÓN&nbsp;</div>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Herramientas y opciones"></i></div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="text-left" colspan="2"><strong>Resultado:&nbsp;</strong><span class="inicio-registros">1</span><span id="view-page-result">-<span class="fin-registros">1</span> de <span class="total-registros">1</span> registros</span></td>
+                                <td class="text-right text-xs-left" colspan="5">
+                                    <strong>Registros por página&nbsp;</strong>
+                                    <select id="catidad-rgistros" onchange="cargarExcel()">
+                                        <option value="10" selected>10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>&nbsp;
+                                    <span class="pagina">1</span> de <span class="total-paginas">75</span> páginas&nbsp;
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(1)"><i class="fas fa-angle-double-left"></i></button>
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(2)"><i class="fas fa-angle-left"></i></button>
+                                        <input id="ir-pagina" class="ir-pagina" type="number" value="1" min="1">
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(3)"><i class="fas fa-angle-right"></i></button>
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(4)"><i class="fas fa-angle-double-right"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
+
 <div class="modal fade" id="modal-confirmacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-sres-azul text-white">
+            <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Confirmar acción</h5>
                 <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
@@ -46,3 +184,6 @@
         </div>
     </div>
 </div>
+
+@Html.Hidden("columna", "ID_RESULTADO")
+@Html.Hidden("orden", "DESC")

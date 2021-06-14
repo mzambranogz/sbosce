@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MINEM.MIGI.Web.Controllers
 {
+    [HandleError]
     [Autenticado]
     public class MantenimientoController : Controller
     {

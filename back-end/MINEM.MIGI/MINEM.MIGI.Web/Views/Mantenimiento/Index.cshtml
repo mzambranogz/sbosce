@@ -6,7 +6,58 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/migi_mantenimiento.js")"></script>
 }
 
-<div class="container-fluid margin-top-excel">
+
+<div class="container-fluid map-root" id="historia">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Busqueda")">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Mantenimiento de Tablas</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container-fluid my-4" id="cuerpo">
+    <div class="row m-0">
+        <div class="col-12 cuerpo-interior">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 pt-4">
+                        <div class="h4">Mantenimiento de Tablas&nbsp;<br><small class="text-muted">Seleccione el tipo de mantenimiento que desea realizar de acuerdo a las tablas maestras que utiliza el sistema.</small></div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 pt-4">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 pt-4">
+                        <form>
+                            <div class="form-group">
+                                <label for="txt-buscar">Buscar&nbsp;</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text" id="inputGroup1"><i class="fas fa-table"></i></span></div>
+                                    <select class="form-control cbo-list" id="cbo-tabla-mantenimiento" required>
+                                        <option value="0" data-url="">-Seleccione una Tabla de Mantenimiento-</option>
+                                        <option value="1" data-url="Mantenimiento/Usuario">Mantenimiento de Usuarios</option>
+                                        <option value="2" data-url="Mantenimiento/Equipo">Mantenimiento de Equipos</option>
+                                        <option value="3" data-url="Mantenimiento/PalabraClave">Mantenimiento de Palabras Claves</option>
+                                        <option value="4" data-url="Mantenimiento/PalabraClaveCantidad">Mantenimiento de Palabras Claves Cantidad</option>
+                                        <option value="5" data-url="Mantenimiento/Anio">Mantenimiento de Años</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">&nbsp;</div>
+                                <div class="col-sm-12 col-md-6 col-lg-6"><a class="btn btn-success w-100 mb-2 go-select" href="javascript:void(0)" id="ir-mantenimiento"><i class="far fa-hand-point-up px-1"></i>Ir al mantenimiento</a></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-12 col-lg-6 pt-4">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="container-fluid margin-top-excel">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -14,15 +65,14 @@
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid">
+</div>*@
+@*<div class="container-fluid">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="form-group">
                     <label for="txt-buscar">Buscar&nbsp;</label>
                     <div class="input-group">
-                        @*<div class="input-group-prepend"><span class="input-group-text" id="inputGroup1"><i class="fas fa-table"></i></span></div>*@
                         <select class="form-control estilo-01 text-sres-oscuro" id="cbo-tabla-mantenimiento" required>
                             <option value="0" data-url="">-Seleccione una Tabla de Mantenimiento-</option>
                             <option value="1" data-url="Mantenimiento/Usuario">Mantenimiento de Usuarios</option>
@@ -40,4 +90,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@

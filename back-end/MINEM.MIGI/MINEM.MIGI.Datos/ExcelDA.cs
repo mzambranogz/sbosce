@@ -104,7 +104,7 @@ namespace MINEM.MIGI.Datos
             return seGuardo;
         }
 
-        public List<ExcelBE> ListarExcels(int tipoexcel, OracleConnection db)
+        public List<ExcelBE> ListarExcels(int tipoexcel, int registros, int pagina, string columna, string orden, OracleConnection db)
         {
             List<ExcelBE> lista = new List<ExcelBE>();
 
@@ -113,6 +113,10 @@ namespace MINEM.MIGI.Datos
                 string sp = $"{Package.Excel}USP_SEL_LISTA_EXCEL";
                 var p = new OracleDynamicParameters();
                 p.Add("PI_TIPO_EXCEL", tipoexcel);
+                p.Add("PI_REGISTROS", registros);
+                p.Add("PI_PAGINA", pagina);
+                p.Add("PI_COLUMNA", columna);
+                p.Add("PI_ORDEN", orden);
                 p.Add("PO_REF", dbType: OracleDbType.RefCursor, direction: ParameterDirection.Output);
                 lista = db.Query<ExcelBE>(sp, p, commandType: CommandType.StoredProcedure).ToList();
             }

@@ -1,4 +1,5 @@
 ﻿var arrAnioDescripcion = [], equipo_g = ""
+var arrGN1_TablaBienes = [], arrGN1_TablaServicios = [], arrGN2 = [], arrGN3 = []
 $(document).ready(() => {
     $('#btn-exportar').on('click', (e) => exportarExcel())
     cargarResultado()
@@ -8,7 +9,9 @@ var exportarExcel = () => {
     $('.inhabilitar').addClass('disabled-etiqueta-a')
     $("#preload").html("<i Class='fas fa-spinner fa-spin px-1'></i> Cargando...")
     let url = `${baseUrl}Excel/ExportarExcel`
-    fetch(url)
+    let data = { TABLA_BIENES: arrGN1_TablaBienes, TABLA_SERVICIOS: arrGN1_TablaServicios, TABLA_RESUMEN: arrGN2, TABLA_ESTIMADO: arrGN3, ARR_ANIOS: arrAnioDescripcion };
+    let init = { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) };
+    fetch(url, init)
     .then(r => r.blob())
     .then(j => {
         let urlBlob = window.URL.createObjectURL(j);
@@ -61,7 +64,8 @@ var estructurarGraficoN1 = (lista) => {
     let tituloAnio = arrAnioDescripcion.join(' - ')
     let titulo = `${equipo_g} POR REQUERIMIENTO ${tituloAnio}`
 
-    let arr = [], arrGN2 = []
+    let arr = []
+    arrGN2 = []
     arr.push(["Palabra Clave", "Coincidencia"])
     $.each((lista), (x, y) => {
         if (y.LISTA_GRAFICON1.length > 0) {
@@ -83,7 +87,7 @@ var estructurarGraficoN1 = (lista) => {
             arrGN2.push({
                 HALLAZGO: palabra,
                 TOTAL: suma,
-                ANIOS: arrAnio
+                ANIOSAR: arrAnio
             })
         } else {
 
@@ -91,7 +95,7 @@ var estructurarGraficoN1 = (lista) => {
             arrGN2.push({
                 HALLAZGO: '',
                 TOTAL: 0,
-                ANIOS: null
+                ANIOSAR: null
             })
         }
     })
@@ -99,7 +103,8 @@ var estructurarGraficoN1 = (lista) => {
     let titulo_bienes = `${equipo_g} POR REQUERIMIENTO BIENES ${tituloAnio}`
     let titulo_servicios = `${equipo_g} POR REQUERIMIENTO SERVICIOS ${tituloAnio}`
 
-    let arrGN1_Bienes = [], arrGN1_Servicios = [], arrGN1_TablaBienes = [], arrGN1_TablaServicios = []
+    let arrGN1_Bienes = [], arrGN1_Servicios = []
+    arrGN1_TablaBienes = [], arrGN1_TablaServicios = []
 
     arrGN1_Bienes.push(["Palabra Clave", "Coincidencia"])
     arrGN1_Servicios.push(["Palabra Clave", "Coincidencia"])
@@ -193,7 +198,7 @@ var armarTablaGN2 = (id, arr) => {
         let anios = ""
         $.each((arrAnioDescripcion), (m, n) => {
             let suma = 0
-            $.each((x.ANIOS), (a, b) => {
+            $.each((x.ANIOSAR), (a, b) => {
                 if (n == b[0])
                     suma += b[1]
             })
@@ -208,33 +213,49 @@ var armarTablaGN2 = (id, arr) => {
 
 var estructurarGraficoN3 = (lista) => {
     if (lista == null) return
+    arrGN3 = []
 
-    let body = '<tbody></tbody>'
-    let head = '<thead></thead>'
-    let tabla = `<table id="tbl-gf3-resumen" class="table table-hover">${head}${body}</table>`
-    let h4 = '<h4 class="text-center mb-3">RESUMEN CANTIDAD ESTIMADA</h4>'
-    let div = `<div class="col-12 mostrar">${h4}${tabla}</div>`
-    $('#seccion-cant-estimada').append(div)
+    //let body = '<tbody></tbody>'
+    //let head = '<thead></thead>'
+    //let tabla = `<table id="tbl-gf3-resumen" class="table table-hover">${head}${body}</table>`
+    //let h4 = '<h4 class="text-center mb-3">RESUMEN CANTIDAD ESTIMADA</h4>'
+    //let div = `<div class="col-12 mostrar">${h4}${tabla}</div>`
+    //$('#seccion-cant-estimada').append(div)
 
-    let columna_anio = ""
-    $.each((arrAnioDescripcion), (x, y) => {
-        columna_anio += `<th>${y}</th>`
-    })
-    $('#tbl-gf3-resumen').find('thead').html(`<tr><th>HALLAZGO</th>${columna_anio}`)
+    //let columna_anio = ""
+    //$.each((arrAnioDescripcion), (x, y) => {
+    //    columna_anio += `<th>${y}</th>`
+    //})
+    //$('#tbl-gf3-resumen').find('thead').html(`<tr><th>HALLAZGO</th>${columna_anio}`)
 
-    let content = '';
+    //let content = '';
+    //if (lista.length > 0) {
+    //    content = lista.map((x, y) => {
+    //        let hallazgo
+    //        let anios = x.LISTA_GRAFICON3.length == 0 ? '' : x.LISTA_GRAFICON3.map((m, n) => {
+    //            hallazgo = m.HALLAZGO
+    //            return `<td>${m.CANTIDAD}</td>`
+    //        }).join('')
+    //        return `<tr><td>${hallazgo}</td>${anios}</tr>`
+    //    }).join('')
+    //}
+    //$('#tbl-gf3-resumen').find('tbody').html(content)
+
     if (lista.length > 0) {
-        content = lista.map((x, y) => {
-            let hallazgo
-            let anios = x.LISTA_GRAFICON3.length == 0 ? '' : x.LISTA_GRAFICON3.map((m, n) => {
+        lista.map((x, y) => {
+            let hallazgo, arrAnioTablaEstimado = []
+            x.LISTA_GRAFICON3.map((m, n) => {
                 hallazgo = m.HALLAZGO
-                return `<td>${m.CANTIDAD}</td>`
-            }).join('')
-            return `<tr><td>${hallazgo}</td>${anios}</tr>`
-        }).join('')
+                arrAnioTablaEstimado.push([m.ANIO, m.CANTIDAD])
+            })
+            arrGN3.push({ //Tabla 3
+                HALLAZGO: hallazgo,
+                ANIOSAR: arrAnioTablaEstimado
+            })
+        })
     }
-    //console.log(content)
-    $('#tbl-gf3-resumen').find('tbody').html(content)
+
+    armarTablaGN3('#tbl-gf3-resumen', arrGN3)
 
     let arrListaAnio = []
     $.each((arrAnioDescripcion), (m, n) => {
@@ -281,7 +302,8 @@ var estructurarGraficoM8U = (lista) => {
     let titulo_bienes = `${equipo_g} POR REQUERIMIENTO BIENES ${tituloAnio}`
     let titulo_servicios = `${equipo_g} POR REQUERIMIENTO SERVICIOS ${tituloAnio}`
 
-    let arrGN1_Bienes = [], arrGN1_Servicios = [], arrGN1_TablaBienes = [], arrGN1_TablaServicios = []
+    let arrGN1_Bienes = [], arrGN1_Servicios = []
+    arrGN1_TablaBienes = [], arrGN1_TablaServicios = []
     arrGN1_Bienes.push(["Palabra Clave", "Coincidencia"])
     arrGN1_Servicios.push(["Palabra Clave", "Coincidencia"])
 
@@ -336,7 +358,9 @@ var estructurarGraficoM8U = (lista) => {
     google.charts.setOnLoadCallback(drawChart(arrGN1_Servicios, titulo_servicios, 'pie-gn1-servicios'));
 
     let arrListaAnio = []
-    let arr = [], arrGN2 = [], arrGN3 = []
+    let arr = []
+    arrGN2 = []
+    arrGN3 = []
     arr.push(["Palabra Clave", "Coincidencia"])
     let fg2 = lista.length == 0 ? '' : lista.map((x, y) => {
         //palabras
@@ -367,14 +391,14 @@ var estructurarGraficoM8U = (lista) => {
         arrGN2.push({ //Tabla 2
             HALLAZGO: palabra,
             TOTAL: suma_total,
-            ANIOS: arrAnio
+            ANIOSAR: arrAnio
         })
         arrListaAnio.push({ //Grafico 3
             LISTA_ANIO: arrAnioGraficoEstimado
         })
         arrGN3.push({ //Tabla 3
             HALLAZGO: palabra,
-            ANIOS: arrAnioTablaEstimado
+            ANIOSAR: arrAnioTablaEstimado
         })
     })
 
@@ -403,7 +427,7 @@ var armarTablaGN3 = (id, arr) => {
         let anios = ""
         $.each((arrAnioDescripcion), (m, n) => {
             let suma = 0
-            $.each((x.ANIOS), (a, b) => {
+            $.each((x.ANIOSAR), (a, b) => {
                 if (n == b[0])
                     suma += b[1]
             })

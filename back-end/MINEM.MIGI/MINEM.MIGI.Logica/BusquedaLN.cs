@@ -67,132 +67,135 @@ namespace MINEM.MIGI.Logica
                 List<GraficoBE> lstGeneralGraficoN3 = new List<GraficoBE>();               
 
                 List<string> lstPalabraBusquedaOmit = new List<string>();
-                foreach (PalabraClaveCantidadBE pb in obj.LISTA_PALABRAS_CANTIDAD)
-                //foreach (PalabraBusquedaBE pb in lstPalabraBusqueda)
+
+                if (obj.LISTA_PALABRAS_CANTIDAD != null)
                 {
-                    List<string> lstPalabraOmit = new List<string>();
-                    foreach (PalabraClaveBE pc in obj.LISTA_PALABRAS)
+                    foreach (PalabraClaveCantidadBE pb in obj.LISTA_PALABRAS_CANTIDAD)
                     {
-                        GraficoBE ggf = new GraficoBE();
-                        List<GraficoN3BE> lstGraficoN3 = new List<GraficoN3BE>();
-                        foreach (AnioBE a in obj.LISTA_ANIOS)
+                        List<string> lstPalabraOmit = new List<string>();
+                        foreach (PalabraClaveBE pc in obj.LISTA_PALABRAS)
                         {
-                            GraficoN3BE gfn3 = new GraficoN3BE() { HALLAZGO = pc.PALABRA, ANIO = a.ANIO, CANTIDAD = 0 };
-                            string sql = "";
-                            if (lstPalabraBusquedaOmit.Count == 0)
+                            GraficoBE ggf = new GraficoBE();
+                            List<GraficoN3BE> lstGraficoN3 = new List<GraficoN3BE>();
+                            foreach (AnioBE a in obj.LISTA_ANIOS)
                             {
-                                if (lstPalabraOmit.Count == 0)
+                                GraficoN3BE gfn3 = new GraficoN3BE() { HALLAZGO = pc.PALABRA, ANIO = a.ANIO, CANTIDAD = 0 };
+                                string sql = "";
+                                if (lstPalabraBusquedaOmit.Count == 0)
                                 {
-                                    sql = $"SELECT '{pc.PALABRA}' HALLAZGO, OBJETOCONTRACTUAL, ANIO, DESCRIPCION_ORDEN  FROM T_GENM_MIGI ";
-                                    sql += $" WHERE LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pc.PALABRA}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' AND ANIO IN ({a.ANIO}) AND (OBJETOCONTRACTUAL LIKE '%SERVICIOS%' OR OBJETOCONTRACTUAL LIKE '%BIENES%') ";
-                                    sql += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pb.PALABRA_CANTIDAD}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' ";
-                                    //lstPalabraOmit.Add(pc.PALABRA);
-                                }
-                                else
-                                {
-                                    string po = "";
-                                    foreach (string p in lstPalabraOmit)
+                                    if (lstPalabraOmit.Count == 0)
                                     {
-                                        po += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) NOT LIKE '%' || LOWER(TRANSLATE('{p}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' ";
+                                        sql = $"SELECT '{pc.PALABRA}' HALLAZGO, OBJETOCONTRACTUAL, ANIO, DESCRIPCION_ORDEN  FROM T_GENM_MIGI ";
+                                        sql += $" WHERE LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pc.PALABRA}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' AND ANIO IN ({a.ANIO}) AND (OBJETOCONTRACTUAL LIKE '%SERVICIOS%' OR OBJETOCONTRACTUAL LIKE '%BIENES%') ";
+                                        sql += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pb.PALABRA_CANTIDAD}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' ";
+                                        //lstPalabraOmit.Add(pc.PALABRA);
                                     }
-                                    sql = $"SELECT '{pc.PALABRA}' HALLAZGO, OBJETOCONTRACTUAL, ANIO, DESCRIPCION_ORDEN  FROM T_GENM_MIGI ";
-                                    sql += $" WHERE DESCRIPCION_ORDEN LIKE '%{pc.PALABRA}%' AND ANIO IN ({a.ANIO}) {po} AND (OBJETOCONTRACTUAL LIKE '%SERVICIOS%' OR OBJETOCONTRACTUAL LIKE '%BIENES%') ";
-                                    sql += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pb.PALABRA_CANTIDAD}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' ";
-                                    //lstPalabraOmit.Add(pc.PALABRA);
-                                }
-                            }
-                            else
-                            {
-                                string po_b = "";
-                                foreach (string p in lstPalabraBusquedaOmit)
-                                {
-                                    po_b += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) NOT LIKE '%' || LOWER(TRANSLATE('{p}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' ";
-                                }
-                                if (lstPalabraOmit.Count == 0)
-                                {
-                                    sql = $"SELECT '{pc.PALABRA}' HALLAZGO, OBJETOCONTRACTUAL, ANIO, DESCRIPCION_ORDEN  FROM T_GENM_MIGI ";
-                                    sql += $" WHERE LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pc.PALABRA}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' AND ANIO IN ({a.ANIO}) AND (OBJETOCONTRACTUAL LIKE '%SERVICIOS%' OR OBJETOCONTRACTUAL LIKE '%BIENES%') ";
-                                    sql += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pb.PALABRA_CANTIDAD}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' {po_b} ";
-                                    //lstPalabraOmit.Add(pc.PALABRA);
-                                }
-                                else
-                                {
-                                    string po = "";
-                                    foreach (string p in lstPalabraOmit)
+                                    else
                                     {
-                                        po += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) NOT LIKE '%' || LOWER(TRANSLATE('{p}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' ";
-                                    }
-                                    sql = $"SELECT '{pc.PALABRA}' HALLAZGO, OBJETOCONTRACTUAL, ANIO, DESCRIPCION_ORDEN  FROM T_GENM_MIGI ";
-                                    sql += $" WHERE DESCRIPCION_ORDEN LIKE '%{pc.PALABRA}%' AND ANIO IN ({a.ANIO}) {po} AND (OBJETOCONTRACTUAL LIKE '%SERVICIOS%' OR OBJETOCONTRACTUAL LIKE '%BIENES%') ";
-                                    sql += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pb.PALABRA_CANTIDAD}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' {po_b} ";
-                                    //lstPalabraOmit.Add(pc.PALABRA);
-                                }
-                            }
-                            List<OrdenCompraBE> lstOC = BusquedaDA.FiltrarPalabraBusqueda(sql, cn);
-                            foreach (OrdenCompraBE palabraB in lstOC)
-                            {
-                                string palabraBusqueda = quitarAcentos(pb.PALABRA_CANTIDAD.ToLower());
-                                string palabraEvaluar = quitarAcentos(palabraB.DESCRIPCION_ORDEN.ToLower());
-                                int lastIndex = palabraEvaluar.IndexOf(palabraBusqueda);
-                                if (lastIndex > -1)
-                                {
-                                    lastIndex += palabraBusqueda.Length - 1;
-                                    int tamanio = palabraEvaluar.Length;
-                                    if (tamanio > lastIndex + 1) //se suma 1 porque lastIndex es un indice que empiza en 0
-                                    {
-                                        string seccionrestante = palabraEvaluar.Substring(lastIndex + 2); //Se suma 2 corra una letra mas y para que salte el espacio
-                                        if (seccionrestante.Length > 2)
+                                        string po = "";
+                                        foreach (string p in lstPalabraOmit)
                                         {
-                                            int cantidad = 0;
-                                            string[] result = seccionrestante.Split(' ');
-                                            if (result.Length > 0)
+                                            po += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) NOT LIKE '%' || LOWER(TRANSLATE('{p}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' ";
+                                        }
+                                        sql = $"SELECT '{pc.PALABRA}' HALLAZGO, OBJETOCONTRACTUAL, ANIO, DESCRIPCION_ORDEN  FROM T_GENM_MIGI ";
+                                        sql += $" WHERE DESCRIPCION_ORDEN LIKE '%{pc.PALABRA}%' AND ANIO IN ({a.ANIO}) {po} AND (OBJETOCONTRACTUAL LIKE '%SERVICIOS%' OR OBJETOCONTRACTUAL LIKE '%BIENES%') ";
+                                        sql += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pb.PALABRA_CANTIDAD}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' ";
+                                        //lstPalabraOmit.Add(pc.PALABRA);
+                                    }
+                                }
+                                else
+                                {
+                                    string po_b = "";
+                                    foreach (string p in lstPalabraBusquedaOmit)
+                                    {
+                                        po_b += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) NOT LIKE '%' || LOWER(TRANSLATE('{p}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' ";
+                                    }
+                                    if (lstPalabraOmit.Count == 0)
+                                    {
+                                        sql = $"SELECT '{pc.PALABRA}' HALLAZGO, OBJETOCONTRACTUAL, ANIO, DESCRIPCION_ORDEN  FROM T_GENM_MIGI ";
+                                        sql += $" WHERE LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pc.PALABRA}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' AND ANIO IN ({a.ANIO}) AND (OBJETOCONTRACTUAL LIKE '%SERVICIOS%' OR OBJETOCONTRACTUAL LIKE '%BIENES%') ";
+                                        sql += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pb.PALABRA_CANTIDAD}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' {po_b} ";
+                                        //lstPalabraOmit.Add(pc.PALABRA);
+                                    }
+                                    else
+                                    {
+                                        string po = "";
+                                        foreach (string p in lstPalabraOmit)
+                                        {
+                                            po += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) NOT LIKE '%' || LOWER(TRANSLATE('{p}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' ";
+                                        }
+                                        sql = $"SELECT '{pc.PALABRA}' HALLAZGO, OBJETOCONTRACTUAL, ANIO, DESCRIPCION_ORDEN  FROM T_GENM_MIGI ";
+                                        sql += $" WHERE DESCRIPCION_ORDEN LIKE '%{pc.PALABRA}%' AND ANIO IN ({a.ANIO}) {po} AND (OBJETOCONTRACTUAL LIKE '%SERVICIOS%' OR OBJETOCONTRACTUAL LIKE '%BIENES%') ";
+                                        sql += $" AND LOWER(TRANSLATE(DESCRIPCION_ORDEN,'ÁÉÍÓÚáéíóú','AEIOUaeiou')) LIKE '%' || LOWER(TRANSLATE('{pb.PALABRA_CANTIDAD}','ÁÉÍÓÚáéíóú','AEIOUaeiou')) ||'%' {po_b} ";
+                                        //lstPalabraOmit.Add(pc.PALABRA);
+                                    }
+                                }
+                                List<OrdenCompraBE> lstOC = BusquedaDA.FiltrarPalabraBusqueda(sql, cn);
+                                foreach (OrdenCompraBE palabraB in lstOC)
+                                {
+                                    string palabraBusqueda = quitarAcentos(pb.PALABRA_CANTIDAD.ToLower());
+                                    string palabraEvaluar = quitarAcentos(palabraB.DESCRIPCION_ORDEN.ToLower());
+                                    int lastIndex = palabraEvaluar.IndexOf(palabraBusqueda);
+                                    if (lastIndex > -1)
+                                    {
+                                        lastIndex += palabraBusqueda.Length - 1;
+                                        int tamanio = palabraEvaluar.Length;
+                                        if (tamanio > lastIndex + 1) //se suma 1 porque lastIndex es un indice que empiza en 0
+                                        {
+                                            string seccionrestante = palabraEvaluar.Substring(lastIndex + 2); //Se suma 2 corra una letra mas y para que salte el espacio
+                                            if (seccionrestante.Length > 2)
                                             {
-                                                int n;
-                                                bool v = Int32.TryParse(result[0], out n);
-                                                if (v)
+                                                int cantidad = 0;
+                                                string[] result = seccionrestante.Split(' ');
+                                                if (result.Length > 0)
                                                 {
-                                                    gfn3.CANTIDAD += Convert.ToInt32(result[0]);
-                                                }
-                                                else if (ValidarNumeroParent(result[0], out cantidad))
-                                                {
-                                                    gfn3.CANTIDAD += cantidad;
-                                                }
-                                                else
-                                                {
-                                                    int numero = 0;
-                                                    int num_millones = 0;
-                                                    foreach (string item in result)
+                                                    int n;
+                                                    bool v = Int32.TryParse(result[0], out n);
+                                                    if (v)
                                                     {
-                                                        int num = Conversion.LetrasANumero(quitarAcentos(item.Trim().ToLower()).ToUpper());
-                                                        if (num == 0) break;
-                                                        else if (num == -1) numero += 0;
-                                                        else if (num > 0)
-                                                        {
-                                                            if (num == 1000000)
-                                                            {
-                                                                num_millones = numero == 0 ? num : numero * num;
-                                                                numero = 0;
-                                                            }
-                                                            else if (num == 1000) numero = numero == 0 ? num : numero * num;
-                                                            else numero += num;
-                                                        }
+                                                        gfn3.CANTIDAD += Convert.ToInt32(result[0]);
                                                     }
-                                                    numero += num_millones;
-                                                    gfn3.CANTIDAD += numero;
+                                                    else if (ValidarNumeroParent(result[0], out cantidad))
+                                                    {
+                                                        gfn3.CANTIDAD += cantidad;
+                                                    }
+                                                    else
+                                                    {
+                                                        int numero = 0;
+                                                        int num_millones = 0;
+                                                        foreach (string item in result)
+                                                        {
+                                                            int num = Conversion.LetrasANumero(quitarAcentos(item.Trim().ToLower()).ToUpper());
+                                                            if (num == 0) break;
+                                                            else if (num == -1) numero += 0;
+                                                            else if (num > 0)
+                                                            {
+                                                                if (num == 1000000)
+                                                                {
+                                                                    num_millones = numero == 0 ? num : numero * num;
+                                                                    numero = 0;
+                                                                }
+                                                                else if (num == 1000) numero = numero == 0 ? num : numero * num;
+                                                                else numero += num;
+                                                            }
+                                                        }
+                                                        numero += num_millones;
+                                                        gfn3.CANTIDAD += numero;
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                 }
+                                lstGraficoN3.Add(gfn3);
                             }
-                            lstGraficoN3.Add(gfn3);
+                            ggf.LISTA_GRAFICON3 = lstGraficoN3;
+                            lstGeneralGraficoN3.Add(ggf);
+                            lstPalabraOmit.Add(pc.PALABRA);
                         }
-                        ggf.LISTA_GRAFICON3 = lstGraficoN3;
-                        lstGeneralGraficoN3.Add(ggf);
-                        lstPalabraOmit.Add(pc.PALABRA);
+                        lstPalabraBusquedaOmit.Add(pb.PALABRA_CANTIDAD);
                     }
-                    lstPalabraBusquedaOmit.Add(pb.PALABRA_CANTIDAD);
-                }
+                }                
                 entidad.LISTA_GRAFICON3 = lstGeneralGraficoN3;
             }
             finally { if (cn.State == ConnectionState.Open) cn.Close(); }

@@ -52,3 +52,4 @@ D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Web\bin\es\System.Web.Mvc.
 D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Web\obj\Release\MINEM.MIGI.Web.csprojResolveAssemblyReference.cache
 D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Web\obj\Release\MINEM.MIGI.Web.dll
 D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Web\obj\Release\MINEM.MIGI.Web.pdb
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Web\bin\App_Data\PlantillaReporte.xlsx

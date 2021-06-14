@@ -1,14 +1,13 @@
 ﻿
 $(document).ready(() => {
     $('#btnIniciar').on('click', onSubmit)
-    $('#btn-olvidar').on('click', olvidarContrasena())
 })
 
 function onSubmit(token) {
-    $("#form-login").submit();
+    $("#frmLogin").submit();
 }
 
-$("#form-login").submit(function () {
+$("#frmLogin").submit(function () {
     var form = $(this);
 
     if (form.validate()) {
@@ -17,12 +16,15 @@ $("#form-login").submit(function () {
             type: 'POST',
             url: form.attr('action'),
             success: function (r) {
-                debugger;
                 if (r.success)
                     location.href = `${baseUrl}${r.message}`
                 else
-                    if (r.tipo == "Error")
-                        alert(r.message)
+                    if (r.tipo == "Error") {
+                        $('#seccion-msj').html(mensajeError('Error de acceso', r.message, 1))
+                        setTimeout(() => {
+                            $('#seccion-msj').html('')
+                        }, 4000)
+                    }
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 alert(errorThrown);

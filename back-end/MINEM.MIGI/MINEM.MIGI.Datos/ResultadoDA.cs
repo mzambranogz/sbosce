@@ -13,7 +13,7 @@ namespace MINEM.MIGI.Datos
 {
     public class ResultadoDA : BaseDA
     {
-        public List<ResultadoBE> ListaResultado( OracleConnection db)
+        public List<ResultadoBE> ListaResultado(int registros, int pagina, string columna, string orden, OracleConnection db)
         {
             List<ResultadoBE> lista = new List<ResultadoBE>();
 
@@ -21,7 +21,11 @@ namespace MINEM.MIGI.Datos
             {
                 string sp = $"{Package.Resultado}USP_SEL_LISTA_RESULTADO";
                 var p = new OracleDynamicParameters();
-                p.Add("PO_REFCURSOR", dbType: OracleDbType.RefCursor, direction: ParameterDirection.Output);
+                p.Add("PI_REGISTROS", registros);
+                p.Add("PI_PAGINA", pagina);
+                p.Add("PI_COLUMNA", columna);
+                p.Add("PI_ORDEN", orden);
+                p.Add("PO_REF", dbType: OracleDbType.RefCursor, direction: ParameterDirection.Output);
                 lista = db.Query<ResultadoBE>(sp, p, commandType: CommandType.StoredProcedure).ToList();
             }
             catch (Exception ex)

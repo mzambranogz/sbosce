@@ -15,21 +15,19 @@ var responseEnvioMail = (data) => {
     let message = data.message;
 
     if (success == true) {
-        $('#alerta').alertSuccess({ type: 'success', title: 'Validando credenciales', message });
+        $('#seccion-msj').html(mensajeSuccess(message))
         setTimeout(redirigir, 5000);
     }
     else {
-        $('#alerta').alertError({ type: 'danger', title: 'Validando credenciales', message });
-        setTimeout(limpiarAlert, 2500);
+        $('#seccion-msj').html(mensajeError('Error de recuperación', message, 1))
+        setTimeout(() => {
+            $('#seccion-msj').html('')
+        }, 3500);
     }
 };
 
 var redirigir = () => {
     location.href = `${baseUrl}Inicio`;
-}
-
-var limpiarAlert = () => {
-    $('#alerta').html();
 }
 
 $(document).ready(() => {

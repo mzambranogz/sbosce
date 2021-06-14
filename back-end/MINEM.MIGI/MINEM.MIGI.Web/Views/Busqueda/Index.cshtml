@@ -17,184 +17,176 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/migi_busqueda.js")"></script>    
 }
 
-<div class="container margin-top-excel">
-    <div class="row mb-3">
-        <div class="col-3">
-            <div class="form-group mb-2">
-                <label for="mls-palabras">Tipo de búsqueda<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione un tipo de búqueda"></i></label>
-                <div class="input-group">
-                    <select id="tipo-busqueda" class="form-control">
-                        <option value="0">Seleccione un tipo de búqueda</option>
-                        <option value="1">Menor a 8 UIT</option>
-                        <option value="2">Mayor o igual a 8 UIT</option>
-                    </select>
+<div class="container-fluid map-root" id="historia">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Busqueda")">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Búsqueda principal</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container-fluid my-4" id="cuerpo">
+    <div class="row m-0">
+        <div class="col-12 cuerpo-interior">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="h4">
+                            Filtros de búsqueda&nbsp;<br><small class="text-muted">Complete todos los criterios para optimizar su búsqueda:</small>
+                            <hr>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group mb-2">
-                <label for="mls-palabras">Equipo<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione un tipo de búqueda"></i></label>
-                <div class="input-group">
-                    <select id="cbo-equipo" class="form-control">
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="mls-palabras">Filtrar información<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione un tipo de búqueda"></i></label>
-                <div class="input-group">
-                    <a class="btn btn-primary w-100" href="javascript:void(0)" id="filtrar-datos">Procesar</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="form-group">
-                <label for="mls-palabras">Palabras claves<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione una o varias palabras claves"></i></label>
-                <div class="input-group custom-control custom-checkbox custom-checkbox d-inline-block pl-3 mb-2">
-                    <input class="custom-control-input" type="checkbox" id="chk-todos-palabras">
-                    <label class="custom-control-label" for="chk-todos-palabras">&nbsp;Seleccionar todos</label>
-                </div>
-                <div class="input-group">
-                    @*<div class="input-group-prepend"><span class="input-group-text" id="inputGroup9"><i class="fas fa-landmark"></i></span></div>*@
-                    <div class="form-control" style="height:160px; overflow-y: auto;" id="lista-palabras">
+                <div id="seccion-msj"></div>
+                <div class="row mt-2 mb-2">
+                    <div class="col-12">
+                        <span id="preload"></span>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12"><span data-toggle="modal" data-target="#medidas-mitigacion-listado"><a class="agregar-iniciativa" id="filtrar-datos" href="javascript:void(0)" data-toggle="tooltip" data-placement="right" title="Puedes iniciar el proceso de bùsqueda pulsando este botòn"><i class="far fa-hand-point-left fa-3x primerIngreso animated bounceInRight infinite"></i><i class="fas fa-sync-alt px-1"></i>Procesar</a></span></div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="txt-buscar">Tipo de búsqueda<span class="text-danger font-weight-bold">&nbsp;(*)&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione un tipo de búsqueda"></i></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text" id="inputGroup1"><i class="fas fa-file-invoice"></i></span></div>
+                                        <select class="form-control cbo-list" id="tipo-busqueda" required>
+                                            <option value="0">-Tipo de búsqueda-</option>
+                                            <option value="1">Menor a 8 UIT</option>
+                                            <option value="2">Mayor o igual a 8 UIT</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="txt-buscar">Equipo<span class="text-danger font-weight-bold">&nbsp;(*)&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione un equipo y se mostrarán las palabras claves asociadas a este"></i></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text" id="inputGroup1"><i class="fas fa-file-invoice"></i></span></div>
+                                        <select class="form-control cbo-list" id="cbo-equipo" required>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="mls-ubicaciones">Palabras clave<span class="text-danger font-weight-bold">&nbsp;(*)&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Puede seleccionar una o varias palabras claves"></i></label>
+                                    <div class="input-group custom-control custom-checkbox custom-checkbox d-inline-block pl-3 mb-2">
+                                        <input class="custom-control-input" type="checkbox" id="chk-todos-palabras">
+                                        <label class="custom-control-label" for="chk-todos-palabras">&nbsp;Seleccionar todos</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text" id="inputGroup9"><i class="fas fa-landmark"></i></span></div>
+                                        <div class="form-control" style="height:180px; overflow-y: auto;" id="lista-palabras">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="mls-ubicaciones">Año<span class="text-danger font-weight-bold">&nbsp;(*)&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Puede seleccionar una o varios años"></i></label>
+                                    <div class="input-group custom-control custom-checkbox custom-checkbox d-inline-block pl-3 mb-2">
+                                        <input class="custom-control-input" type="checkbox" id="chk-todos-anios">
+                                        <label class="custom-control-label" for="chk-todos-anios">&nbsp;Seleccionar todos</label>
+                                    </div>                      
+                                    <div class="input-group">     
+                                        <div class="input-group-prepend"><span class="input-group-text" id="inputGroup9"><i class="fas fa-landmark"></i></span></div>                                     
+                                        <div class="form-control" style="height:180px; overflow-y: auto;" id="lista-anios">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="mls-ubicaciones">Palabras claves cantidad<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Puede seleccionar una o varias palabras claves de cantidad"></i></label>
+                                    <div class="input-group custom-control custom-checkbox custom-checkbox d-inline-block pl-3 mb-2">
+                                        <input class="custom-control-input" type="checkbox" id="chk-todos-palabras-cantidad">
+                                        <label class="custom-control-label" for="chk-todos-palabras-cantidad">&nbsp;Seleccionar todos</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text" id="inputGroup9"><i class="fas fa-landmark"></i></span></div>                                    
+                                        <div class="form-control" style="height:180px; overflow-y: auto;" id="lista-palabras-cantidad">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-9 pl-3 bg-white">
+                        <div class="row d-none" id="seccion-btn">
+                            <div class="col-4">
+                                <a class="btn btn-success w-100 mb-2 inhabilitar" href="javascript:void(0)" id="btn-exportar"><i class="fas fa-file-download px-1"></i>Exportar</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="btn btn-purple w-100 mb-2 inhabilitar" href="javascript:void(0)" id="btn-guardar"><i class="fas fa-save px-1"></i>Guardar resultados</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="btn btn-teal w-100 mb-2 inhabilitar" href="javascript:void(0)" id="btn-nuevo"><i class="fas fa-search px-1"></i>Nueva búsqueda</a>
+                            </div>
+                            <div class="col-12">
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-7 mostrar d-none">
+                                <div class="h5">Resultado bienes por año&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Tabla de requerimiento bienes con cantidades por año"></i></div>
+                                <div class="table-responsive tabla-principal">
+                                    <table class="table table-hover" id="tbl-gf1-bienes">
+                                        <thead></thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            @*<div class="col-4"><img class="img-fluid" src="./images/dashboard.jpg"></div>*@
+                            <div class="col-5 mostrar"><div id="pie-gn1-bienes" style="height: 500px;"></div></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-7 mostrar d-none">
+                                <div class="h5">Resultados servicios por año&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Tabla de requerimiento servicios con cantidades por año"></i></div>
+                                <div class="table-responsive tabla-principal">
+                                    <table class="table table-hover" id="tbl-gf1-servicios">
+                                        <thead></thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            @*<div class="col-4"><img class="img-fluid" src="./images/dashboard.jpg"></div>*@
+                            <div class="col-5 mostrar"><div id="pie-gn1-servicios" style="height: 500px;"></div></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-7 mostrar d-none">
+                                <div class="h5">Resumen por años&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Tabla resumen (bienes y servicios) con cantidades por año"></i></div>
+                                <div class="table-responsive tabla-principal">
+                                    <table class="table table-hover" id="tbl-gf1-resumen">
+                                        <thead></thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            @*<div class="col-4"><img class="img-fluid" src="./images/dashboard.jpg"></div>*@
+                            <div class="col-5 mostrar"><div id="piechartGN1" style="height: 500px;"></div></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12" id="seccion-cant-estimada">
+                                @*<div class="h5">Resumen cantidad estimada&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Texto de ayuda"></i></div>
+                                <div class="table-responsive tabla-principal">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>*@
+                            </div>
+                            @*<div class="col-5"><img class="img-fluid" src="./images/dashboard.jpg"></div>*@
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-3">
-            <div class="form-group">
-                <label for="mls-palabras">Años<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione una o varias palabras claves"></i></label>
-                <div class="input-group custom-control custom-checkbox custom-checkbox d-inline-block pl-3 mb-2">
-                    <input class="custom-control-input" type="checkbox" id="chk-todos-anios">
-                    <label class="custom-control-label" for="chk-todos-anios">&nbsp;Seleccionar todos</label>
-                </div>
-                <div class="input-group">
-                    @*<div class="input-group-prepend"><span class="input-group-text" id="inputGroup9"><i class="fas fa-landmark"></i></span></div>*@
-                    <div class="form-control" style="height:160px; overflow-y: auto;" id="lista-anios">
-                    </div>
-                </div>
-            </div>
-        </div>  
-        <div class="col-3">
-            <div class="form-group">
-                <label for="mls-palabras">Palabras claves cantidad<span class="text-danger font-weight-bold">&nbsp;</span><i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Seleccione una o varias palabras claves cantidad"></i></label>
-                <div class="input-group custom-control custom-checkbox custom-checkbox d-inline-block pl-3 mb-2">
-                    <input class="custom-control-input" type="checkbox" id="chk-todos-palabras-cantidad">
-                    <label class="custom-control-label" for="chk-todos-palabras-cantidad">&nbsp;Seleccionar todos</label>
-                </div>
-                <div class="input-group">
-                    @*<div class="input-group-prepend"><span class="input-group-text" id="inputGroup9"><i class="fas fa-landmark"></i></span></div>*@
-                    <div class="form-control" style="height:160px; overflow-y: auto;" id="lista-palabras-cantidad">
-                    </div>
-                </div>
-            </div>
-        </div>      
     </div>
-    <div class="row d-none" id="seccion-btn">
-        <div class="col-4">
-            <div class="form-group">
-                <div class="input-group">
-                    <a class="btn btn-primary w-100 inhabilitar" href="javascript:void(0)" id="btn-exportar">Exportar</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="form-group">
-                <div class="input-group">
-                    <a class="btn btn-primary w-100 inhabilitar" href="javascript:void(0)" id="btn-guardar">Guardar resultado</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="form-group">
-                <div class="input-group">
-                    <a class="btn btn-primary w-100 inhabilitar" href="javascript:void(0)" id="btn-nuevo">Nueva búsqueda</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 alert-add"></div>
-    </div>
-    <div class="row mt-2 mb-2">
-        <div class="col-12">
-            <span id="preload"></span>
-        </div>
-    </div> 
-    @*<div class="container mt-2">
-        <div class="row">
-            <table id="tbl-busqueda" class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>ENTIDAD</th>
-                        <th>RUC ENTIDAD</th>
-                        <th>ORDEN</th>
-                        <th>DESCRIPCIÓN ORDEN</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </div>*@
-
-    @*<div class="container mt-2">
-        <div class="row">
-            <table id="tbl-grafico-n1" class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>HALLAZGO</th>
-                        <th>TIPO REQUERIMIENTO</th>
-                        <th>CANTIDAD</th>
-                        <th>AÑO</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </div>*@
-
-    <div class="container" mt-2>
-        <div class="row">
-            <div class="col-6 mostrar d-none">
-                <h4 class="text-center mb-3">RESULTADO BIENES POR AÑOS</h4>
-                <table id="tbl-gf1-bienes" class="table table-hover">
-                    <thead></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-            <div class="col-6 mostrar d-none">
-                <div id="pie-gn1-bienes" style="height: 600px;"></div>
-            </div>
-            <div class="col-6 mostrar d-none">
-                <h4 class="text-center mb-3">RESULTADO SERVICIOS POR AÑOS</h4>
-                <table id="tbl-gf1-servicios" class="table table-hover">
-                    <thead></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-            <div class="col-6 mostrar d-none">
-                <div id="pie-gn1-servicios" style="height: 600px;"></div>
-            </div>
-            <div class="col-6 mostrar d-none">
-                <h4 class="text-center mb-3">RESUMEN POR AÑOS</h4>
-                <table id="tbl-gf1-resumen" class="table table-hover">
-                    <thead></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-            <div class="col-6 mostrar d-none">
-                <div id="piechartGN1" style="height: 600px;"></div>
-            </div>
-        </div>
-        <div class="row" id="seccion-cant-estimada">
-            @*<div class="col-12 mostrar d-none">
-                <h4 class="text-center mb-3">RESUMEN CANTIDAD ESTIMADA</h4>
-                <table id="tbl-gf3-resumen" class="table table-hover">
-                    <thead></thead>
-                    <tbody></tbody>
-                </table>
-            </div>*@
-        </div>
-    </div>
-    
-
 </div>

@@ -1,0 +1,77 @@
+13/06/2021 18:54:45: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 18:54:45: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 18:54:45: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 18:54:45: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 18:54:45: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 18:54:45: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 18:54:45: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 18:54:45: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 18:54:45: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 18:54:45: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 18:54:45: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ResultadoBE] ListaResultado(Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+13/06/2021 22:50:23: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1
+13/06/2021 22:50:23: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1
+13/06/2021 22:50:23: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1
+13/06/2021 22:50:23: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1
+13/06/2021 22:50:23: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1
+13/06/2021 22:50:23: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1
+13/06/2021 22:50:23: [Método: Boolean MoveNext(), Línea: 0] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1
+13/06/2021 22:50:23: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1
+13/06/2021 22:50:23: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1
+13/06/2021 22:50:23: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1
+13/06/2021 22:50:23: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-00936: falta una expresión
+ORA-06512: en "MIGI.PKG_MIGI_EXCEL", línea 106
+ORA-06512: en línea 1

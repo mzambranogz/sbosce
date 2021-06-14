@@ -100,13 +100,59 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\util.css" />
     <Content Include="Content\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\001.jpg" />
+    <Content Include="images\dashboard.jpg" />
+    <Content Include="images\favicon\android-chrome-192x192.png" />
+    <Content Include="images\favicon\android-chrome-256x256.png" />
+    <Content Include="images\favicon\android-icon-144x144.png" />
+    <Content Include="images\favicon\android-icon-192x192.png" />
+    <Content Include="images\favicon\android-icon-36x36.png" />
+    <Content Include="images\favicon\android-icon-48x48.png" />
+    <Content Include="images\favicon\android-icon-72x72.png" />
+    <Content Include="images\favicon\android-icon-96x96.png" />
+    <Content Include="images\favicon\apple-icon-114x114.png" />
+    <Content Include="images\favicon\apple-icon-120x120.png" />
+    <Content Include="images\favicon\apple-icon-144x144.png" />
+    <Content Include="images\favicon\apple-icon-152x152.png" />
+    <Content Include="images\favicon\apple-icon-180x180.png" />
+    <Content Include="images\favicon\apple-icon-57x57 - copia.png" />
+    <Content Include="images\favicon\apple-icon-57x57.png" />
+    <Content Include="images\favicon\apple-icon-60x60.png" />
+    <Content Include="images\favicon\apple-icon-72x72.png" />
+    <Content Include="images\favicon\apple-icon-76x76.png" />
+    <Content Include="images\favicon\apple-icon-precomposed.png" />
+    <Content Include="images\favicon\apple-icon.png" />
+    <Content Include="images\favicon\apple-touch-icon.png" />
+    <Content Include="images\favicon\browserconfig.xml" />
+    <Content Include="images\favicon\favicon-16x16.png" />
+    <Content Include="images\favicon\favicon-32x32.png" />
+    <Content Include="images\favicon\favicon-96x96.png" />
+    <Content Include="images\favicon\favicon.ico" />
+    <Content Include="images\favicon\ms-icon-144x144.png" />
+    <Content Include="images\favicon\ms-icon-150x150.png" />
+    <Content Include="images\favicon\ms-icon-310x310.png" />
+    <Content Include="images\favicon\ms-icon-70x70.png" />
+    <Content Include="images\favicon\mstile-150x150.png" />
+    <Content Include="images\favicon\safari-pinned-tab.svg" />
+    <Content Include="images\fondo_12_medidas.png" />
+    <Content Include="images\fondo_footer.png" />
+    <Content Include="images\formula.jpg" />
+    <Content Include="images\logo-gef-blanco.png" />
+    <Content Include="images\logo-minem-blanco.png" />
     <Content Include="images\logo-minem.jpg" />
+    <Content Include="images\logo-nama-blanco.png" />
+    <Content Include="images\logo-pnud-blanco.png" />
     <Content Include="images\logo_gef.jpg" />
+    <Content Include="images\logo_gef.png" />
+    <Content Include="images\logo_gef.svg" />
+    <Content Include="images\logo_mrv_new_negro.svg" />
     <Content Include="images\logo_pnud.jpg" />
+    <Content Include="images\logo_pnud.png" />
+    <Content Include="images\logo_pnud.svg" />
     <Content Include="images\password-level-47px.png" />
     <Content Include="Mailing\RecuperarClave.html" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -115,6 +161,9 @@
     <Content Include="App_Data\PlantillaReporte.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="images\favicon\manifest.json" />
+    <Content Include="images\favicon\site.webmanifest" />
+    <Content Include="images\favicon\_manifest.json" />
     <None Include="Properties\PublishProfiles\MIGI.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\migi_cambiarcontrasena.js" />
@@ -141,6 +190,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\plugins\alert.js" />
     <Content Include="Scripts\plugins\counter.js" />
+    <Content Include="Scripts\plugins\util.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -153,6 +203,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BusquedaController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\ExcelController.cs" />
     <Compile Include="Controllers\MantenimientoController.cs" />
     <Compile Include="Controllers\ResultadoController.cs" />
@@ -191,6 +242,9 @@
     <Content Include="Views\Resultado\VerResultado.cshtml" />
     <Content Include="Views\Inicio\OlvidarContrasena.cshtml" />
     <Content Include="Views\Inicio\CambiarContrasena.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Error\Error404.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

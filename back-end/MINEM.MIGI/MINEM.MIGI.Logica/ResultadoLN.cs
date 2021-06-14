@@ -13,13 +13,13 @@ namespace MINEM.MIGI.Logica
     {
         ResultadoDA ResultadoDA = new ResultadoDA();
 
-        public List<ResultadoBE> ListaResultado()
+        public List<ResultadoBE> ListaResultado(int registros, int pagina, string columna, string orden)
         {
             List<ResultadoBE> lista = new List<ResultadoBE>();
             try
             {
                 cn.Open();
-                lista = ResultadoDA.ListaResultado(cn);
+                lista = ResultadoDA.ListaResultado(registros, pagina, columna, orden, cn);
             }
             finally
             {

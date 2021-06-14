@@ -9,6 +9,7 @@
     $('#btnConsultar').on('click', (e) => consultar());
     $('#btnConsultar')[0].click();
     $('#btnNuevo').on('click', (e) => nuevo());
+    $('#btnConfirmar').on('click', (e) => eliminar());
     $('#btnGuardar').on('click', (e) => guardar());
 });
 
@@ -123,9 +124,10 @@ var renderizar = (data, cantidadCeldas, pagina, registros) => {
             let colNro = `<td class="text-center" data-encabezado="Número de orden" scope="row" data-count="0">${(pagina - 1) * registros + (i + 1)}</td>`;
             let colCodigo = `<td class="text-center" data-encabezado="Código" scope="row"><span>${(`${formatoCodigo}${x.ID_ANIO}`).split('').reverse().join('').substring(0, formatoCodigo.length).split('').reverse().join('')}</span></td>`;
             let colNombres = `<td class="text-center" data-encabezado="Año">${x.ANIO}</td>`;
-            let btnEditar = `<a class="dropdown-item estilo-01 btnEditar" href="#" data-id="${x.ID_ANIO}" data-toggle="modal" data-target="#modal-mantenimiento"><i class="fas fa-edit mr-1"></i>Editar</a>`;
-            let btnCambiarEstado = `${[0, 1].includes(x.FLAG_ESTADO) ? "" : `<a href="#" data-id="${x.ID_ANIO}" data-estado="${x.FLAG_ESTADO}" class="dropdown-item estilo-01 btnCambiarEstado"><i class="fas fa-eraser mr-1"></i>Eliminar</a> `}`;
-            let colOpciones = `<td class="text-center" data-encabezado="Gestión"><div class="btn-group w-100"><a class="btn btn-sm bg-success text-white w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Gestionar</a><div class="dropdown-menu">${btnEditar}${btnCambiarEstado}</div></div></td>`;
+            let btnEditar = `<a class="dropdown-item btnEditar" href="javascript:void(0)" data-id="${x.ID_ANIO}" data-toggle="modal" data-target="#modal-mantenimiento"><i class="fas fa-edit mr-1"></i>Editar</a>`;
+            //let btnCambiarEstado = `${[0, 1].includes(x.FLAG_ESTADO) ? "" : `<a href="javascript:void(0)" data-id="${x.ID_ANIO}" data-estado="${x.FLAG_ESTADO}" class="dropdown-item btnCambiarEstado"><i class="fas fa-eraser mr-1"></i>Eliminar</a> `}`;
+            let btnCambiarEstado = `${[0, 1].includes(x.FLAG_ESTADO) ? "" : `<a class="dropdown-item btnCambiarEstado" href="#" data-id="${x.ID_ANIO}" data-estado="${x.FLAG_ESTADO}"><i class="fas fa-eraser mr-1"></i>Eliminar</a>`}`;
+            let colOpciones = `<td class="text-center text-xs-right" data-encabezado="Acciones"><div class="btn-group"><div class="acciones fase-01 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-h"></i></div><div class="dropdown-menu dropdown-menu-right">${btnEditar}${btnCambiarEstado}</div></div></div></td>`;
             let fila = `<tr>${colNro}${colCodigo}${colNombres}${colOpciones}</tr>`;
             return fila;
         }).join('');
@@ -135,10 +137,13 @@ var renderizar = (data, cantidadCeldas, pagina, registros) => {
 };
 
 var cambiarEstado = (element) => {
+    idEliminar = $(element).attr('data-id');
+    $("#modal-confirmacion").modal('show');    
+};
 
-    let id = $(element).attr('data-id');
-    if (!confirm(`¿Está seguro que desea eliminar este registro?`)) return;
-    let data = { ID_ANIO: id, UPD_USUARIO: idUsuarioLogin };
+var eliminar = () => {
+    if (idEliminar == 0) return;
+    let data = { ID_ANIO: idEliminar, UPD_USUARIO: idUsuarioLogin };
     let init = { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) };
     let url = `${baseUrl}Mantenimiento/EliminarAnio`;
 
@@ -146,6 +151,7 @@ var cambiarEstado = (element) => {
     .then(r => r.json())
     .then(j => {
         if (j.success) {
+            $("#modal-confirmacion").modal('hide');
             $('#btnConsultar')[0].click();
         } else {
             alert('Ocurrió un problema al momento de eliminar el registro')
@@ -155,7 +161,7 @@ var cambiarEstado = (element) => {
         console.log('Hubo un problema con la petición Fetch:' + error.message);
         location.href = `${baseUrl}Inicio/Index`
     })
-};
+}
 
 var nuevo = () => {
     $('#frm').show();
@@ -167,7 +173,7 @@ var nuevo = () => {
     $('.alert-add').html('');
     $('#btnGuardar').show();
     $('#btnGuardar').next().html('Cancelar');
-    $('#exampleModalLabel').html('REGISTRAR AÑO');
+    $('#exampleModalLabel').html('Registro de nuevo año <br><small class="text-muted">Complete los siguientes campos para registrar un nuevo año</small><small class="text-danger d-block"><strong>(*)&nbsp;</strong>Campos obligatorios</small>');
     limpiarDatos();
 }
 
@@ -188,7 +194,7 @@ var consultarEntidad = (element) => {
     $('.alert-add').html('');
     $('#btnGuardar').show();
     $('#btnGuardar').next().html('Cancelar');
-    $('#exampleModalLabel').html('ACTUALIZAR AÑO');
+    $('#exampleModalLabel').html('Actualización de año <br><small class="text-muted">Puede cambiar los datos mostrados para actualizar un año</small><small class="text-danger d-block"><strong>(*)&nbsp;</strong>Campos obligatorios</small>');
     limpiarDatos();
     let id = $(element).attr('data-id');
 
