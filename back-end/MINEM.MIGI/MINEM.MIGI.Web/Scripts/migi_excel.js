@@ -1,5 +1,7 @@
 ﻿
 $(document).ready(() => {
+    $('.b-activo').removeClass('nav-active')
+    $('.v-cargamasiva').addClass('nav-active')
     $('#btnExcel').on('click', EnviarExcel)
     cargarExcel()
 })
@@ -137,6 +139,8 @@ var validarInput = () => {
         $.each(arr, function (ind, elem) { error += '<li><small class="mb-0">' + elem + '</li></small>'; });
         error = `<ul>${error}</ul>`;
         $('.alert-add').alertError({ type: 'danger', title: 'ERROR', message: error });
+        $('#txt-excel').val('')
+        $('#excel').val('')
         return false
     }
     return true
@@ -155,8 +159,15 @@ $("#form-excel").submit(function () {
                     $('#excel').val('');
                     $('#anio').val(0);
                     $('#mes').val(0)
+                    $('.alert-add').alertSuccess({ type: 'success', title: 'Bien hecho', message: r.mensaje });
+                    setTimeout(() => {
+                        $('.alert-add').html('')
+                    }, 4000)
+                } else {
+                    $('.alert-add').alertError({ type: 'danger', title: 'ERROR', message: r.mensaje });
                 }
-                alert(r.mensaje)
+                $('#txt-excel').val('')
+                $('#excel').val('')
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 //alert(errorThrown);

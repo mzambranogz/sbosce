@@ -18,3 +18,8 @@ D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\bin\Debug\MINEM.MI
 D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\obj\Debug\MINEM.MIGI.Entidad.csprojResolveAssemblyReference.cache
 D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\obj\Debug\MINEM.MIGI.Entidad.dll
 D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\obj\Debug\MINEM.MIGI.Entidad.pdb
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\bin\Debug\MINEM.MIGI.Entidad.dll
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\bin\Debug\MINEM.MIGI.Entidad.pdb
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\obj\Debug\MINEM.MIGI.Entidad.csprojResolveAssemblyReference.cache
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\obj\Debug\MINEM.MIGI.Entidad.dll
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\obj\Debug\MINEM.MIGI.Entidad.pdb

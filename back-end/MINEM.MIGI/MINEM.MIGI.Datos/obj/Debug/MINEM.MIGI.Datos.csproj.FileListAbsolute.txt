@@ -58,3 +58,15 @@ D:\ESCRITORIO\MIGI FORMATO NUEVO\back-end\MINEM.MIGI\MINEM.MIGI.Datos\bin\Debug\
 D:\ESCRITORIO\MIGI FORMATO NUEVO\back-end\MINEM.MIGI\MINEM.MIGI.Datos\obj\Debug\MINEM.MIGI.Datos.csprojResolveAssemblyReference.cache
 D:\ESCRITORIO\MIGI FORMATO NUEVO\back-end\MINEM.MIGI\MINEM.MIGI.Datos\obj\Debug\MINEM.MIGI.Datos.dll
 D:\ESCRITORIO\MIGI FORMATO NUEVO\back-end\MINEM.MIGI\MINEM.MIGI.Datos\obj\Debug\MINEM.MIGI.Datos.pdb
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\bin\Debug\MINEM.MIGI.Datos.dll
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\bin\Debug\MINEM.MIGI.Datos.pdb
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\bin\Debug\Dapper.dll
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\bin\Debug\MINEM.MIGI.Entidad.dll
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\bin\Debug\MINEM.MIGI.Util.dll
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\bin\Debug\MINEM.MIGI.Entidad.pdb
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\bin\Debug\MINEM.MIGI.Util.pdb
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\bin\Debug\Dapper.xml
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\obj\Debug\MINEM.MIGI.Datos.csprojResolveAssemblyReference.cache
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\obj\Debug\MINEM.MIGI.Datos.dll
+C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Datos\obj\Debug\MINEM.MIGI.Datos.pdb

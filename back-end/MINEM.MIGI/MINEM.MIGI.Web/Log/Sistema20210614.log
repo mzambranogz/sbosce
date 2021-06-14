@@ -1,0 +1,2068 @@
+14/06/2021 09:51:02: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 09:51:02: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 09:51:02: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 09:51:02: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 09:51:02: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 09:51:02: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 09:51:02: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 09:51:02: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 09:51:02: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 09:51:02: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 09:51:02: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ResultadoBE] ListaResultado(Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 29] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:16:29: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:18:31: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ResultadoBE] ListaResultado(Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 29] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:21:13: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:23:50: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:25:12: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:26:12: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:32:15: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:33:26: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:34:43: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:25: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:35:52: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:13: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:36:29: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:37:29: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:44:52: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:46:23: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:47:26: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:48:19: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:02: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:51:49: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:30: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:54:51: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:26: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:36: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 14:58:42: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:24: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:00:27: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ResultadoBE] ListaResultado(Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 29] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:05:58: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ResultadoBE] ListaResultado(Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 29] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_RESULTADO'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:01: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:06: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:06:08: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:11:50: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:12:24: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:17: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:13:50: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:46: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:14:48: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:15:05: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:17:51: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:18:25: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:19:48: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:12: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:21: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:24: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:25: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: Void HandleErrorHelper(Int32, Oracle.DataAccess.Client.OracleConnection, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, System.String, Boolean, Int32, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: Void HandleError(Int32, Oracle.DataAccess.Client.OracleConnection, System.String, IntPtr, Oracle.DataAccess.Client.OpoSqlValCtx*, System.Object, Boolean, Oracle.DataAccess.Client.OracleLogicalTransaction), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: Oracle.DataAccess.Client.OracleDataReader ExecuteReader(Boolean, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: System.Data.Common.DbDataReader ExecuteDbDataReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: System.Data.IDataReader System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: System.Data.IDataReader ExecuteReaderWithFlagsFallback(System.Data.IDbCommand, Boolean, System.Data.CommandBehavior), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: Boolean MoveNext(), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: Void .ctor(System.Collections.Generic.IEnumerable`1[T]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: System.Collections.Generic.List`1[TSource] ToList[TSource](System.Collections.Generic.IEnumerable`1[TSource]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: System.Collections.Generic.IEnumerable`1[T] Query[T](System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, Boolean, System.Nullable`1[System.Int32], System.Nullable`1[System.Data.CommandType]), Línea: 0] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored
+14/06/2021 15:20:37: [Método: System.Collections.Generic.List`1[MINEM.MIGI.Entidad.ExcelBE] ListarExcels(Int32, Int32, Int32, System.String, System.String, Oracle.DataAccess.Client.OracleConnection), Línea: 121] - ORA-06550: línea 1, columna 7:
+PLS-00306: número o tipos de argumentos erróneos al llamar a 'USP_SEL_LISTA_EXCEL'
+ORA-06550: línea 1, columna 7:
+PL/SQL: Statement ignored

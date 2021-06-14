@@ -1,5 +1,7 @@
 ﻿var idEliminar = 0
 $(document).ready(() => {
+    $('.b-activo').removeClass('nav-active')
+    $('.v-resultado').addClass('nav-active')
     cargarExcel()
     $('#btnConfirmar').on('click', (e) => eliminar());
 })

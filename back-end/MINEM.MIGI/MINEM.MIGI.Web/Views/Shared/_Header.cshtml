@@ -21,19 +21,16 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link nav-active text-dark px-2" href="@Url.Action("Index", "Inicio")"><i class="fas fa-search pr-1"></i>Búsqueda principal</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark px-2" href="@Url.Action("Index", "Mantenimiento")"><i class="fas fa-table pr-1"></i>Mantenimientos</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark px-2" href="#"><i class="fas fa-file-excel pr-1"></i>Carga masiva</a></li>
-
-                        @*<li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cargar masiva</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="nav-item"><a class="nav-link b-activo v-busqueda nav-active text-dark px-2" href="@Url.Action("Index", "Inicio")"><i class="fas fa-search pr-1"></i>Búsqueda principal</a></li>
+                        <li class="nav-item"><a class="nav-link b-activo v-mantenimiento text-dark px-2" href="@Url.Action("Index", "Mantenimiento")"><i class="fas fa-table pr-1"></i>Mantenimientos</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link b-activo v-cargamasiva text-dark px-2 dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-file-excel pr-1"></i>Carga masiva</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @Html.ActionLink("Excel menor a 8 UIT", "Index", "Excel", null, new { target = "", @class = "dropdown-item", role = "button" })
                                 @Html.ActionLink("Excel mayor o igual a 8 UIT", "ExcelM8U", "Excel", null, new { target = "", @class = "dropdown-item", role = "button" })
-                            </ul>
-                        </li>*@
-
-                        <li class="nav-item"><a class="nav-link text-dark px-2" href="@Url.Action("Index", "Resultado")"><i class="fas fa-flag-checkered pr-1"></i>Resultados</a></li>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link b-activo v-resultado text-dark px-2" href="@Url.Action("Index", "Resultado")"><i class="fas fa-flag-checkered pr-1"></i>Resultados</a></li>
                     </ul>
                     <div class="btn-group w-sm-100">
                         <a class="btn btn-outline-success border-0 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0"><i class="fas fa-user pr-1"></i>@usuario.NOMBRES @usuario.APELLIDOS</a>

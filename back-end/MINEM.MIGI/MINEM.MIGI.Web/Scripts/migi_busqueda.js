@@ -1,6 +1,8 @@
 ﻿var arrAnioDescripcion = [], equipo_g
 var arrGN1_TablaBienes = [], arrGN1_TablaServicios = [], arrGN2 = [], arrGN3 = []
 $(document).ready(() => {
+    $('.b-activo').removeClass('nav-active')
+    $('.v-busqueda').addClass('nav-active')
     $('#filtrar-datos').on('click', (e) => filtrarInformacion());
     $('#cbo-equipo').on('change', (e) => filtrarPalabras());
     $('#tipo-busqueda').on('change', (e) => cambiarTipoBusqueda())

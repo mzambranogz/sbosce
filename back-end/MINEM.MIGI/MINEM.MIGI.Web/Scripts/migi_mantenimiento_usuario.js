@@ -1,5 +1,7 @@
 ﻿
 $(document).ready(() => {
+    $('.b-activo').removeClass('nav-active')
+    $('.v-mantenimiento').addClass('nav-active')
     $('#ir-pagina').on('change', (e) => cambiarPagina());
     $('#catidad-rgistros').on('change', (e) => cambiarPagina());
     $('#btnConsultar').on('click', (e) => consultar());
