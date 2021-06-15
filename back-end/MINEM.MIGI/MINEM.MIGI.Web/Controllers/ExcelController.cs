@@ -22,9 +22,12 @@ namespace MINEM.MIGI.Web.Controllers
     {
         // GET: Excel
         ExcelLN ExcelLN = new ExcelLN();
+        AnioLN AnioLN = new AnioLN();
         BusquedaLN BusquedaLN = new BusquedaLN();
         public ActionResult Index()
         {
+            List<AnioBE> lista = AnioLN.ListarAnio();
+            ViewData["listaAnio"] = lista;
             return View();
         }
 
@@ -95,12 +98,12 @@ namespace MINEM.MIGI.Web.Controllers
                         return esNuevo;
                     }
 
-                    if (sheetIndex > 1)
-                    {
-                        esNuevo = false;
-                        msg = "El archivo excel solo debe contener una hoja con el nombre CONOSCE";
-                        return esNuevo;
-                    }
+                    //if (sheetIndex > 1)
+                    //{
+                    //    esNuevo = false;
+                    //    msg = "El archivo excel solo debe contener una hoja con el nombre CONOSCE";
+                    //    return esNuevo;
+                    //}
 
                     var stringTable = workbookPart.GetPartsOfType<SharedStringTablePart>().FirstOrDefault();
                     OpenXmlReader reader = OpenXmlReader.Create(worksheetPart);

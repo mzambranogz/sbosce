@@ -1,4 +1,5 @@
 ﻿@using MINEM.MIGI.Web.Models
+@using MINEM.MIGI.Entidad;
 @model ExcelViewModel
 
 @{
@@ -20,7 +21,7 @@
     lstItemMes.Add(new SelectListItem { Text = "Diciembre", Value = "12", Selected = false });
 
     List<SelectListItem> lstItemAnio = new List<SelectListItem>();
-    lstItemAnio.Add(new SelectListItem { Text = "Seleccione un anio", Value = "0", Selected = true });
+    /*lstItemAnio.Add(new SelectListItem { Text = "Seleccione un anio", Value = "0", Selected = true });
     lstItemAnio.Add(new SelectListItem { Text = "2015", Value = "2015", Selected = false });
     lstItemAnio.Add(new SelectListItem { Text = "2016", Value = "2016", Selected = false });
     lstItemAnio.Add(new SelectListItem { Text = "2017", Value = "2017", Selected = false });
@@ -32,7 +33,13 @@
     lstItemAnio.Add(new SelectListItem { Text = "2023", Value = "2023", Selected = false });
     lstItemAnio.Add(new SelectListItem { Text = "2024", Value = "2024", Selected = false });
     lstItemAnio.Add(new SelectListItem { Text = "2025", Value = "2025", Selected = false });
-    lstItemAnio.Add(new SelectListItem { Text = "2026", Value = "2026", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2026", Value = "2026", Selected = false });*/
+
+    List<AnioBE> lista = (List<AnioBE>)ViewData["listaAnio"] == null ? new List<AnioBE>() : (List<AnioBE>)ViewData["listaAnio"];
+    foreach (var item in lista)
+    {
+        lstItemAnio.Add(new SelectListItem { Text = item.ANIO, Value = item.ANIO, Selected = false });
+    }
 }
 
 @section scripts_footer {
@@ -109,7 +116,7 @@
     <div class="row m-0">
         <div class="col-12">
             <div class="container py-4">
-                <div class="h5">Resultados&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Tabla con los resultados almacenados"></i></div>
+                <div class="h5">Resultados&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Tabla con los excel cargados"></i></div>
                 <div class="table-responsive tabla-principal">
                     <table class="table table-hover" id="tbl">
                         <thead>
