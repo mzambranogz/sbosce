@@ -296,6 +296,7 @@ var filtrarInformacion = () => {
     $("#preload").html("<i Class='fas fa-spinner fa-spin px-1'></i> Espere unos minutos por favor, se está realizando la búsqueda...")
     $('.mostrar').addClass('d-none')
     $('#seccion-cant-estimada').html('')    
+    $('#seccion-msj').html('')
     fetch(url, init)
     .then(r => r.json())
     .then(estructurarFiltro)
