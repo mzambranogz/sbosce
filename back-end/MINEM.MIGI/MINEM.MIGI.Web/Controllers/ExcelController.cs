@@ -231,7 +231,11 @@ namespace MINEM.MIGI.Web.Controllers
                             msg = "No se obtuvieron los datos de la hoja excel, por favor verificar si la hoja tiene los datos a cargar";
                         }
                         else
-                            ExcelLN.GuardarDatosExcel(dt);
+                        {
+                            esNuevo = ExcelLN.GuardarDatosExcel(dt);
+                            if (!esNuevo) msg = "Ocurrió un problema al guardar los datos";
+                        }
+                            
                     }
                     //if (esNuevo)
                     //    ExcelLN.GuardarDatosExcel(dt);
@@ -508,7 +512,10 @@ namespace MINEM.MIGI.Web.Controllers
                             msg = "No se obtuvieron los datos de la hoja excel, por favor verificar si la hoja tiene los datos a cargar";
                         }
                         else
-                            ExcelLN.GuardarDatosExcelM8U(dt);
+                        {
+                            esNuevo = ExcelLN.GuardarDatosExcelM8U(dt);
+                            if (!esNuevo) msg = "Ocurrió un problema al guardar los datos";
+                        }                            
                     }
                         
                 }

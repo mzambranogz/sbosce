@@ -2,6 +2,7 @@
 using MINEM.MIGI.Entidad;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.IO;
 using System.Linq;
@@ -14,12 +15,13 @@ namespace MINEM.MIGI.Logica
     public class ExcelLN : BaseLN
     {
         ExcelDA ExcelDA = new ExcelDA();
+        string Esquema = ConfigurationManager.AppSettings["userBD"];
         public bool GuardarDatosExcel(DataTable dt)
         {
             bool esValido = false;
             try
             {
-                esValido = ExcelDA.GuardarMasivo(dt, "T_GENM_MIGI", cn);
+                esValido = ExcelDA.GuardarMasivo(dt, Esquema + ".T_GENM_MIGI", cn);
             }
             finally { if (cn.State == ConnectionState.Open) cn.Close(); }
 
@@ -31,7 +33,7 @@ namespace MINEM.MIGI.Logica
             bool esValido = false;
             try
             {
-                esValido = ExcelDA.GuardarMasivo(dt, "T_GENM_MIGI_M8U", cn);
+                esValido = ExcelDA.GuardarMasivo(dt, Esquema + ".T_GENM_MIGI_M8U", cn);
             }
             finally { if (cn.State == ConnectionState.Open) cn.Close(); }
 
