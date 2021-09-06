@@ -14,39 +14,68 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/migi_login.js")"></script>
 }
 
-<div class="content-body">
-    <main class="form-signin">
-        @*@if (TempData["Mensaje"] != null)
-        {
-            <div class="text-success summary-form">
-                <ul>
-                    <li>@TempData["Mensaje"].ToString()</li>
-                </ul>
-            </div>
-        }*@
-
-        @Html.ValidationSummary(true, "", new { @class = "text-danger summary-form " })
-        @Html.ValidationMessage("CustomError")
-        @using (Html.BeginForm("InicioSesion", "Inicio", FormMethod.Post, new { id = "form-login", role = "form" }))
-        {
-            @Html.AntiForgeryToken()
-            <h1 class="h3 mb-3 fw-normal">Inicia sesión</h1>
-
-            @*<label for="" class="visually-hidden">Correo electrónico</label>*@
-            @Html.TextBoxFor(m => m.CORREO, new { placeholder = "Correo electrónico", @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.CORREO, "", new { @Class = "text-danger small" })
-            @*<label for="inputPassword" class="visually-hidden">Contraseña</label>*@
-            @Html.PasswordFor(m => m.CONTRASENA, new { placeholder = "Contraseña", @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.CONTRASENA, "", new { @Class = "text-danger" })
-
-            <button id="btnIniciar" class="g-recaptcha w-100 btn btn-lg btn-primary mt-2" data-sitekey="@ViewData["keySiteCaptcha"]" data-action='submit'>Acceder</button>
-        } 
+<div class="container-fluid banner d-flex flex-row justify-content-center align-items-center" id="carousel">
+    <div class="banners-degradado">
+        <div class="banner-1 banner-mostrado" data-titulo="" data-descripcion=""></div>
+    </div>
+    <div class="flecha d-none" id="enlaceAspectos"><i class="fas fa-angle-double-right fa-2x text-white btn-slider-bottom"></i></div>
+    <div class="container my-5">
         <div class="row">
-            <div class="col-12">
-                <a class="" id="btn-olvidar" href="@Url.Action("OlvidarContrasena","Inicio")">¿Olvidó su contraseña?</a>
+            <div class="col-md-2 d-flex flex-row justify-content-center align-items-center wrap-slider-left"><i class="fas fa-chevron-left fa-3x text-white btn-slider-left d-none"></i></div>
+            <div class="col-md-8 col-sm-12 text-center">
+                <div class="row">
+                    <div class="col-12 d-flex flex-row justify-content-center align-items-end">
+                        <div class="slider-pagging d-none"></div>
+                    </div>
+                </div>
             </div>
-        </div>       
-    </main>
+            <div class="col-md-2 d-flex flex-row justify-content-center align-items-center wrap-slider-right"><i class="fas fa-chevron-right fa-3x text-white btn-slider-right d-none"></i></div>
+        </div>
+        <div class="row dentro-banner rounded">
+            <div class="col-md-6 col-lg-4 p-4 bg-light rounded-right">
+                <div class="h4">Ingresar <br><small class="text-muted">Accede con tu cuenta</small></div>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger summary-form " })
+                @Html.ValidationMessage("CustomError")
+                @using (Html.BeginForm("InicioSesion", "Inicio", FormMethod.Post, new { id = "frmLogin", role = "form", @class = "pt-4" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <label for="txt-user">Correo electrónico</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text" id="inputGroup1"><i class="fas fa-envelope"></i></span></div>
+                            @Html.TextBoxFor(m => m.CORREO, new { placeholder = "Ingresar correo electrónico", @class = "form-control", maxlength = "50", title = "Ingrese una dirección de correo válida."})                            
+                        </div>
+                        @Html.ValidationMessageFor(m => m.CORREO, "", new { @Class = "text-danger small" })
+                    </div>
+                    <div class="form-group">
+                        <label for="txt-pswd">Contraseña</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text" id="inputGroup2"><i class="fas fa-key"></i></span></div>
+                            @Html.PasswordFor(m => m.CONTRASENA, new { placeholder = "Ingresar contraseña", @class = "form-control", maxlength = "30", title = "Ingrese su contraseña." })
+                            <div class="input-group-append">
+                                <label class="input-group-text cursor-pointer ver-clave"><i class="fas fa-eye mr-1"></i>Mostrar</label>
+                            </div>                            
+                        </div>
+                        @Html.ValidationMessageFor(m => m.CONTRASENA, "", new { @Class = "text-danger small" })
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="chk-recd">
+                            <label class="custom-control-label" for="chk-recd">Recordar email</label>
+                        </div>
+                    </div>
+                    <div id="seccion-msj"></div>
+                    <button id="btnIniciar" class="g-recaptcha w-100 btn btn-lg btn-primary" data-sitekey="@ViewData["keySiteCaptcha"]" data-action='submit'><i class="fas fa-sign-in-alt px-1"></i>Ingresar</button>
+                }
+
+                <p id="btn-olvidar" class="pt-4 mb-0 text-center"><a href="@Url.Action("OlvidarContrasena","Inicio")">¿Olvidó su contraseña?</a></p>
+            </div>
+            <div class="col-md-6 col-lg-8 p-4 d-none d-md-block">
+                <div class="display-4 text-white animated slideInLeft">Accede a nuestro <br><strong>Módulo informático de <br></strong><strong>carga, filtro, resumen <br></strong><strong>y gráficos de información</strong></div>
+                <p class="lead text-white mt-4 animated bounceInUp">Ingresa con tu&nbsp;<strong>correo electrónico&nbsp;</strong>y&nbsp;<strong>contraseña&nbsp; <br></strong>previamente registrados.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 

@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Error";
+}
+
+<div class="container-fluid banner d-flex flex-row justify-content-center align-items-center" id="carousel">
+    <div class="banners-degradado">
+        <div class="banner-1 banner-mostrado" data-titulo="" data-descripcion=""></div>
+    </div>
+    <div class="flecha d-none" id="enlaceAspectos"><i class="fas fa-angle-double-right fa-2x text-white btn-slider-bottom"></i></div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-2 d-flex flex-row justify-content-center align-items-center wrap-slider-left"><i class="fas fa-chevron-left fa-3x text-white btn-slider-left d-none"></i></div>
+            <div class="col-md-8 col-sm-12 text-center">
+                <div class="row">
+                    <div class="col-12 d-flex flex-row justify-content-center align-items-end">
+                        <div class="slider-pagging d-none"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 d-flex flex-row justify-content-center align-items-center wrap-slider-right"><i class="fas fa-chevron-right fa-3x text-white btn-slider-right d-none"></i></div>
+        </div>
+        <div class="row dentro-banner rounded">
+            <div class="col-md-6 col-lg-6 p-4 bg-light rounded-right">
+                <div class="h4">Ocurrió un problema comunciarse con el Administrador del sistema</div>
+            </div>
+            <div class="col-md-6 col-lg-6 p-4 d-none d-md-block">
+                <span class="text-white">Volver al </span><a class="text-white font-weight-bold" href="@Url.Action("Index","Inicio")">Inicio</a>
+            </div>
+        </div>
+    </div>
+</div>

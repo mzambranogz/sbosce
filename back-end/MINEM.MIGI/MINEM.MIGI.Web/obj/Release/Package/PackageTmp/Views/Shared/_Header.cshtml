@@ -3,11 +3,54 @@
     UsuarioBE usuario = Session["user"] == null ? null : (UsuarioBE)Session["user"];
 }
 
-<header>
+<div class="container-fluid menu-nav bg-sutil fixed-top d-print-none" id="cabecera">
+    <div class="container menu-main linea">
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar p-0">
+            <a class="navbar-brand mr-md-auto animated fadeIn mx-0" href="@Url.Action("Index","Inicio")"><img src="@Url.Content("~/images/logo_mrv_new_negro.svg")" height="36"></a>
+            <ul class="navbar-nav ml-md-auto">
+                <li class="nav-item align-self-center"><a class="nav-link animated fadeIn p-1" href="https://www.gob.pe/minem" target="_blank"><img src="@Url.Content("~/images/logo-minem.jpg")" height="40"></a></li>
+                <li class="nav-item align-self-center"><a class="nav-link animated fadeIn p-1" href="https://www.thegef.org/" target="_blank"><img src="@Url.Content("~/images/logo_gef.svg")" height="45"></a></li>
+                <li class="nav-item align-self-center"><a class="nav-link animated fadeIn p-1 mr-0" href="https://www.pe.undp.org/" target="_blank"><img src="@Url.Content("~/images/logo_pnud.svg")" height="51"></a></li>
+            </ul>
+        </header>
+    </div>
+    @if (usuario != null)
+    {
+        <div class="container menu-sub">
+            <nav class="navbar navbar-dark navbar-expand-lg p-0 py-1">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link b-activo v-busqueda nav-active text-dark px-2" href="@Url.Action("Index", "Inicio")"><i class="fas fa-search pr-1"></i>Búsqueda principal</a></li>
+                        <li class="nav-item"><a class="nav-link b-activo v-mantenimiento text-dark px-2" href="@Url.Action("Index", "Mantenimiento")"><i class="fas fa-table pr-1"></i>Mantenimientos</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link b-activo v-cargamasiva text-dark px-2 dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-file-excel pr-1"></i>Carga masiva</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @Html.ActionLink("Excel menor a 8 UIT", "Index", "Excel", null, new { target = "", @class = "dropdown-item", role = "button" })
+                                @Html.ActionLink("Excel mayor o igual a 8 UIT", "ExcelM8U", "Excel", null, new { target = "", @class = "dropdown-item", role = "button" })
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link b-activo v-resultado text-dark px-2" href="@Url.Action("Index", "Resultado")"><i class="fas fa-flag-checkered pr-1"></i>Resultados</a></li>
+                    </ul>
+                    <div class="btn-group w-sm-100">
+                        <a class="btn btn-outline-success border-0 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0"><i class="fas fa-user pr-1"></i>@usuario.NOMBRES @usuario.APELLIDOS</a>
+                        <div class="dropdown-menu dropdown-menu-right w-sm-100">
+                            <a class="dropdown-item" href="@Url.Action("Salir", "Inicio")"><i class="fas fa-sign-out-alt pr-1"></i>Salir del sistema</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    }    
+</div>
+<div class="flecha-top d-print-none"><i class="fas fa-angle-double-right fa-2x text-dark btn-slider-bottom"></i></div>    
+
+
+
+@*<header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="@Url.Action("Index", "Inicio")">
-                @*<img src="@Url.Content("~/images/logo.png")" alt="" width="30" height="24" class="d-inline-block align-text-top">*@
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,9 +68,6 @@
                         <li class="nav-item">
                             @Html.ActionLink("Bandeja principal", "Index", "Busqueda", null, new { target = "", @class = "nav-link active", role = "button" })
                         </li>
-                        @*<li class="nav-item">
-                            @Html.ActionLink("Cargar excel", "Index", "Excel", null, new { target = "", @class = "nav-link active", role = "button" })
-                        </li>*@
                         <li class="nav-item">
                             @Html.ActionLink("Mantenimiento", "Index", "Mantenimiento", null, new { target = "", @class = "nav-link active", role = "button" })
                         </li>
@@ -47,24 +87,17 @@
                         <li class="nav-item">
                             @Html.ActionLink("Salir", "Salir", "Inicio", null, new { target = "", @class = "nav-link active", role = "button" })
                         </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Excel menor a 8 UIT", "Index", "Excel", null, new { @class = "nav-link active", role = "button" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Excel mayor o igual a 8 UIT", "ExcelM8U", "Excel", null, new { @class = "nav-link active", role = "button" })
+                        </li>
                     }
                 </ul>
                 <div class="d-flex">
-                    @*@if (objUsuario == null)
-                    {
-                        @Html.ActionLink("Ingresar", "Index", "Login", null, new { target = "", @class = "btn btn-outline-secondary me-2", role = "button" })
-                        @Html.ActionLink("Registrar", "Registrar", "Usuario", null, new { target = "", @class = "btn btn-outline-secondary", role = "button" })
-                    }
-                    else
-                    {
-                        <div class="p-2 me-2 font-weight-bold"><span>@objUsuario.Nombres&nbsp;@objUsuario.Apellidos</span></div>
-                        @Html.ActionLink("Salir", "Logout", "Login", null, new { target = "", @class = "btn btn-outline-secondary", role = "button" })
-                    }*@
-
-                    @*@Html.ActionLink("Ingresar", "Index", "Login", null, new { target = "", @class = "btn btn-outline-secondary me-2", role = "button" })
-                    @Html.ActionLink("Registrar", "Registrar", "Usuario", null, new { target = "", @class = "btn btn-outline-secondary", role = "button" })*@
                 </div>
             </div>
         </div>
     </nav>
-</header>
+</header>*@

@@ -40,6 +40,7 @@ namespace MINEM.MIGI.Web.Controllers
         public JsonResult Leer(ExcelViewModel model)
         {
             bool esNuevo = true, continua = false, esValido = true;
+            int idExcel = 0;
             string msg = "";
             string filePath = string.Empty;
             if (model.excel != null)
@@ -53,26 +54,48 @@ namespace MINEM.MIGI.Web.Controllers
                 string extension = Path.GetExtension(model.excel.FileName);
                 model.excel.SaveAs(filePath);
             }
-            ////
-            esNuevo = LeerExcel(filePath, 0, 100000, model.anio, model.mes, 0, out msg, out continua);
-            if (esNuevo && continua) LeerExcel(filePath, 100000, 200000, model.anio, model.mes, 5, out msg, out continua);
-            if (esNuevo && continua) LeerExcel(filePath, 200000, 300000, model.anio, model.mes, 5, out msg, out continua);
-            if (esNuevo && continua) LeerExcel(filePath, 300000, 400000, model.anio, model.mes, 5, out msg, out continua);
-            if (esNuevo) msg = "Se proceso correctamente el excel";
 
-            if (esNuevo) esValido = ExcelLN.GuardarDatosArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ANIO = model.anio, MES = model.mes, ID_TIPO_EXCEL = 1, UPD_USUARIO = ObtenerSesion().ID_USUARIO });
-            if (!esValido) msg = "Ocurrió un problema al momento de guardar los datos del excel";
+            esValido = validarExcel(filePath, out msg);
+            if (esValido)
+            {
+                esValido = ExcelLN.VerificarArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ANIO = model.anio, MES = model.mes, ID_TIPO_EXCEL = 1 });
+                if (esValido)
+                {
+                    esValido = ExcelLN.GuardarDatosArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ANIO = model.anio, MES = model.mes, ID_TIPO_EXCEL = 1, UPD_USUARIO = ObtenerSesion().ID_USUARIO }, out idExcel);
+                    if (!esValido)
+                    {
+                        esNuevo = false;
+                        msg = "Ocurrió un problema al momento de guardar el archivo excel";
+                    }
+                    else
+                    {
+                        esNuevo = LeerExcel(idExcel, filePath, 0, 100000, model.anio, model.mes, 0, out msg, out continua);
+                        if (esNuevo && continua) LeerExcel(idExcel, filePath, 100000, 200000, model.anio, model.mes, 5, out msg, out continua);
+                        if (esNuevo && continua) LeerExcel(idExcel, filePath, 200000, 300000, model.anio, model.mes, 5, out msg, out continua);
+                        if (esNuevo && continua) LeerExcel(idExcel, filePath, 300000, 400000, model.anio, model.mes, 5, out msg, out continua);
+                        if (esNuevo) msg = "Se proceso correctamente el excel";
+                        else ExcelLN.EliminarArchivo(new ExcelBE { ID_EXCEL = idExcel });
+                        //if (esNuevo) esValido = ExcelLN.GuardarDatosArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ANIO = model.anio, MES = model.mes, ID_TIPO_EXCEL = 1, UPD_USUARIO = ObtenerSesion().ID_USUARIO });
+                        //if (!esValido) msg = "Ocurrió un problema al momento de guardar los datos del excel";
 
-
-            esNuevo = esNuevo && esValido ? true : !esValido ? false : !esNuevo ? false : true;
+                        //esNuevo = esNuevo && esValido ? true : !esValido ? false : !esNuevo ? false : true;
+                    }
+                }
+                else
+                {
+                    esNuevo = false;
+                    msg = "Ya ha sido cargado los datos de un archivo excel con el mismo mes y año";
+                }
+            }
+            else
+                esNuevo = false;
 
             return Json(new { success = esNuevo, mensaje = msg });
         }
 
-        private bool LeerExcel(string filePath, int inicio, int fin, string anio, string mes, int contador, out string msg, out bool continua)
+        private bool validarExcel(string filePath, out string msg)
         {
-            bool esNuevo = true;
-            continua = false;
+            bool esValido = true;
             msg = "";
             using (Stream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
@@ -80,7 +103,7 @@ namespace MINEM.MIGI.Web.Controllers
                 {
                     WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
                     WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
-                    //WorksheetPart worksheetPart = null;                    
+
                     int sheetIndex = 0;
                     bool encontrado = false;
                     foreach (WorksheetPart worksheetpartV in workbookPart.WorksheetParts)
@@ -93,10 +116,43 @@ namespace MINEM.MIGI.Web.Controllers
 
                     if (!encontrado)
                     {
-                        esNuevo = false;
+                        esValido = false;
                         msg = "La hoja de donde se obtendrán los datos debe llamarse CONOSCE y no se ha encontrado";
-                        return esNuevo;
+                        return esValido;
                     }
+                }
+            }
+            return esValido;
+        }
+
+        private bool LeerExcel(int idExcel, string filePath, int inicio, int fin, string anio, string mes, int contador, out string msg, out bool continua)
+        {
+            bool esNuevo = true;
+            continua = false;
+            msg = "";
+            using (Stream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            {
+                using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(stream, false))
+                {
+                    WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+                    WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
+               
+                    //int sheetIndex = 0;
+                    //bool encontrado = false;
+                    //foreach (WorksheetPart worksheetpartV in workbookPart.WorksheetParts)
+                    //{
+                    //    string sheetName = workbookPart.Workbook.Descendants<Sheet>().ElementAt(sheetIndex).Name;
+                    //    if (sheetName == "CONOSCE")
+                    //        encontrado = true;
+                    //    sheetIndex++;
+                    //}
+
+                    //if (!encontrado)
+                    //{
+                    //    esNuevo = false;
+                    //    msg = "La hoja de donde se obtendrán los datos debe llamarse CONOSCE y no se ha encontrado";
+                    //    return esNuevo;
+                    //}
 
                     //if (sheetIndex > 1)
                     //{
@@ -135,6 +191,7 @@ namespace MINEM.MIGI.Web.Controllers
                                 {
                                     var index = 0;
                                     DataRow row = dt.NewRow();
+                                    row["ID_EXCEL"] = Convert.ToString(idExcel);
                                     row["ANIO"] = anio;
                                     row["MES"] = mes;
                                     foreach (var cell in r.Descendants<Cell>())
@@ -246,6 +303,7 @@ namespace MINEM.MIGI.Web.Controllers
 
         private DataTable ArmarColumnas(DataTable dt)
         {
+            dt.Columns.Add("ID_EXCEL");
             dt.Columns.Add("ANIO");
             dt.Columns.Add("MES");
             dt.Columns.Add("ENTIDAD");
@@ -272,6 +330,7 @@ namespace MINEM.MIGI.Web.Controllers
         public JsonResult LeerExcelM8U(ExcelViewModel model)
         {
             bool esNuevo = true, continua = false, esValido = true;
+            int idExcel = 0;
             string msg = "";
             string filePath = string.Empty;
             if (model.excel != null)
@@ -285,26 +344,44 @@ namespace MINEM.MIGI.Web.Controllers
                 string extension = Path.GetExtension(model.excel.FileName);
                 model.excel.SaveAs(filePath);
             }
-            ////
-            esNuevo = LeerExcelM8U(filePath, 0, 50000, 0, out msg, out continua);
-            if (esNuevo && continua) LeerExcelM8U(filePath, 50000, 100000, 10, out msg, out continua);
-            if (esNuevo && continua) LeerExcelM8U(filePath, 100000, 150000, 10, out msg, out continua);
-            if (esNuevo && continua) LeerExcelM8U(filePath, 200000, 250000, 10, out msg, out continua);
-            if (esNuevo) msg = "Se proceso correctamente el excel";
 
-            if (esNuevo) esValido = ExcelLN.GuardarDatosArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ID_TIPO_EXCEL = 2, UPD_USUARIO = ObtenerSesion().ID_USUARIO });
-            if (!esValido) msg = "Ocurrió un problema al momento de guardar los datos del excel";
-
-
-            esNuevo = esNuevo && esValido ? true : !esValido ? false : !esNuevo ? false : true;
+            esValido = validarExcelM8U(filePath, out msg);
+            if (esValido)
+            {
+                esValido = ExcelLN.VerificarArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ANIO = "0", MES = "0", ID_TIPO_EXCEL = 2 });
+                if (esValido)
+                {
+                    esValido = ExcelLN.GuardarDatosArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ID_TIPO_EXCEL = 2, UPD_USUARIO = ObtenerSesion().ID_USUARIO }, out idExcel);
+                    if (!esValido)
+                    {
+                        esNuevo = false;
+                        msg = "Ocurrió un problema al momento de guardar el archivo excel";
+                    }
+                    else
+                    {
+                        esNuevo = LeerExcelM8U(idExcel, filePath, 0, 50000, 0, out msg, out continua);
+                        if (esNuevo && continua) LeerExcelM8U(idExcel, filePath, 50000, 100000, 10, out msg, out continua);
+                        if (esNuevo && continua) LeerExcelM8U(idExcel, filePath, 100000, 150000, 10, out msg, out continua);
+                        if (esNuevo && continua) LeerExcelM8U(idExcel, filePath, 200000, 250000, 10, out msg, out continua);
+                        if (esNuevo) msg = "Se proceso correctamente el excel";
+                        else ExcelLN.EliminarArchivo(new ExcelBE { ID_EXCEL = idExcel, ID_TIPO_EXCEL = 2 });
+                    }
+                }
+                else
+                {
+                    esNuevo = false;
+                    msg = "Ya ha sido cargado los datos de un archivo excel con este nombre.";
+                }
+            }
+            else
+                esNuevo = false;           
 
             return Json(new { success = esNuevo, mensaje = msg });
         }
 
-        private bool LeerExcelM8U(string filePath, int inicio, int fin, int contador, out string msg, out bool continua)
+        private bool validarExcelM8U(string filePath, out string msg)
         {
-            bool esNuevo = true;
-            continua = false;
+            bool esValido = true;
             msg = "";
             using (Stream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
@@ -312,7 +389,7 @@ namespace MINEM.MIGI.Web.Controllers
                 {
                     WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
                     WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
-                    //WorksheetPart worksheetPart = null;
+
                     int sheetIndex = 0;
                     bool encontrado = false;
                     foreach (WorksheetPart worksheetpartV in workbookPart.WorksheetParts)
@@ -325,17 +402,57 @@ namespace MINEM.MIGI.Web.Controllers
 
                     if (!encontrado)
                     {
-                        esNuevo = false;
+                        esValido = false;
                         msg = "La hoja de donde se obtendrán los datos debe llamarse CONOSCE y no se ha encontrado";
-                        return esNuevo;
+                        return esValido;
                     }
 
                     if (sheetIndex > 1)
                     {
-                        esNuevo = false;
+                        esValido = false;
                         msg = "El archivo excel solo debe contener una hoja con el nombre CONOSCE";
-                        return esNuevo;
+                        return esValido;
                     }
+                }
+            }
+            return esValido;
+        }
+
+        private bool LeerExcelM8U(int idExcel, string filePath, int inicio, int fin, int contador, out string msg, out bool continua)
+        {
+            bool esNuevo = true;
+            continua = false;
+            msg = "";
+            using (Stream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            {
+                using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(stream, false))
+                {
+                    WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+                    WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
+
+                    //int sheetIndex = 0;
+                    //bool encontrado = false;
+                    //foreach (WorksheetPart worksheetpartV in workbookPart.WorksheetParts)
+                    //{
+                    //    string sheetName = workbookPart.Workbook.Descendants<Sheet>().ElementAt(sheetIndex).Name;
+                    //    if (sheetName == "CONOSCE")
+                    //        encontrado = true;
+                    //    sheetIndex++;
+                    //}
+
+                    //if (!encontrado)
+                    //{
+                    //    esNuevo = false;
+                    //    msg = "La hoja de donde se obtendrán los datos debe llamarse CONOSCE y no se ha encontrado";
+                    //    return esNuevo;
+                    //}
+
+                    //if (sheetIndex > 1)
+                    //{
+                    //    esNuevo = false;
+                    //    msg = "El archivo excel solo debe contener una hoja con el nombre CONOSCE";
+                    //    return esNuevo;
+                    //}
 
                     var stringTable = workbookPart.GetPartsOfType<SharedStringTablePart>().FirstOrDefault();
                     OpenXmlReader reader = OpenXmlReader.Create(worksheetPart);
@@ -397,6 +514,7 @@ namespace MINEM.MIGI.Web.Controllers
                                 {
                                     var index = 1;
                                     DataRow row = dt.NewRow();
+                                    row["ID_EXCEL"] = Convert.ToString(idExcel);
                                     foreach (var cell in r.Descendants<Cell>())
                                     {
                                         while (!verificarCelda(cell.CellReference, index))
@@ -561,6 +679,7 @@ namespace MINEM.MIGI.Web.Controllers
 
         private DataTable ArmarColumnasExcelM8U(DataTable dt)
         {
+            dt.Columns.Add("ID_EXCEL");
             dt.Columns.Add("VERSION");
             dt.Columns.Add("RUC_ENTIDAD");
             dt.Columns.Add("ENTIDAD");
@@ -598,6 +717,13 @@ namespace MINEM.MIGI.Web.Controllers
             dt.Columns.Add("ITEM_CUBSO");
             dt.Columns.Add("ESTADO_ITEM");
             return dt;
+        }
+
+        public JsonResult EliminarExcel(ExcelBE excel) {
+            bool v = ExcelLN.EliminarArchivo(excel);
+            var jsonResult = Json(new { success = v }, JsonRequestBehavior.AllowGet);
+            jsonResult.MaxJsonLength = int.MaxValue;
+            return jsonResult;
         }
 
         public JsonResult ListarExcels(int tipoexcel, int registros, int pagina, string columna, string orden) {

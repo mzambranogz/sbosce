@@ -3,6 +3,7 @@ $(document).ready(() => {
     $('.b-activo').removeClass('nav-active')
     $('.v-cargamasiva').addClass('nav-active')
     $('#btnExcel').on('click', EnviarExcel)
+    $('#btnConfirmar').on('click', (e) => eliminar());
     cargarExcel()
 })
 
@@ -109,11 +110,22 @@ var cargarExcel = () => {
                 let colMes = `<td class="text-center" data-encabezado="Mes">${x.NOMBRE_MES}</td>`;
                 //let btnCambiarEstado = `<a class="dropdown-item estilo-01 btnCambiarEstado" href="javascript:void(0)" data-id="${x.ID_RESULTADO}" data-estado="${x.FLAG_ESTADO}"><i class="fas fa-edit mr-1"></i>Eliminar</a>`;
                 //let btnEditar = `<a class="dropdown-item estilo-01 btnEditar" href="${baseUrl}Resultado/VerResultado/${x.ID_RESULTADO}" data-id="${x.ID_RESULTADO}"><i class="fas fa-edit mr-1"></i>Ver resultado</a>`;
-                let fila = `<tr>${colNro}${colCodigo}${colNombres}${colAnio}${colMes}</tr>`;
+
+                let btnCambiarEstado = `<a class="dropdown-item estilo-01 btnCambiarEstado" href="javascript:void(0)" data-id="${x.ID_EXCEL}" data-estado="${x.FLAG_ESTADO}"><i class="fas fa-edit mr-1"></i>Eliminar</a>`;
+                let colOpciones = `<td class="text-center" data-encabezado="Gestión"><div class="btn-group w-100"><a class="btn btn-sm bg-success text-white w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Gestionar</a><div class="dropdown-menu">${btnCambiarEstado}</div></div></td>`;
+                let fila = `<tr>${colNro}${colCodigo}${colNombres}${colAnio}${colMes}${colOpciones}</tr>`;
                 return fila;
             }).join('');
 
             tabla.find('tbody').html(contenido)
+
+            tabla.find('.btnCambiarEstado').each(x => {
+                let elementButton = tabla.find('.btnCambiarEstado')[x];
+                $(elementButton).on('click', (e) => {
+                    e.preventDefault();
+                    cambiarEstado(e.currentTarget);
+                });
+            });
         } else {
             $('#viewPagination').hide(); $('#view-page-result').hide();
             $('.inicio-registros').text('No se encontraron resultados');
@@ -204,3 +216,28 @@ $("#form-excel").submit(function () {
     //});
     return false;
 })
+
+var cambiarEstado = (element) => {
+    idEliminar = $(element).attr('data-id');
+    $("#modal-confirmacion").modal('show');
+};
+
+var eliminar = () => {
+    if (idEliminar == 0) return;
+    let data = { ID_EXCEL: idEliminar, ID_TIPO_EXCEL: 1 };
+    let init = { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) };
+    let url = `${baseUrl}Excel/EliminarExcel`;
+    fetch(url, init)
+        .then(r => r.json())
+        .then(j => {
+            if (j.success) {
+                cargarExcel();
+                $("#modal-confirmacion").modal('hide');
+                $('.alert-add').alertSuccess({ type: 'success', title: 'Bien hecho', message: 'Se eliminó correctamente' });
+                setTimeout(() => {
+                    $('.alert-add').html('')
+                }, 4000)
+            } else 
+                $('.alert-add').alertError({ type: 'danger', title: 'ERROR', message: 'Ocurrió un problema al eliminar el archivo escel y sus registros' });
+        });
+}

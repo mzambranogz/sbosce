@@ -81,23 +81,65 @@ namespace MINEM.MIGI.Datos
             return esValido;
         }
 
-        public bool GuardarDatosArchivo(ExcelBE obj, OracleConnection db)
+        public bool VerificarArchivo(ExcelBE obj, OracleConnection db)
         {
+            bool seGuardo = false;
+            try
+            {
+                string sp = $"{Package.Excel}USP_SEL_VERIFICAR_EXCEL";
+                var p = new OracleDynamicParameters();
+                p.Add("PI_NOMBRE", obj.NOMBRE);
+                p.Add("PI_ANIO", obj.ANIO);
+                p.Add("PI_MES", obj.MES);
+                p.Add("PI_ID_TIPO_EXCEL", obj.ID_TIPO_EXCEL);
+                p.Add("PO_VERIFICAR", dbType: OracleDbType.Int32, direction: ParameterDirection.Output);
+                db.Execute(sp, p, commandType: CommandType.StoredProcedure);
+                int verificado = (int)p.Get<dynamic>("PO_VERIFICAR").Value;
+                seGuardo = verificado == 0;
+            }
+            catch (Exception ex) { Log.Error(ex); }
+
+            return seGuardo;
+        }
+
+        public bool GuardarDatosArchivo(ExcelBE obj, out int idExcel, OracleConnection db)
+        {
+            idExcel = -1;
             bool seGuardo = false;
             try
             {
                 string sp = $"{Package.Excel}USP_PRC_GUARDAR_EXCEL";
                 var p = new OracleDynamicParameters();
-                //p.Add("PI_ID_EXCEL", entidad.ID_EXCEL);
                 p.Add("PI_NOMBRE", obj.NOMBRE);
                 p.Add("PI_ANIO", obj.ANIO);
                 p.Add("PI_MES", obj.MES);
                 p.Add("PI_ID_TIPO_EXCEL", obj.ID_TIPO_EXCEL);
                 p.Add("PI_UPD_USUARIO", obj.UPD_USUARIO);
+                p.Add("PO_ID_EXCEL", dbType: OracleDbType.Int32, direction: ParameterDirection.Output);
                 p.Add("PO_ROWAFFECTED", dbType: OracleDbType.Int32, direction: ParameterDirection.Output);
                 db.Execute(sp, p, commandType: CommandType.StoredProcedure);
-                int filasAfectadas = (int)p.Get<dynamic>("PO_ROWAFFECTED").Value;
-                seGuardo = filasAfectadas > 0;
+                idExcel = (int)p.Get<dynamic>("PO_ID_EXCEL").Value;
+                int filasafectadas = (int)p.Get<dynamic>("PO_ROWAFFECTED").Value;
+                seGuardo = filasafectadas > 0;
+            }
+            catch (Exception ex) { Log.Error(ex); }
+
+            return seGuardo;
+        }
+
+        public bool EliminarArchivo(ExcelBE obj, OracleConnection db)
+        {
+            bool seGuardo = false;
+            try
+            {
+                string sp = $"{Package.Excel}USP_DEL_DATOS_EXCEL";
+                var p = new OracleDynamicParameters();
+                p.Add("PI_ID_EXCEL", obj.ID_EXCEL);
+                p.Add("PI_ID_TIPO_EXCEL", obj.ID_TIPO_EXCEL);
+                p.Add("PO_ROWAFFECTED", dbType: OracleDbType.Int32, direction: ParameterDirection.Output);
+                db.Execute(sp, p, commandType: CommandType.StoredProcedure);
+                int filasafectadas = (int)p.Get<dynamic>("PO_ROWAFFECTED").Value;
+                seGuardo = filasafectadas > 0;
             }
             catch (Exception ex) { Log.Error(ex); }
 

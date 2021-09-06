@@ -19,69 +19,88 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/migi_verresultado.js")"></script>
 }
 
-<div class="container margin-top-excel">
-
-    <div class="row d-none" id="seccion-btn">
-        <div class="col-4">
-            <div class="form-group">
-                <div class="input-group">
-                    <a class="btn btn-primary w-100 inhabilitar" href="javascript:void(0)" id="btn-exportar">Exportar</a>
+<div class="container-fluid map-root" id="historia">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Busqueda")">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Resultado")">Resultados</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Ver resultado</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container-fluid my-4" id="cuerpo">
+    <div class="row m-0">
+        <div class="col-12 cuerpo-interior">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="h4">
+                            Resultados de la búsqueda&nbsp;<br><small class="text-muted">Estos resultados pueden exportarse en un archivo excel:</small>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div id="seccion-msj"></div>
+                <div class="row mt-2 mb-2">
+                    <div class="col-12">
+                        <span id="preload"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 pl-3 bg-white">
+                        <div class="row d-none" id="seccion-btn">
+                            <div class="col-4 mt-2">
+                                <a class="btn btn-success w-100 mb-2 inhabilitar" href="javascript:void(0)" id="btn-exportar"><i class="fas fa-file-download px-1"></i>Exportar</a>
+                            </div>
+                            <div class="col-12">
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-7 mostrar d-none">
+                                <div class="h5">Resultado bienes por año&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Texto de ayuda"></i></div>
+                                <div class="table-responsive tabla-principal">
+                                    <table class="table table-hover" id="tbl-gf1-bienes">
+                                        <thead></thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-5 mostrar"><div id="pie-gn1-bienes" style="height: 500px;"></div></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-7 mostrar d-none">
+                                <div class="h5">Resultados servicios por año&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Texto de ayuda"></i></div>
+                                <div class="table-responsive tabla-principal">
+                                    <table class="table table-hover" id="tbl-gf1-servicios">
+                                        <thead></thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-5 mostrar"><div id="pie-gn1-servicios" style="height: 500px;"></div></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-7 mostrar d-none">
+                                <div class="h5">Resumen por años&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Texto de ayuda"></i></div>
+                                <div class="table-responsive tabla-principal">
+                                    <table class="table table-hover" id="tbl-gf1-resumen">
+                                        <thead></thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-5 mostrar"><div id="piechartGN1" style="height: 500px;"></div></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12" id="seccion-cant-estimada">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-4">
-        </div>
-        <div class="col-4">
-        </div>
-        <div class="col-4">
-        </div>
     </div>
-    <div class="row">
-        <div class="col-12 alert-add"></div>
-    </div>
-    <div class="row mt-2 mb-2">
-        <div class="col-12">
-            <span id="preload"></span>
-        </div>
-    </div>
-
-    <div class="container" mt-2>
-        <div class="row">
-            <div class="col-6 mostrar d-none">
-                <h4 class="text-center mb-3">RESULTADO BIENES POR AÑOS</h4>
-                <table id="tbl-gf1-bienes" class="table table-hover">
-                    <thead></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-            <div class="col-6 mostrar d-none">
-                <div id="pie-gn1-bienes" style="height: 600px;"></div>
-            </div>
-            <div class="col-6 mostrar d-none">
-                <h4 class="text-center mb-3">RESULTADO SERVICIOS POR AÑOS</h4>
-                <table id="tbl-gf1-servicios" class="table table-hover">
-                    <thead></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-            <div class="col-6 mostrar d-none">
-                <div id="pie-gn1-servicios" style="height: 600px;"></div>
-            </div>
-            <div class="col-6 mostrar d-none">
-                <h4 class="text-center mb-3">RESUMEN POR AÑOS</h4>
-                <table id="tbl-gf1-resumen" class="table table-hover">
-                    <thead></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-            <div class="col-6 mostrar d-none">
-                <div id="piechartGN1" style="height: 600px;"></div>
-            </div>
-        </div>
-        <div class="row" id="seccion-cant-estimada">
-
-        </div>
-    </div>
-
-
 </div>

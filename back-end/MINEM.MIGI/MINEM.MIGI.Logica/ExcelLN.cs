@@ -64,16 +64,41 @@ namespace MINEM.MIGI.Logica
             return esValido;
         }
 
-        public bool GuardarDatosArchivo(ExcelBE obj)
+        public bool VerificarArchivo(ExcelBE obj)
         {
+            bool existe = false;
+            try
+            {
+                existe = ExcelDA.VerificarArchivo(obj, cn);
+            }
+            finally { if (cn.State == ConnectionState.Open) cn.Close(); }
+
+            return existe;
+        }
+
+        public bool GuardarDatosArchivo(ExcelBE obj, out int idExcel)
+        {
+            idExcel = -1;
             bool esValido = false;
             try
             {
-                esValido = ExcelDA.GuardarDatosArchivo(obj, cn);
+                esValido = ExcelDA.GuardarDatosArchivo(obj, out idExcel, cn);
             }
             finally { if (cn.State == ConnectionState.Open) cn.Close(); }
 
             return esValido;
+        }
+
+        public bool EliminarArchivo(ExcelBE obj)
+        {
+            bool existe = false;
+            try
+            {
+                existe = ExcelDA.EliminarArchivo(obj, cn);
+            }
+            finally { if (cn.State == ConnectionState.Open) cn.Close(); }
+
+            return existe;
         }
 
         public List<ExcelBE> ListarExcels(int tipoexcel, int registros, int pagina, string columna, string orden)

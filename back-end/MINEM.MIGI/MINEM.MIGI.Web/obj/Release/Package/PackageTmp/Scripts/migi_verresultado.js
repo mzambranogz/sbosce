@@ -7,7 +7,7 @@ $(document).ready(() => {
 
 var exportarExcel = () => {
     $('.inhabilitar').addClass('disabled-etiqueta-a')
-    $("#preload").html("<i Class='fas fa-spinner fa-spin px-1'></i> Cargando...")
+    $("#preload").html("<i Class='fas fa-spinner fa-spin px-1'></i> Espere por favor, se están exportando los datos...")
     let url = `${baseUrl}Excel/ExportarExcel`
     let data = { TABLA_BIENES: arrGN1_TablaBienes, TABLA_SERVICIOS: arrGN1_TablaServicios, TABLA_RESUMEN: arrGN2, TABLA_ESTIMADO: arrGN3, ARR_ANIOS: arrAnioDescripcion };
     let init = { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) };
@@ -30,7 +30,7 @@ var exportarExcel = () => {
 var cargarResultado = () => {
     let url = `${baseUrl}Resultado/MostrarResultado/${idresultado}`
 
-    $("#preload").html("<i Class='fas fa-spinner fa-spin px-1'></i> Cargando...")
+    $("#preload").html("<i Class='fas fa-spinner fa-spin px-1'></i> Cargando los resultados...")
     $('.mostrar').addClass('d-none')
     $('#seccion-cant-estimada').html('')
     fetch(url)
@@ -51,7 +51,7 @@ var estructurarFiltro = (data) => {
     
     if (tb == 1) {
         estructurarGraficoN1(data.LISTA_GRAFICO)
-        estructurarGraficoN3(data.LISTA_GRAFICON3)
+        if (data.LISTA_GRAFICON3 != null) if (data.LISTA_GRAFICON3.length > 0) estructurarGraficoN3(data.LISTA_GRAFICON3)
     } else {
         estructurarGraficoM8U(data.LISTA_GRAFICO)
     }
@@ -62,7 +62,7 @@ var estructurarGraficoN1 = (lista) => {
     if (lista == null) return
 
     let tituloAnio = arrAnioDescripcion.join(' - ')
-    let titulo = `${equipo_g} POR REQUERIMIENTO ${tituloAnio}`
+    let titulo = `Resumen por requerimiento ${tituloAnio}`
 
     let arr = []
     arrGN2 = []
@@ -100,8 +100,8 @@ var estructurarGraficoN1 = (lista) => {
         }
     })
 
-    let titulo_bienes = `${equipo_g} POR REQUERIMIENTO BIENES ${tituloAnio}`
-    let titulo_servicios = `${equipo_g} POR REQUERIMIENTO SERVICIOS ${tituloAnio}`
+    let titulo_bienes = `Búsqueda por requerimiento bienes ${tituloAnio}`
+    let titulo_servicios = `Búsqueda por requerimiento servicios ${tituloAnio}`
 
     let arrGN1_Bienes = [], arrGN1_Servicios = []
     arrGN1_TablaBienes = [], arrGN1_TablaServicios = []
@@ -142,21 +142,21 @@ var estructurarGraficoN1 = (lista) => {
             /* Tablas Bienes y servicios */
             arrGN1_TablaBienes.push({
                 HALLAZGO: palabra,
-                TIPO_REQUERIMIENTO: "BIENES",
+                TIPO_REQUERIMIENTO: "Bienes",
                 TOTAL: suma_bienes,
                 ANIOS: arrAnioBienes
             })
             arrGN1_TablaServicios.push({
                 HALLAZGO: palabra,
-                TIPO_REQUERIMIENTO: "SERVICIOS",
+                TIPO_REQUERIMIENTO: "Servicios",
                 TOTAL: suma_servicios,
                 ANIOS: arrAnioservicios
             })
         }
     })
     $('.mostrar').removeClass('d-none')
-    armarTablaGN1('#tbl-gf1-bienes', "BIENES", arrGN1_TablaBienes)
-    armarTablaGN1('#tbl-gf1-servicios', "SERVICIOS", arrGN1_TablaServicios)
+    armarTablaGN1('#tbl-gf1-bienes', "Bienes", arrGN1_TablaBienes)
+    armarTablaGN1('#tbl-gf1-servicios', "Servicios", arrGN1_TablaServicios)
     armarTablaGN2('#tbl-gf1-resumen', arrGN2)
 
     google.charts.setOnLoadCallback(drawChart(arrGN1_Bienes, titulo_bienes, 'pie-gn1-bienes'));
@@ -167,17 +167,21 @@ var estructurarGraficoN1 = (lista) => {
 var armarTablaGN1 = (id, tipo_req, arr) => {
     let columna_anio = ""
     $.each((arrAnioDescripcion), (x, y) => {
-        columna_anio += `<th>${y}</th>`
+        columna_anio += `<th scope="col" width=""><div class="d-flex flex-column justify-content-between align-items-center"><div class="d-flex justify-content-center align-items-center"><div class="pl-1">${y}</div></div><div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Año ${y}"></i></div></div></th>`
     })
-    $(id).find('thead').html(`<tr><th>HALLAZGO</th><th>${tipo_req}</th>${columna_anio}<th>TOTAL</th>`)
+
+    let colHallazgo = `<th scope="col" width=""><div class="d-flex flex-column justify-content-between align-items-center"><div class="d-flex justify-content-center align-items-center"><div class="pl-1">Hallazgo</div></div><div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="right" title="La palabra clave en ${tipo_req}"></i></div></div></th>`
+    let colRequerimiento = `<th scope="col" width=""><div class="d-flex flex-column justify-content-between align-items-center"><div class="d-flex justify-content-center align-items-center"><div class="pl-1">${tipo_req}</div></div><div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="right" title="Requerimiento bienes"></i></div></div></th>`
+    let colTotal = `<th scope="col" width=""><div class="d-flex flex-column justify-content-between align-items-center"><div class="d-flex justify-content-center align-items-center"><div class="pl-1">Total</div></div><div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="right" title="Suma total de las cantidades de hallazgos por año de la palabra clave"></i></div></div></th>`
+    $(id).find('thead').html(`<tr class="bg-primary text-white">${colHallazgo}${colRequerimiento}${columna_anio}${colTotal}</tr>`)
 
     let content = arr.map((x, y) => {
-        let hallazgo = `<td>${x.HALLAZGO}</td>`
-        let tipo_requerimiento = `<td>${x.TIPO_REQUERIMIENTO}</td>`
-        let total = `<td>${x.TOTAL}</td>`
+        let hallazgo = `<td data-encabezado="Hallazgo">${x.HALLAZGO}</td>`
+        let tipo_requerimiento = `<td data-encabezado="${tipo_req}">${x.TIPO_REQUERIMIENTO}</td>`
+        let total = `<td class="text-center" data-encabezado="Total">${formatoMilesEnteros(x.TOTAL)}</td>`
         let anios = ""
         $.each((x.ANIOS), (m, n) => {
-            anios += `<td>${n}</td>`
+            anios += `<td class="text-center" data-encabezado="">${formatoMilesEnteros(n)}</td>`
         })
         return `<tr>${hallazgo}${tipo_requerimiento}${anios}${total}</tr>`
     }).join('')
@@ -188,13 +192,16 @@ var armarTablaGN1 = (id, tipo_req, arr) => {
 var armarTablaGN2 = (id, arr) => {
     let columna_anio = ""
     $.each((arrAnioDescripcion), (x, y) => {
-        columna_anio += `<th>${y}</th>`
+        columna_anio += `<th scope="col" width=""><div class="d-flex flex-column justify-content-between align-items-center"><div class="d-flex justify-content-center align-items-center"><div class="pl-1">${y}</div></div><div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Año ${y}"></i></div></div></th>`
     })
-    $(id).find('thead').html(`<tr><th>HALLAZGO</th>${columna_anio}<th>TOTAL</th>`)
+
+    let colHallazgo = `<th scope="col" width=""><div class="d-flex flex-column justify-content-between align-items-center"><div class="d-flex justify-content-center align-items-center"><div class="pl-1">Hallazgo</div></div><div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="right" title="La palabra clave en bienes"></i></div></div></th>`
+    let colTotal = `<th scope="col" width=""><div class="d-flex flex-column justify-content-between align-items-center"><div class="d-flex justify-content-center align-items-center"><div class="pl-1">Total</div></div><div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="right" title="Suma total de las cantidades de hallazgos por año de la palabra clave"></i></div></div></th>`
+    $(id).find('thead').html(`<tr class="bg-primary text-white">${colHallazgo}${columna_anio}${colTotal}</tr>`)
 
     let content = arr.map((x, y) => {
-        let hallazgo = `<td>${x.HALLAZGO}</td>`
-        let total = `<td>${x.TOTAL}</td>`
+        let hallazgo = `<td data-encabezado="Hallazgo">${x.HALLAZGO}</td>`
+        let total = `<td class="text-center" data-encabezado="Total">${formatoMilesEnteros(x.TOTAL)}</td>`
         let anios = ""
         $.each((arrAnioDescripcion), (m, n) => {
             let suma = 0
@@ -202,7 +209,7 @@ var armarTablaGN2 = (id, arr) => {
                 if (n == b[0])
                     suma += b[1]
             })
-            anios += `<td>${suma}</td>`
+            anios += `<td class="text-center" data-encabezado="">${formatoMilesEnteros(suma)}</td>`
         })
 
         return `<tr>${hallazgo}${anios}${total}</tr>`
@@ -279,8 +286,8 @@ var estructurarGraficoN3 = (lista) => {
     $.each((arrAnioDescripcion), (m, n) => {
         let arr = []
         arr.push(['Hallazgo', 'cantidad'])
-        $('#seccion-cant-estimada').append(`<div class="col-6 mostrar"><div id="piechar-${n}" style="height: 600px;"></div></div>`)
-        let titulo = `RESUMEN CANTIDAD ESTIMADA DE ${equipo_g} (${n})`
+        $('#seccion-cant-estimada .row').append(`<div class="col-6 mostrar"><div id="piechar-${n}" style="height: 500px;"></div></div>`)
+        let titulo = `Resumen de cantidad estimada (${n})`
         $.each((arrListaAnio), (x, y) => {
             $.each((y.LISTA_ANIO), (a, b) => {
                 if (n == b.ANIO) arr.push([b.HALLAZGO, b.CANTIDAD])
@@ -298,9 +305,9 @@ var estructurarGraficoM8U = (lista) => {
     arrTipoRequerimiento.push('SERVICIOS')
 
     let tituloAnio = arrAnioDescripcion.join(' - ')
-    let titulo = `${equipo_g} POR REQUERIMIENTO ${tituloAnio}`
-    let titulo_bienes = `${equipo_g} POR REQUERIMIENTO BIENES ${tituloAnio}`
-    let titulo_servicios = `${equipo_g} POR REQUERIMIENTO SERVICIOS ${tituloAnio}`
+    let titulo = `Por requerimiento ${tituloAnio}`
+    let titulo_bienes = `Por requerimiento bienes ${tituloAnio}`
+    let titulo_servicios = `${equipo_g} Por requerimiento servicios ${tituloAnio}`
 
     let arrGN1_Bienes = [], arrGN1_Servicios = []
     arrGN1_TablaBienes = [], arrGN1_TablaServicios = []
@@ -412,18 +419,22 @@ var armarTablaGN3 = (id, arr) => {
     let body = '<tbody></tbody>'
     let head = '<thead></thead>'
     let tabla = `<table id="tbl-gf3-resumen" class="table table-hover">${head}${body}</table>`
-    let h4 = '<h4 class="text-center mb-3">RESUMEN CANTIDAD ESTIMADA</h4>'
-    let div = `<div class="col-12 mostrar">${h4}${tabla}</div>`
-    $('#seccion-cant-estimada').append(div)
+    let contenedorTabla = `<div class="table-responsive tabla-principal">${tabla}</div>`
+    let titulo = `<div class="h5">Resumen cantidad estimada&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Texto de ayuda"></i></div>`
+    let div = `<div class="col-12 mostrar">${titulo}${contenedorTabla}</div>`
+    $('#seccion-cant-estimada').append(`<div class="row">${div}</div>`)
 
     let columna_anio = ""
     $.each((arrAnioDescripcion), (x, y) => {
-        columna_anio += `<th>${y}</th>`
+        columna_anio += `<th scope="col" width=""><div class="d-flex flex-column justify-content-between align-items-center"><div class="d-flex justify-content-center align-items-center"><div class="pl-1">${y}</div></div><div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Año ${y}"></i></div></div></th>`
     })
-    $(id).find('thead').html(`<tr><th>HALLAZGO</th>${columna_anio}`)
+    
+    let colHallazgo = `<th scope="col" width=""><div class="d-flex flex-column justify-content-between align-items-center"><div class="d-flex justify-content-center align-items-center"><div class="pl-1">Hallazgo</div></div><div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="right" title="Palabra clave"></i></div></div></th>`
+
+    $(id).find('thead').html(`<tr class="bg-primary text-white">${colHallazgo}${columna_anio}`)
 
     let content = arr.map((x, y) => {
-        let hallazgo = `<td>${x.HALLAZGO}</td>`
+        let hallazgo = `<td data-encabezado="Hallazgo">${x.HALLAZGO}</td>`
         let anios = ""
         $.each((arrAnioDescripcion), (m, n) => {
             let suma = 0
@@ -431,7 +442,7 @@ var armarTablaGN3 = (id, arr) => {
                 if (n == b[0])
                     suma += b[1]
             })
-            anios += `<td>${suma}</td>`
+            anios += `<td class="text-center" data-encabezado="">${formatoMilesEnteros(suma)}</td>`
         })
 
         return `<tr>${hallazgo}${anios}</tr>`
@@ -444,8 +455,8 @@ var armarGraficoN3 = (arrListaAnio) => {
     $.each((arrAnioDescripcion), (m, n) => {
         let arr = []
         arr.push(['Hallazgo', 'cantidad'])
-        $('#seccion-cant-estimada').append(`<div class="col-6 mostrar"><div id="piechar-${n}" style="height: 600px;"></div></div>`)
-        let titulo = `RESUMEN CANTIDAD ESTIMADA DE ${equipo_g} (${n})`
+        $('#seccion-cant-estimada .row').append(`<div class="col-6 mostrar"><div id="piechar-${n}" style="height: 500px;"></div></div>`)
+        let titulo = `Resumen cantidad estimada (${n})`
         $.each((arrListaAnio), (x, y) => {
             $.each((y.LISTA_ANIO), (a, b) => {
                 if (n == b.ANIO) arr.push([b.HALLAZGO, b.CANTIDAD])

@@ -1,31 +1,37 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Módulo informático de carga, filtro, resumen y gráficos de información | Ingreso</title>
+        <meta name="description" content="Módulo informático de carga, filtro, resumen y gráficos de información">
+        <link rel="apple-touch-icon" sizes="180x180" href="@Url.Content("~/images/favicon/apple-touch-icon.png")">
+        <link rel="icon" type="image/png" href="@Url.Content("~/images/favicon/favicon-32x32.png")" sizes="32x32">
+        <link rel="icon" type="image/png" href="@Url.Content("~/images/favicon/favicon-16x16.png")" sizes="16x16">
+        <link rel="mask-icon" href="@Url.Content("~/images/favicon/safari-pinned-tab.svg")" color="#5bbad5">
+        <link rel="shortcut icon" href="@Url.Content("~/images/favicon/favicon.ico")">
+        <meta name="msapplication-config" content="@Url.Content("~/images/favicon/browserconfig.xml")">
+        <meta name="theme-color" content="#ffffff">
+        @*<script src="https://www.google.com/recaptcha/api.js?render=6LcKud4UAAAAAIWfqQyeI8l83jWB4WlvDkpWMWKC"></script>
+        <script src="https://www.gstatic.com/charts/loader.js"></script>*@
+        <link rel="stylesheet" href="@Url.Content("~/Content/style.css")">
+        <link rel="stylesheet" href="@Url.Content("~/Content/util.css")">
+        @RenderSection("scripts_header", false)
+    </head>
+@*<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />*@
-    @*<script src="~/Scripts/modernizr-2.6.2.js"></script>*@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.js" integrity="sha512-n8DscwKN6+Yjr7rI6mL+m9nS4uCEgIrKRFcP0EOkIvzOLUyQgOjWK15hRfoCJQZe0s6XrARyXjpvGFo1w9N3xg==" crossorigin="anonymous"></script>
     @RenderSection("scripts_header", false)
-</head>
+</head>*@
 <body>
-    @Html.Partial("_Header")
+    @Html.Partial("_Header")    
     @RenderBody()
-    <hr />
-    <footer>
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-    </footer>
-    @*<script src="~/Scripts/jquery-3.6.0.js"></script>*@
-    @*<script src="~/Scripts/bootstrap.js"></script>*@
-    <script src="~/Scripts/script.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    <script src="~/Scripts/jquery.form.min.js"></script>
+    @Html.Partial("_Footer")    
     @Html.Partial("_Scripts_Sesion")
     @RenderSection("scripts_footer", false)
 </body>

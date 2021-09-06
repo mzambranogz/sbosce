@@ -8,130 +8,118 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/migi_mantenimiento_palabraclavecantidad.js")"></script>
 }
 
-<div class="container-fluid mt-5">
+<div class="container-fluid map-root" id="historia">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="estilo-05" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="text-sres-gris" href="@Url.Action("Index","Inicio")">Inicio</a></li>
-                        <li class="breadcrumb-item"><a class="text-sres-gris" href="@Url.Action("Index","Mantenimiento")">Mantenimiento de Tablas</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Mantenimiento de Palabras Claves de Cantidad</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Busqueda")">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Mantenimiento")">Mantenimiento de Tablas</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Mantenimiento de Palabras Claves de Cantidad</li>
+            </ol>
+        </nav>
     </div>
 </div>
-<div class="container-fluid my-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9">
-                <h2 class="estilo-03 text-sres-azul">Mantenimiento de Palabras Claves de Cantidad</h2>
-            </div>
-            <div class="col-lg-3">
-                <span data-toggle="modal" data-target="#modal-mantenimiento">
-                    <div class="btn btn-sres-verde btn-lg w-100 mb-2" id="btnNuevo" data-toggle="tooltip" data-placement="top" title="Agregar una nueva palabra clave">Agregar palabra</div>
-                </span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="rayado wow fadeIn"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10">
-                <div class="form-group">
-                    <label class="estilo-01 text-sres-oscuro" for="txt-descripcion">DESCRIPCIÓN</label>
-                    <div class="input-group">
-                        <input class="form-control form-control-sm" type="text" id="txt-descripcion" placeholder="Ingrese la descripción de su búsqueda" maxlength="60">
+<div class="container-fluid my-4" id="cuerpo">
+    <div class="row m-0">
+        <div class="col-12 cuerpo-interior">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 pt-4">
+                        <div class="h4">Mantenimiento de Palabras Claves de Cantidad&nbsp;<br><small class="text-muted">Utilice la búsqueda para encontrar la palabra clave cantidad indicado para el mantenimiento</small></div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">&nbsp;</div>
+                            <div class="col-sm-12 col-md-6 col-lg-6"><span data-toggle="modal" data-target="#modal-mantenimiento"><a class="agregar-iniciativa" id="btnNuevo" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Agregar un nueva palabra clave cantidad"><i class="fas fa-plus px-1"></i>Agregar Palabra</a></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 pt-4">
+                        <div class="form-group">
+                            <label for="txt-buscar">Buscar&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Utilice la búsqueda ingresando una descripción para ubicar sus registros"></i></label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"><span class="input-group-text" id="inputGroup1"><i class="fas fa-search"></i></span></div>
+                                <input class="form-control" type="text" id="txt-descripcion" placeholder="Ingrese la descripción de su búsqueda" aria-describedby="inputGroup1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <button class="btn btn-info w-100 mb-2" id="btnConsultar"><i class="fas fa-search px-1"></i>Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 pt-4">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <label class="estilo-01 text-sres-oscuro">&nbsp;</label>
-                    <div class="input-group">
-                        <button class="btn btn-primary w-100" id="btnConsultar">Consultar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid my-5">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="table-responsive tabla-principal">
-                    <table class="table table-sm table-hover" id="tblPrincipal">
-                        <thead class="estilo-06">
-                            <tr>
-                                <th scope="col" width="3%">
-                                    <div class="d-flex flex-column justify-content-between align-items-center">
-                                        <div class="d-flex justify-content-between align-items-center">N°&nbsp;@*<i class="fas fa-sort"></i>*@</div>
-                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Número de orden"></i></div>
-                                    </div>
-                                </th>
-                                <th scope="col" width="8%">
-                                    <div class="d-flex flex-column justify-content-between align-items-center">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="pl-1 text-center w-100">CÓDIGO&nbsp;</div><i class="fas fa-sort columna-filtro" id="ID_PALABRA_CANTIDAD"></i>
-                                        </div>
-                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="código de la palabra clave"></i></div>
-                                    </div>
-                                </th>
-                                <th scope="col" width="79%">
-                                    <div class="d-flex flex-column justify-content-between align-items-center">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="pl-1 text-center w-100">PALABRA CLAVE CANTIDAD&nbsp;</div><i class="fas fa-sort columna-filtro" id="PALABRA_CANTIDAD"></i>
-                                        </div>
-                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Nombre de la palabra clave"></i></div>
-                                    </div>
-                                </th>
-                                <th scope="col" width="10%">
-                                    <div class="d-flex flex-column justify-content-between align-items-center">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="pl-1 text-center w-100">GESTIÓN&nbsp;</div>
-                                        </div>
-                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Herramientas y opciones"></i></div>
-                                    </div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="estilo-01"></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-lg-6 mt-4 estilo-01 d-flex justify-content-start align-items-center">
+            <div class="container py-4">
+                <div class="h5">Bandeja de Palabras Claves Cantidad&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Bandeja principal donde encontrará todas las palabras claves cantidad registradas"></i></div>
+                <div class="dropdown-divider"></div>
                 <div class="row">
-                    <div class="col-12"><strong>Resultado:&nbsp;</strong><span class="inicio-registros">1</span><span id="view-page-result">-<span class="fin-registros">1</span> de <span class="total-registros">1</span> registros</span></div>
-                </div>
-            </div>
-            <div id="viewPagination" class="col-sm-12 col-lg-6 mt-4 estilo-01 d-flex justify-content-end align-items-center" style="display: none">
-                <div class="row">
-                    <div class="col-12">
-                        <strong>Registros por página&nbsp;</strong>
-                        <select id="catidad-rgistros">
-                            <option value="10" selected>10</option>
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
-                        </select>&nbsp;
-                        <span class="pagina">1</span> de <span class="total-paginas">75</span> páginas&nbsp;
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                            <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(1)"><i class="fas fa-angle-double-left"></i></button>
-                            <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(2)"><i class="fas fa-angle-left"></i></button>
-                            <input id="ir-pagina" class="ir-pagina" type="number" value="1" min="1">
-                            <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(3)"><i class="fas fa-angle-right"></i></button>
-                            <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(4)"><i class="fas fa-angle-double-right"></i></button>
+                    <div class="col-12 px-0">
+                        <div class="table-responsive tabla-principal">
+                            <table class="table table-hover" id="tblPrincipal">
+                                <thead>
+                                    <tr class="bg-primary text-white">
+                                        <th scope="col" width="3%">
+                                            <div class="d-flex flex-column justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center">N°&nbsp;</div>
+                                                <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Número de orden"></i></div>
+                                            </div>
+                                        </th>
+                                        <th scope="col" width="20%">
+                                            <div class="d-flex flex-column justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="pl-1 text-center w-100">CÓDIGO&nbsp;</div><i class="fas fa-sort columna-filtro" id="ID_PALABRA_CANTIDAD"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="código de la palabra clave"></i></div>
+                                            </div>
+                                        </th>
+                                        <th scope="col" width="67%">
+                                            <div class="d-flex flex-column justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="pl-1 text-center w-100">PALABRA CLAVE CANTIDAD&nbsp;</div><i class="fas fa-sort columna-filtro" id="PALABRA_CANTIDAD"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Nombre de la palabra clave"></i></div>
+                                            </div>
+                                        </th>
+                                        <th scope="col" width="10%">
+                                            <div class="d-flex flex-column justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="pl-1 text-center w-100">GESTIÓN&nbsp;</div>
+                                                </div>
+                                                <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Herramientas y opciones"></i></div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td class="text-left" colspan="2"><strong>Resultado:&nbsp;</strong><span class="inicio-registros">1</span><span id="view-page-result">-<span class="fin-registros">1</span> de <span class="total-registros">1</span> registros</span></td>
+                                        <td class="text-right text-xs-left" colspan="5">
+                                            <strong>Registros por página&nbsp;</strong>
+                                            <select id="catidad-rgistros">
+                                                <option value="10" selected>10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                            </select>&nbsp;
+                                            <span class="pagina">1</span> de <span class="total-paginas">75</span> páginas&nbsp;
+                                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                                <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(1)"><i class="fas fa-angle-double-left"></i></button>
+                                                <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(2)"><i class="fas fa-angle-left"></i></button>
+                                                <input id="ir-pagina" class="ir-pagina" type="number" value="1" min="1">
+                                                <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(3)"><i class="fas fa-angle-right"></i></button>
+                                                <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(4)"><i class="fas fa-angle-double-right"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -139,18 +127,18 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="modal-mantenimiento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal modal-dialog-centered" role="document">
         <div class="modal-content">
             <form action="" id="frm">
-                <div class="modal-header bg-sres-azul text-white">
-                    <h5 class="modal-title estilo-01" id="exampleModalLabel">REGISTRAR PALABRA CLAVE CANTIDAD</h5>
-                    <button class="text-white close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registro de palabra clave cantidad <br><small class="text-muted">Complete los siguientes campos para registrar una nueva palabra clave cantidad</small><small class="text-danger d-block"><strong>(*)&nbsp;</strong>Campos obligatorios</small></h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <h2 class="estilo-04 text-sres-oscuro mb-3">DATOS PRINCIPALES</h2>
                             <div class="form-group mt-2">
                                 <label class="estilo-01" for="txt-nombre">Palabra clave:</label><span class="text-danger font-weight-bold">&nbsp;(*)&nbsp;</span>
                                 <div class="input-group">
@@ -177,7 +165,7 @@
 <div class="modal fade" id="modal-confirmacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-sres-azul text-white">
+            <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Confirmar acción</h5>
                 <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
@@ -191,9 +179,11 @@
         </div>
     </div>
 </div>
+
 <script>
     var idEliminar = '';
 </script>
+
 
 @Html.Hidden("columna", "ID_PALABRA_CANTIDAD")
 @Html.Hidden("orden", "ASC")

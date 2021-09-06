@@ -1,4 +1,5 @@
 ﻿@using MINEM.MIGI.Web.Models
+@using MINEM.MIGI.Entidad;
 @model ExcelViewModel
 
 @{
@@ -20,7 +21,7 @@
     lstItemMes.Add(new SelectListItem { Text = "Diciembre", Value = "12", Selected = false });
 
     List<SelectListItem> lstItemAnio = new List<SelectListItem>();
-    lstItemAnio.Add(new SelectListItem { Text = "Seleccione un anio", Value = "0", Selected = true });
+    /*lstItemAnio.Add(new SelectListItem { Text = "Seleccione un anio", Value = "0", Selected = true });
     lstItemAnio.Add(new SelectListItem { Text = "2015", Value = "2015", Selected = false });
     lstItemAnio.Add(new SelectListItem { Text = "2016", Value = "2016", Selected = false });
     lstItemAnio.Add(new SelectListItem { Text = "2017", Value = "2017", Selected = false });
@@ -32,7 +33,13 @@
     lstItemAnio.Add(new SelectListItem { Text = "2023", Value = "2023", Selected = false });
     lstItemAnio.Add(new SelectListItem { Text = "2024", Value = "2024", Selected = false });
     lstItemAnio.Add(new SelectListItem { Text = "2025", Value = "2025", Selected = false });
-    lstItemAnio.Add(new SelectListItem { Text = "2026", Value = "2026", Selected = false });
+    lstItemAnio.Add(new SelectListItem { Text = "2026", Value = "2026", Selected = false });*/
+
+    List<AnioBE> lista = (List<AnioBE>)ViewData["listaAnio"] == null ? new List<AnioBE>() : (List<AnioBE>)ViewData["listaAnio"];
+    foreach (var item in lista)
+    {
+        lstItemAnio.Add(new SelectListItem { Text = item.ANIO, Value = item.ANIO, Selected = false });
+    }
 }
 
 @section scripts_footer {
@@ -40,7 +47,151 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/migi_excel.js")"></script>
 }
 
-<div class="container margin-top-excel">
+<div class="container-fluid map-root" id="historia">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Busqueda")">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Carga masiva | excel menor a 8 UIT</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container-fluid my-4" id="cuerpo">
+    <div class="row m-0">
+        <div class="col-12">
+            <div class="container">
+                @using (Html.BeginForm("Leer", "Excel", FormMethod.Post, new { id = "form-excel", enctype = "multipart/form-data", role = "form", @class = "text-left" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="row mt-5">
+                        <div class="col-3">
+                            @Html.LabelFor(m => m.excel)<span class="text-danger font-weight-bold">&nbsp;(*)&nbsp;<i class="fas fa-info-circle ayuda-tooltip" data-toggle="tooltip" data-placement="top" title="Seleccione un archivo para adjuntarlo, se recomienda un archivo del tipo (XLSX, XLSM, XLS)"></i></span>
+                            <div class="input-group">
+                                <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-file"></i></span></div>
+                                <input class="form-control form-control-sm cursor-pointer txt-file-control" type="text" id="txt-excel" placeholder="Subir documentos" required>
+                                @Html.TextBoxFor(m => m.excel, new { type = "file", @class = "d-none fil-file-control" })
+                                <div class="input-group-append">
+                                    <label class="input-group-text cursor-pointer estilo-01" for="excel"><i class="fas fa-upload mr-1"></i>Subir archivo</label>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="col-3">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.anio)<span class="text-danger font-weight-bold">&nbsp;(*)&nbsp;<i class="fas fa-info-circle ayuda-tooltip" data-toggle="tooltip" data-placement="top" title="Año relacionado al excel y los datos a cargar"></i></span>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text" id="inputGroup1"><i class="fas fa-file-invoice"></i></span></div>
+                                    @Html.DropDownListFor(m => m.anio, new SelectList(lstItemAnio, "Value", "Text"), new { @class = "form-control cbo-list" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.mes)<span class="text-danger font-weight-bold">&nbsp;(*)&nbsp;<i class="fas fa-info-circle ayuda-tooltip" data-toggle="tooltip" data-placement="top" title="Mes relacionado al excel y los datos a cargar"></i></span>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text" id="inputGroup1"><i class="fas fa-file-invoice"></i></span></div>
+                                    @Html.DropDownListFor(m => m.mes, new SelectList(lstItemMes, "Value", "Text"), new { @class = "form-control cbo-list" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group align-left">
+                                <label>&nbsp;</label>
+                                <input type="button" id="btnExcel" class="w-100 btn btn-primary" value="Cargar excel">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12 alert-add"></div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-12">
+                            <span id="preload"></span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-12">
+            <div class="container py-4">
+                <div class="h5">Resultados&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Tabla con los excel cargados"></i></div>
+                <div class="table-responsive tabla-principal">
+                    <table class="table table-hover" id="tbl">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th scope="col" width="3%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">N°&nbsp;</div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Número de orden"></i></div>
+                                    </div>
+                                </th>
+                                <th scope="col" width="22%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="pl-1 text-center w-100">CÓDIGO&nbsp;</div><i class="fas fa-sort columna-filtro" id="ID_EXCEL"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Código del excel"></i></div>
+                                    </div>
+                                </th>
+                                <th scope="col" width="42%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="pl-1 text-center w-100">EXCEL&nbsp;</div><i class="fas fa-sort columna-filtro" id="NOMBRE"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Nombre del excel"></i></div>
+                                    </div>
+                                </th>
+                                <th scope="col" width="17%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="pl-1 text-center w-100">AÑO&nbsp;</div><i class="fas fa-sort columna-filtro" id="ANIO"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Año"></i></div>
+                                    </div>
+                                </th>
+                                <th scope="col" width="17%">
+                                    <div class="d-flex flex-column justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="pl-1 text-center w-100">MES&nbsp;</div><i class="fas fa-sort columna-filtro" id="MES"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Mes"></i></div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="text-left" colspan="2"><strong>Resultado:&nbsp;</strong><span class="inicio-registros">1</span><span id="view-page-result">-<span class="fin-registros">1</span> de <span class="total-registros">1</span> registros</span></td>
+                                <td class="text-right text-xs-left" colspan="5">
+                                    <strong>Registros por página&nbsp;</strong>
+                                    <select id="catidad-rgistros" onchange="cargarExcel()">
+                                        <option value="10" selected>10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>&nbsp;
+                                    <span class="pagina">1</span> de <span class="total-paginas">75</span> páginas&nbsp;
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(1)"><i class="fas fa-angle-double-left"></i></button>
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(2)"><i class="fas fa-angle-left"></i></button>
+                                        <input id="ir-pagina" class="ir-pagina" type="number" value="1" min="1">
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(3)"><i class="fas fa-angle-right"></i></button>
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(4)"><i class="fas fa-angle-double-right"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="container margin-top-excel">
         @using (Html.BeginForm("Leer", "Excel", FormMethod.Post, new { id = "form-excel", enctype = "multipart/form-data", role = "form", @class = "text-left" }))
         {
             @Html.AntiForgeryToken()
@@ -80,18 +231,85 @@
             </div> 
         }
     <div class="container">
-        <div class="row">
-            <table id="tbl-excel" class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>N°</th>
-                        <th>NOMBRE EXCEL</th>
-                        <th>AÑO</th>
-                        <th>MES</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+        <div class="row m-0">
+            <div class="col-12 cuerpo-interior">
+                <div class="container py-4">
+                    <div class="h5">Resultados&nbsp;<i class="fas fa-question-circle ayuda-tooltip" data-toggle="tooltip" data-placement="right" title="Tabla con los resultados almacenados"></i></div>
+                    <div class="table-responsive tabla-principal">
+                        <table class="table table-hover" id="tbl">
+                            <thead>
+                                <tr class="bg-primary text-white">
+                                    <th scope="col" width="3%">
+                                        <div class="d-flex flex-column justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center">N°&nbsp;</div>
+                                            <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Número de orden"></i></div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" width="22%">
+                                        <div class="d-flex flex-column justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="pl-1 text-center w-100">CÓDIGO&nbsp;</div><i class="fas fa-sort columna-filtro" id="ID_EXCEL"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Código del excel"></i></div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" width="42%">
+                                        <div class="d-flex flex-column justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="pl-1 text-center w-100">EXCEL&nbsp;</div><i class="fas fa-sort columna-filtro" id="NOMBRE"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Nombre del excel"></i></div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" width="17%">
+                                        <div class="d-flex flex-column justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="pl-1 text-center w-100">AÑO&nbsp;</div><i class="fas fa-sort columna-filtro" id="ANIO"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Año"></i></div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" width="17%">
+                                        <div class="d-flex flex-column justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="pl-1 text-center w-100">MES&nbsp;</div><i class="fas fa-sort columna-filtro" id="MES"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-center align-items-center"><i class="fas fa-info-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Mes"></i></div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot>
+                                <tr>
+                                    <td class="text-left" colspan="2"><strong>Resultado:&nbsp;</strong><span class="inicio-registros">1</span><span id="view-page-result">-<span class="fin-registros">1</span> de <span class="total-registros">1</span> registros</span></td>
+                                    <td class="text-right text-xs-left" colspan="5">
+                                        <strong>Registros por página&nbsp;</strong>
+                                        <select id="catidad-rgistros" onchange="cargarExcel()">
+                                            <option value="10" selected>10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                        </select>&nbsp;
+                                        <span class="pagina">1</span> de <span class="total-paginas">75</span> páginas&nbsp;
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                            <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(1)"><i class="fas fa-angle-double-left"></i></button>
+                                            <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(2)"><i class="fas fa-angle-left"></i></button>
+                                            <input id="ir-pagina" class="ir-pagina" type="number" value="1" min="1">
+                                            <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(3)"><i class="fas fa-angle-right"></i></button>
+                                            <button class="btn btn-sm btn-primary" type="button" onclick="fn_avance_grilla(4)"><i class="fas fa-angle-double-right"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</div>*@
+
+
+@Html.Hidden("columna", "ID_EXCEL")
+@Html.Hidden("orden", "DESC")

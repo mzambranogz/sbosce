@@ -1,0 +1,17 @@
+﻿
+.espacio-interno-8{
+    padding: 8px;
+}
+
+.border-caja-1{
+    border: 1px solid #000;
+}
+
+.margin-top-excel{
+    margin-top: 5%;
+}
+
+.disabled-etiqueta-a {
+    cursor: not-allowed;
+    pointer-events: none;
+}

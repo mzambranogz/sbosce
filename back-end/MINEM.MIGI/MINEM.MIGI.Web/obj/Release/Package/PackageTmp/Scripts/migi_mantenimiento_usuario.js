@@ -1,5 +1,7 @@
 ﻿
 $(document).ready(() => {
+    $('.b-activo').removeClass('nav-active')
+    $('.v-mantenimiento').addClass('nav-active')
     $('#ir-pagina').on('change', (e) => cambiarPagina());
     $('#catidad-rgistros').on('change', (e) => cambiarPagina());
     $('#btnConsultar').on('click', (e) => consultar());
@@ -110,14 +112,14 @@ var renderizar = (data, cantidadCeldas, pagina, registros) => {
     if (deboRenderizar) {
         contenido = data.map((x, i) => {
             let formatoCodigo = '00000000';
-            let colNro = `<td class="text-center" data-encabezado="Número de orden" scope="row" data-count="0">${(pagina - 1) * registros + (i + 1)}</td>`;
-            let colCodigo = `<td class="text-center" data-encabezado="Código" scope="row"><span>${(`${formatoCodigo}${x.ID_USUARIO}`).split('').reverse().join('').substring(0, formatoCodigo.length).split('').reverse().join('')}</span></td>`;
-            let colNombres = `<td class="text-left" data-encabezado="Nombres">${x.NOMBRES}</td>`;
-            let colApellidos = `<td class="text-left" data-encabezado="Apellidos">${x.APELLIDOS}</td>`;
-            let colCorreo = `<td class="text-left" data-encabezado="Correo">${x.CORREO}</td>`;
-            let colEstado = `<td data-encabezado="Estado" class="text-center"><div class="badge badge-${x.FLAG_ESTADO == 0 ? 'info' : x.FLAG_ESTADO == 1 ? 'success' : 'danger'} p-1"><i class="fas fa-times-circle mr-1"></i><small class="estilo-01">${x.FLAG_ESTADO == 0 ? 'Por habilitar' : x.FLAG_ESTADO == 1 ? 'Habilitado' : 'Deshabilitado'}</small></div></td>`;
-            let btnEditar = `<a class="dropdown-item estilo-01 btnEditar" href="#" data-id="${x.ID_USUARIO}" data-toggle="modal" data-target="#modal-mantenimiento"><i class="fas fa-edit mr-1"></i>Editar</a>`;
-            let colOpciones = `<td class="text-center" data-encabezado="Gestión"><div class="btn-group w-100"><a class="btn btn-sm bg-success text-white w-100 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">Gestionar</a><div class="dropdown-menu">${btnEditar}</div></div></td>`;
+            let colNro = `<th class="text-center" data-encabezado="Número" scope="row">${(pagina - 1) * registros + (i + 1)}</th>`;
+            let colCodigo = `<td data-encabezado="Código">${(`${formatoCodigo}${x.ID_USUARIO}`).split('').reverse().join('').substring(0, formatoCodigo.length).split('').reverse().join('')}</td>`;
+            let colNombres = `<td data-encabezado="Nombres">${x.NOMBRES}</td>`;
+            let colApellidos = `<td data-encabezado="Apellidos">${x.APELLIDOS}</td>`;
+            let colCorreo = `<td data-encabezado="Correo">${x.CORREO}</td>`;
+            let colEstado = `<td data-encabezado="Estado" class="text-center"><div class="badge badge-${x.FLAG_ESTADO == 0 ? 'info' : x.FLAG_ESTADO == 1 ? 'success' : 'danger'} p-1"><i class="fas fa-times-circle mr-1"></i>${x.FLAG_ESTADO == 0 ? 'Por habilitar' : x.FLAG_ESTADO == 1 ? 'Habilitado' : 'Deshabilitado'}</div></td>`;
+            let btnEditar = `<a class="dropdown-item btnEditar" href="javascript:void(0)" data-id="${x.ID_USUARIO}" data-toggle="modal" data-target="#modal-mantenimiento"><i class="fas fa-edit mr-1"></i>Editar</a>`;
+            let colOpciones = `<td class="text-center text-xs-right" data-encabezado="Acciones"><div class="btn-group"><div class="acciones fase-01 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-h"></i></div><div class="dropdown-menu dropdown-menu-right">${btnEditar}</div></div></div></td>`;
             let fila = `<tr>${colNro}${colCodigo}${colNombres}${colApellidos}${colCorreo}${colEstado}${colOpciones}</tr>`;
             return fila;
         }).join('');
@@ -131,7 +133,7 @@ var nuevoUsuario = () => {
     $('.alert-add').html('');
     $('#btnGuardar').show();
     $('#btnGuardar').next().html('Cancelar');
-    $('#exampleModalLabel').html('REGISTRAR USUARIO');
+    $('#exampleModalLabel').html('Registro de nuevo usuario <br><small class="text-muted">Complete los siguientes campos para registrar un nuevo usuario</small><small class="text-danger d-block"><strong>(*)&nbsp;</strong>Campos obligatorios</small>');
     $('#txt-user-correo').prop('readonly', false);
     $('.admin-edit').removeClass('d-none');
     limpiarDatosUsuario();
@@ -151,7 +153,7 @@ var consultarUsuario = (element) => {
     $('.alert-add').html('');
     $('#btnGuardar').show();
     $('#btnGuardar').next().html('Cancelar');
-    $('#exampleModalLabel').html('ACTUALIZAR USUARIO');
+    $('#exampleModalLabel').html('Actualización de usuario <br><small class="text-muted">Puede cambiar los datos mostrados para actualizar un usuario</small><small class="text-danger d-block"><strong>(*)&nbsp;</strong>Campos obligatorios</small>');
     limpiarDatosUsuario();
 
     let idUsuario = $(element).attr('data-id');
@@ -195,7 +197,7 @@ var verificar = () => {
 
     if (arr.length > 0) {
         let error = '';
-        $.each(arr, function (ind, elem) { error += '<li><small class="mb-0">' + elem + '</li></small>'; });
+        $.each(arr, function (ind, elem) { error += '<li><span class="mb-0">' + elem + '</li></span>'; });
         error = `<ul>${error}</ul>`;
         $('.alert-add').alertError({ type: 'danger', title: 'ERROR', message: error });
         return;

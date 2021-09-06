@@ -1,5 +1,7 @@
 ﻿
 $(document).ready(() => {
+    $('.b-activo').removeClass('nav-active')
+    $('.v-mantenimiento').addClass('nav-active')
     $('#ir-mantenimiento').on('click', (e) => irMantenimiento(e))
 })
 
