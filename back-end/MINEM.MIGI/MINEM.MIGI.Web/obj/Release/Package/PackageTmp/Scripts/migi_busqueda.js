@@ -16,8 +16,14 @@ $(document).ready(() => {
 });
 
 var todosPalabras = () => {
+    let eq = $('#cbo-equipo').val()
     let t = $('#chk-todos-palabras').prop('checked')
-    if (t) $('#lista-palabras input[type="checkbox"]').prop('checked', true)
+    if (t) {
+        if (eq > 0){
+            $('#lista-palabras input[data-equipo="'+ eq +'"]').prop('checked', true)
+        }
+        //$('#lista-palabras input[type="checkbox"]').prop('checked', true)
+    } 
     else $('#lista-palabras input[type="checkbox"]').prop('checked', false)
 }
 
@@ -157,7 +163,7 @@ var cargarDatos = (listaEquipo, listaPalabras, listaPalabrasCantidad, listaAnio)
     let chekPalabrasCantidad = listaPalabrasCantidad.map((x,y) => {
         let check = '<div class="col-auto my-1"><div class="custom-control custom-checkbox mr-sm-2">'
         check += `<input class="custom-control-input" type="checkbox" id="pc-${x.ID_PALABRA_CANTIDAD}" data-valor="${x.PALABRA_CANTIDAD}" >&nbsp;`
-        check += `<label class="custom-control-label" for="pc-${x.ID_PALABRA_CANTIDAD}">${x.PALABRA_CANTIDAD}</label>`
+        check += `<label class="custom-control-label small" for="pc-${x.ID_PALABRA_CANTIDAD}">${x.PALABRA_CANTIDAD}</label>`
         check += `</div></div>`;
         return check;
     }).join('')
@@ -204,12 +210,12 @@ var cargarDatos = (listaEquipo, listaPalabras, listaPalabrasCantidad, listaAnio)
 
 var filtrarPalabras = () => {
     let equipo = $('#cbo-equipo').val()
+    $('#chk-todos-palabras').prop('checked', false)
     if ( equipo == 0) {
         $('[id*="p-"]').each((x,y) => {
             $(y).parent().parent().addClass('d-none')
             $(y).prop('checked', false)
-        })
-        $('#chk-todos-palabras').prop('checked', false)
+        })        
         return
     }
 

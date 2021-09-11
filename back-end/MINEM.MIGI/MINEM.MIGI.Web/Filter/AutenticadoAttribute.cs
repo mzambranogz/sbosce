@@ -1,4 +1,6 @@
-﻿using MINEM.MIGI.Util;
+﻿using MINEM.MIGI.Entidad;
+using MINEM.MIGI.Util;
+using MINEM.MIGI.Web.Controllers;
 using MINEM.MIGI.Web.Helper;
 using System;
 using System.Collections.Generic;
@@ -14,24 +16,47 @@ namespace MINEM.MIGI.Web.Filter
         // Si no estamos logueado, regresamos al login
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
+            //try
+            //{
+            //    base.OnActionExecuting(filterContext);
+            //    HttpSessionStateBase session = filterContext.HttpContext.Session;
+            //    if (!SessionHelper.ExistUserInSession())
+            //    {
+            //        filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+            //        {
+            //            controller = "Inicio",
+            //            action = "Index"
+            //        }));
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Log.Error(ex);
+            //}
+
             try
             {
                 base.OnActionExecuting(filterContext);
-                HttpSessionStateBase session = filterContext.HttpContext.Session;
-                if (!SessionHelper.ExistUserInSession())
+
+                UsuarioBE usuario = (UsuarioBE)HttpContext.Current.Session["user"];
+
+                if (usuario == null)
                 {
-                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+                    if (filterContext.Controller is InicioController == false)
                     {
-                        controller = "Inicio",
-                        action = "Index"
-                    }));
+                        //filterContext.HttpContext.Response.Redirect("~/Security/Login");
+                        filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+                        {
+                            controller = "Inicio",
+                            action = "Index"
+                        }));
+                    }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Log.Error(ex);
+                throw;
             }
-
         }
     }
 
@@ -43,8 +68,9 @@ namespace MINEM.MIGI.Web.Filter
             try
             {
                 base.OnActionExecuting(filterContext);
-                HttpSessionStateBase session = filterContext.HttpContext.Session;
-                if (session["user"] != null)
+                //HttpSessionStateBase session = filterContext.HttpContext.Session;
+                UsuarioBE usuario = (UsuarioBE)HttpContext.Current.Session["user"];
+                if (usuario != null)
                 {
                     filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
                     {

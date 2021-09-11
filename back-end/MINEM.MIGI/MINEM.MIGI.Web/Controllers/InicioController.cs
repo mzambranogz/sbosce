@@ -35,6 +35,7 @@ namespace MINEM.MIGI.Web.Controllers
             return View();
         }
 
+        [NoLogin]
         public ActionResult OlvidarContrasena() {
             return View();
         }
@@ -66,7 +67,7 @@ namespace MINEM.MIGI.Web.Controllers
         [Autenticado]
         public ActionResult Salir()
         {
-            SessionHelper.DestroyUserSession();
+            //SessionHelper.DestroyUserSession();
             Session["user"] = null;
             return RedirectToAction("Index", "Inicio");
         }

@@ -22,3 +22,4 @@ C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\bin\Debug\MI
 C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\obj\Debug\MINEM.MIGI.Entidad.csprojResolveAssemblyReference.cache
 C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\obj\Debug\MINEM.MIGI.Entidad.dll
 C:\Users\JK\Desktop\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\obj\Debug\MINEM.MIGI.Entidad.pdb
+D:\ESCRITORIO\GIT MIGI\back-end\MINEM.MIGI\MINEM.MIGI.Entidad\obj\Debug\MINEM.MIGI.Entidad.csprojResolveAssemblyReference.cache

@@ -10,130 +10,130 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/PlantillaReporte.xlsx">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="bin/App_Data/PlantillaReporte.xlsx">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="bin/Dapper.dll">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="bin/DocumentFormat.OpenXml.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/es/System.Web.Helpers.resources.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/es/System.Web.Mvc.resources.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/es/System.Web.Razor.resources.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/es/System.Web.Webpages.Deployment.resources.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/es/System.Web.Webpages.Razor.resources.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/es/System.Web.Webpages.resources.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/MINEM.MIGI.Datos.dll">
-      <publishTime>04/09/2021 08:33:53</publishTime>
+      <publishTime>09/10/2021 15:55:17</publishTime>
     </File>
     <File Include="bin/MINEM.MIGI.Entidad.dll">
-      <publishTime>04/09/2021 08:33:53</publishTime>
+      <publishTime>09/04/2021 08:33:53</publishTime>
     </File>
     <File Include="bin/MINEM.MIGI.Logica.dll">
-      <publishTime>04/09/2021 08:33:54</publishTime>
+      <publishTime>09/10/2021 15:55:17</publishTime>
     </File>
     <File Include="bin/MINEM.MIGI.Util.dll">
-      <publishTime>04/09/2021 08:33:53</publishTime>
+      <publishTime>09/04/2021 08:33:53</publishTime>
     </File>
     <File Include="bin/MINEM.MIGI.Web.dll">
-      <publishTime>09/04/2021 09:25:29</publishTime>
+      <publishTime>09/10/2021 15:55:18</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/Oracle.DataAccess.dll">
       <publishTime>05/24/2017 12:46:16</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.Deployment.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.Razor.dll">
-      <publishTime>04/09/2021 08:17:54</publishTime>
+      <publishTime>09/04/2021 08:17:54</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>04/09/2021 15:06:22</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Content/util.css">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="fonts/fa-brands-400.eot">
       <publishTime>09/04/2021 08:17:53</publishTime>
@@ -193,16 +193,16 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="fonts/gothamrounded-bolditalic.eot">
       <publishTime>09/04/2021 08:17:53</publishTime>
@@ -313,334 +313,334 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/001.jpg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/dashboard.jpg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/android-chrome-192x192.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/android-chrome-256x256.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/android-icon-144x144.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/android-icon-192x192.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/android-icon-36x36.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/android-icon-48x48.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/android-icon-72x72.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/android-icon-96x96.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-114x114.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-120x120.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-144x144.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-152x152.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-180x180.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-57x57 - copia.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-57x57.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-60x60.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-72x72.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-76x76.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon-precomposed.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-icon.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/apple-touch-icon.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/browserconfig.xml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/favicon-16x16.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/favicon-32x32.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/favicon-96x96.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/favicon.ico">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/manifest.json">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/ms-icon-144x144.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/ms-icon-150x150.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/ms-icon-310x310.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/ms-icon-70x70.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/mstile-150x150.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/safari-pinned-tab.svg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/site.webmanifest">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/favicon/_manifest.json">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/fondo_12_medidas.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/fondo_footer.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/formula.jpg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo-gef-blanco.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo-minem-blanco.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo-minem.jpg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo-nama-blanco.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo-pnud-blanco.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo_gef.jpg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo_gef.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo_gef.svg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo_mrv_new_negro.svg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo_pnud.jpg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo_pnud.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/logo_pnud.svg">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="images/password-level-47px.png">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Mailing/RecuperarClave.html">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.min.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.min.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.min.map">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/jquery-3.6.0.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/jquery.form.min.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/jquery.unobtrusive-ajax.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.min.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/migi_busqueda.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 10:16:01</publishTime>
     </File>
     <File Include="Scripts/migi_cambiarcontrasena.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/migi_excel.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 19:09:10</publishTime>
     </File>
     <File Include="Scripts/migi_excel_m8u.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 19:05:12</publishTime>
     </File>
     <File Include="Scripts/migi_login.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/migi_mantenimiento.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/migi_mantenimiento_anio.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/migi_mantenimiento_equipo.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/migi_mantenimiento_palabraclave.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/migi_mantenimiento_palabraclavecantidad.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/migi_mantenimiento_usuario.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/migi_olvidar_contrasena.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/migi_resultado.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/migi_verresultado.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.6.2.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/plugins/alert.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/plugins/counter.js">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Scripts/plugins/util.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Scripts/script.js">
-      <publishTime>04/09/2021 08:17:47</publishTime>
+      <publishTime>09/04/2021 08:17:47</publishTime>
     </File>
     <File Include="Views/Busqueda/Index.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Error/Error404.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Excel/ExcelM8U.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 19:03:24</publishTime>
     </File>
     <File Include="Views/Excel/Index.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 19:03:24</publishTime>
     </File>
     <File Include="Views/Inicio/CambiarContrasena.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Inicio/Index.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Inicio/OlvidarContrasena.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Mantenimiento/Anio.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Mantenimiento/Equipo.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Mantenimiento/Index.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Mantenimiento/PalabraClave.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Mantenimiento/PalabraClaveCantidad.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Mantenimiento/Usuario.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Resultado/Index.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Resultado/VerResultado.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Shared/_Footer.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Shared/_Header.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>04/09/2021 08:28:14</publishTime>
+      <publishTime>09/04/2021 08:28:14</publishTime>
     </File>
     <File Include="Views/Shared/_Scripts_Sesion.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/Usuario/Registrar.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/web.config">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>04/09/2021 08:17:53</publishTime>
+      <publishTime>09/04/2021 08:17:53</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/09/2021 08:33:57</publishTime>
+      <publishTime>09/10/2021 15:55:21</publishTime>
     </File>
   </ItemGroup>
 </Project>
