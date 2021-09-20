@@ -94,6 +94,10 @@
                                 </div>
                             </div>
                         </div>
+                        @Html.HiddenFor(m => m.inicio, new { Value = 0 })
+                        @Html.HiddenFor(m => m.fin, new { Value = 5000 })
+                        @Html.HiddenFor(m => m.idExcel, new { Value = 0 })
+                        @*@Html.HiddenFor(m => m.continua, new { Value = true })*@
                         <div class="col-3">
                             <div class="form-group align-left">
                                 <label>&nbsp;</label>

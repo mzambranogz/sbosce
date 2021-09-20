@@ -56,7 +56,11 @@ namespace MINEM.MIGI.Web.Controllers
             if (v)
             {
                 Session["user"] = objUsuario;
-                SessionHelper.AddUserToSession(objUsuario.ID_USUARIO.ToString());
+                //SessionHelper.AddUserToSession(objUsuario.ID_USUARIO.ToString());
+                HttpCookie cookie = new HttpCookie("idusuario",Convert.ToString(objUsuario.ID_USUARIO));
+                cookie.Expires = DateTime.Now.AddDays(1);
+                ControllerContext.HttpContext.Response.SetCookie(cookie);
+
                 return Json(new { success = true, tipo = "Ok", message = "Busqueda/Index" });
             }
             else

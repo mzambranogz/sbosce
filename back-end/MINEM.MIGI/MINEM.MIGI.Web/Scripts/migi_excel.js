@@ -158,8 +158,16 @@ var validarInput = () => {
     return true
 }
 
-$("#form-excel").submit(function () {
+var archivoexcel
+$("#form-excel").submit(function () {    
     var form = $(this);
+
+    //$('#excel').prop('disabled', true)
+    //$('#anio').prop('disabled', true)
+    //$('#mes').prop('disabled', true)
+    //$('#btnExcel').prop('disabled', true)
+    //let num = $('#inicio').val() == 0 ? 0 : 250000 / Parse.Int($('#inicio').val())
+    //$("#preload").html("<i Class='fas fa-spinner fa-spin px-1'></i>" + Math.round(num) + "% Cargando...");
 
     if (form.validate()) {        
         form.ajaxSubmit({
@@ -168,38 +176,58 @@ $("#form-excel").submit(function () {
             url: form.attr('action'),
             success: function (r) {
                 if (r.success) {
-                    $('#excel').val('');
-                    $('#anio').val(0);
-                    $('#mes').val(0)
-                    $('.alert-add').alertSuccess({ type: 'success', title: 'Bien hecho', message: r.mensaje });
-                    setTimeout(() => {
-                        $('.alert-add').html('')
-                    }, 4000)
+                    if (r.continuar) {
+                        $('#inicio').val(r.inicio)
+                        $('#fin').val(r.fin)
+                        $('#idExcel').val(r.idexcel)
+                        $("#form-excel").submit();
+                    } else {
+                        $('#excel').val('');
+                        $('#anio').val(0);
+                        $('#mes').val(0)
+                        $('.alert-add').alertSuccess({ type: 'success', title: 'Bien hecho', message: r.mensaje });
+                        $("#preload").html("<i Class='fas fa-spinner fa-spin px-1'></i>" + 100 + "% Cargando...");
+                        setTimeout(() => {
+                            $('.alert-add').html('')
+                            $("#preload").html("");
+                        }, 4000)
+                        $('#txt-excel').val('')
+                        $('#excel').val('')
+
+                        cargarExcel()
+                        $('#btnExcel').prop('disabled', false)                        
+                    }                    
                 } else {
                     $('.alert-add').alertError({ type: 'danger', title: 'ERROR', message: r.mensaje });
+                    $('#btnExcel').prop('disabled', false)
+                    $("#preload").html("");
                 }
-                $('#txt-excel').val('')
-                $('#excel').val('')
+                //$('#txt-excel').val('')
+                //$('#excel').val('')
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 //alert(errorThrown);
                 console.log('Hubo un problema con la petición Fetch:' + errorThrown.message);
-                location.href = `${baseUrl}Inicio/Index`
+                //location.href = `${baseUrl}Inicio/Index`
             },
             beforeSend: function () {
-                $('#excel').prop('disabled', true)
-                $('#anio').prop('disabled', true)
-                $('#mes').prop('disabled', true)
-                $('#btnExcel').prop('disabled', true)
-                $("#preload").html("<i Class='fas fa-spinner fa-spin px-1'></i> Cargando...");
+                //$('#excel').prop('disabled', true)
+                //$('#anio').prop('disabled', true)
+                //$('#mes').prop('disabled', true)
+                //$('#btnExcel').prop('disabled', true)
+                let tamanio = $('#excel')[0].files[0].size
+                // Peso -> 27148000 / cantidad reg -> 137484 peso por reg -> 202.20 | Peso Archivo / Cant reg = peso por reg
+                let totalreg = tamanio / 202.20
+                let num = $('#inicio').val() == 0 ? 0 : 100 / (Math.round(totalreg) / parseInt($('#inicio').val()))
+                $("#preload").html("<i Class='fas fa-spinner fa-spin px-1'></i>" + Math.round(num > 100 ? 100 : num) + "% Cargando...");
             },
             complete: function () {
-                cargarExcel()
-                $('#excel').prop('disabled', false)
-                $('#anio').prop('disabled', false)
-                $('#mes').prop('disabled', false)
-                $('#btnExcel').prop('disabled', false)
-                $("#preload").html("");
+                //cargarExcel()
+                //$('#excel').prop('disabled', false)
+                //$('#anio').prop('disabled', false)
+                //$('#mes').prop('disabled', false)
+                //$('#btnExcel').prop('disabled', false)
+                //$("#preload").html("");
             }
         });
     }

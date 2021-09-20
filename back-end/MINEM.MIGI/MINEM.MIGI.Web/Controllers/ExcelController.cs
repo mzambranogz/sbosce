@@ -3,6 +3,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using MINEM.MIGI.Entidad;
 using MINEM.MIGI.Logica;
+using MINEM.MIGI.Util;
 using MINEM.MIGI.Web.Filter;
 using MINEM.MIGI.Web.Models;
 using System;
@@ -40,7 +41,7 @@ namespace MINEM.MIGI.Web.Controllers
         public JsonResult Leer(ExcelViewModel model)
         {
             bool esNuevo = true, continua = false, esValido = true;
-            int idExcel = 0;
+            int idExcel = model.idExcel;
             string msg = "";
             string filePath = string.Empty;
             if (model.excel != null)
@@ -55,13 +56,13 @@ namespace MINEM.MIGI.Web.Controllers
                 model.excel.SaveAs(filePath);
             }
 
-            esValido = validarExcel(filePath, out msg);
+            esValido = model.inicio == 0 ? validarExcel(filePath, out msg) : true;
             if (esValido)
             {
-                esValido = ExcelLN.VerificarArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ANIO = model.anio, MES = model.mes, ID_TIPO_EXCEL = 1 });
+                esValido = model.inicio == 0 ? ExcelLN.VerificarArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ANIO = model.anio, MES = model.mes, ID_TIPO_EXCEL = 1 }) : true;
                 if (esValido)
                 {
-                    esValido = ExcelLN.GuardarDatosArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ANIO = model.anio, MES = model.mes, ID_TIPO_EXCEL = 1, UPD_USUARIO = ObtenerSesion().ID_USUARIO }, out idExcel);
+                    esValido = model.inicio == 0 ? ExcelLN.GuardarDatosArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ANIO = model.anio, MES = model.mes, ID_TIPO_EXCEL = 1, UPD_USUARIO = ObtenerSesion().ID_USUARIO }, out idExcel) : true;
                     if (!esValido)
                     {
                         esNuevo = false;
@@ -69,16 +70,13 @@ namespace MINEM.MIGI.Web.Controllers
                     }
                     else
                     {
-                        esNuevo = LeerExcel(idExcel, filePath, 0, 100000, model.anio, model.mes, 0, out msg, out continua);
-                        if (esNuevo && continua) LeerExcel(idExcel, filePath, 100000, 200000, model.anio, model.mes, 5, out msg, out continua);
-                        if (esNuevo && continua) LeerExcel(idExcel, filePath, 200000, 300000, model.anio, model.mes, 5, out msg, out continua);
-                        if (esNuevo && continua) LeerExcel(idExcel, filePath, 300000, 400000, model.anio, model.mes, 5, out msg, out continua);
-                        if (esNuevo) msg = "Se proceso correctamente el excel";
-                        else ExcelLN.EliminarArchivo(new ExcelBE { ID_EXCEL = idExcel });
-                        //if (esNuevo) esValido = ExcelLN.GuardarDatosArchivo(new ExcelBE { NOMBRE = model.excel.FileName, ANIO = model.anio, MES = model.mes, ID_TIPO_EXCEL = 1, UPD_USUARIO = ObtenerSesion().ID_USUARIO });
-                        //if (!esValido) msg = "Ocurrió un problema al momento de guardar los datos del excel";
+                        esNuevo = LeerExcel(idExcel, filePath, model.inicio, model.fin, model.anio, model.mes, model.inicio == 0 ? 0 : 10, out msg, out continua);
+                        //if (esNuevo && continua) LeerExcel(idExcel, filePath, 100000, 200000, model.anio, model.mes, 5, out msg, out continua);
+                        //if (esNuevo && continua) LeerExcel(idExcel, filePath, 200000, 300000, model.anio, model.mes, 5, out msg, out continua);
+                        //if (esNuevo && continua) LeerExcel(idExcel, filePath, 300000, 400000, model.anio, model.mes, 5, out msg, out continua);
 
-                        //esNuevo = esNuevo && esValido ? true : !esValido ? false : !esNuevo ? false : true;
+                        if (esNuevo && !continua) msg = "Se proceso correctamente el excel";
+                        else if (!esNuevo) ExcelLN.EliminarArchivo(new ExcelBE { ID_EXCEL = idExcel });
                     }
                 }
                 else
@@ -90,7 +88,7 @@ namespace MINEM.MIGI.Web.Controllers
             else
                 esNuevo = false;
 
-            return Json(new { success = esNuevo, mensaje = msg });
+            return Json(new { success = esNuevo, continuar = continua, mensaje = msg, inicio = model.fin + 1, fin = model.fin + 5000, idexcel = idExcel });
         }
 
         private bool validarExcel(string filePath, out string msg)
@@ -130,174 +128,183 @@ namespace MINEM.MIGI.Web.Controllers
             bool esNuevo = true;
             continua = false;
             msg = "";
-            using (Stream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            try
             {
-                using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(stream, false))
+                using (Stream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
-                    WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
-                    WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
-               
-                    //int sheetIndex = 0;
-                    //bool encontrado = false;
-                    //foreach (WorksheetPart worksheetpartV in workbookPart.WorksheetParts)
-                    //{
-                    //    string sheetName = workbookPart.Workbook.Descendants<Sheet>().ElementAt(sheetIndex).Name;
-                    //    if (sheetName == "CONOSCE")
-                    //        encontrado = true;
-                    //    sheetIndex++;
-                    //}
-
-                    //if (!encontrado)
-                    //{
-                    //    esNuevo = false;
-                    //    msg = "La hoja de donde se obtendrán los datos debe llamarse CONOSCE y no se ha encontrado";
-                    //    return esNuevo;
-                    //}
-
-                    //if (sheetIndex > 1)
-                    //{
-                    //    esNuevo = false;
-                    //    msg = "El archivo excel solo debe contener una hoja con el nombre CONOSCE";
-                    //    return esNuevo;
-                    //}
-
-                    var stringTable = workbookPart.GetPartsOfType<SharedStringTablePart>().FirstOrDefault();
-                    OpenXmlReader reader = OpenXmlReader.Create(worksheetPart);
-
-                    DataTable dt = new DataTable();
-                    dt = ArmarColumnas(dt);
-                    while (reader.Read())
+                    using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(stream, false))
                     {
-                        if (reader.ElementType == typeof(Row))
+                        WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+                        WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
+
+                        //int sheetIndex = 0;
+                        //bool encontrado = false;
+                        //foreach (WorksheetPart worksheetpartV in workbookPart.WorksheetParts)
+                        //{
+                        //    string sheetName = workbookPart.Workbook.Descendants<Sheet>().ElementAt(sheetIndex).Name;
+                        //    if (sheetName == "CONOSCE")
+                        //        encontrado = true;
+                        //    sheetIndex++;
+                        //}
+
+                        //if (!encontrado)
+                        //{
+                        //    esNuevo = false;
+                        //    msg = "La hoja de donde se obtendrán los datos debe llamarse CONOSCE y no se ha encontrado";
+                        //    return esNuevo;
+                        //}
+
+                        //if (sheetIndex > 1)
+                        //{
+                        //    esNuevo = false;
+                        //    msg = "El archivo excel solo debe contener una hoja con el nombre CONOSCE";
+                        //    return esNuevo;
+                        //}
+
+                        var stringTable = workbookPart.GetPartsOfType<SharedStringTablePart>().FirstOrDefault();
+                        OpenXmlReader reader = OpenXmlReader.Create(worksheetPart);
+
+                        DataTable dt = new DataTable();
+                        dt = ArmarColumnas(dt);
+                        while (reader.Read())
                         {
-                            Row r = (Row)reader.LoadCurrentElement();
-                            if (r.RowIndex == 2)
+                            if (reader.ElementType == typeof(Row))
                             {
-                                int cont = 0;
-                                foreach (var cell in r.Descendants<Cell>())
+                                Row r = (Row)reader.LoadCurrentElement();
+                                if (r.RowIndex == 2)
                                 {
-                                    cont++;
-                                }
-                                if (cont > 18 || cont < 18)
-                                {
-                                    esNuevo = false;
-                                    msg = "El excel no presenta el formato de columnas correcto";
-                                    break;
-                                }
-                            }
-                            if (r.RowIndex >= inicio && r.RowIndex <= fin)
-                            {
-                                if (r.RowIndex > 2)
-                                {
-                                    var index = 0;
-                                    DataRow row = dt.NewRow();
-                                    row["ID_EXCEL"] = Convert.ToString(idExcel);
-                                    row["ANIO"] = anio;
-                                    row["MES"] = mes;
+                                    int cont = 0;
                                     foreach (var cell in r.Descendants<Cell>())
                                     {
-                                        string cellValue = string.Empty;
-                                        if (cell.DataType != null)
+                                        cont++;
+                                    }
+                                    if (cont > 18 || cont < 18)
+                                    {
+                                        esNuevo = false;
+                                        msg = "El excel no presenta el formato de columnas correcto";
+                                        break;
+                                    }
+                                }
+                                if (r.RowIndex >= inicio && r.RowIndex <= fin)
+                                {
+                                    if (r.RowIndex > 2)
+                                    {
+                                        var index = 0;
+                                        DataRow row = dt.NewRow();
+                                        row["ID_EXCEL"] = Convert.ToString(idExcel);
+                                        row["ANIO"] = anio;
+                                        row["MES"] = mes;
+                                        foreach (var cell in r.Descendants<Cell>())
                                         {
-                                            if (cell.DataType == CellValues.SharedString)
+                                            string cellValue = string.Empty;
+                                            if (cell.DataType != null)
                                             {
-                                                var id = -1;
-                                                if (Int32.TryParse(cell.InnerText, out id))
+                                                if (cell.DataType == CellValues.SharedString)
                                                 {
-                                                    var item = workbookPart.SharedStringTablePart.SharedStringTable.Elements<SharedStringItem>().ElementAt(id);
-                                                    if (item.Text != null)
-                                                        cellValue = item.Text.Text;
-                                                    else if (item.InnerText != null)
-                                                        cellValue = item.InnerText;
-                                                    else if (item.InnerXml != null)
-                                                        cellValue = item.InnerXml;
+                                                    var id = -1;
+                                                    if (Int32.TryParse(cell.InnerText, out id))
+                                                    {
+                                                        var item = workbookPart.SharedStringTablePart.SharedStringTable.Elements<SharedStringItem>().ElementAt(id);
+                                                        if (item.Text != null)
+                                                            cellValue = item.Text.Text;
+                                                        else if (item.InnerText != null)
+                                                            cellValue = item.InnerText;
+                                                        else if (item.InnerXml != null)
+                                                            cellValue = item.InnerXml;
+                                                    }
                                                 }
+                                                else
+                                                    cellValue = cell.InnerText;
                                             }
                                             else
                                                 cellValue = cell.InnerText;
+
+                                            switch (index)
+                                            {
+                                                case 0: row["ENTIDAD"] = cellValue; break;
+                                                case 1: row["RUC_ENTIDAD"] = cellValue; break;
+                                                case 2: row["FECHA_REGISTRO"] = cellValue; break;
+                                                case 3: row["FECHA_DE_EMISION"] = cellValue; break;
+                                                case 4: row["FECHA_COMPROMISO_PRESUPUESTAL"] = cellValue; break;
+                                                case 5: row["FECHA_DE_NOTIFICACION"] = cellValue; break;
+                                                case 6: row["TIPOORDEN"] = cellValue; break;
+                                                case 7: row["NRO_DE_ORDEN"] = cellValue; break;
+                                                case 8: row["ORDEN"] = cellValue; break;
+                                                case 9: row["DESCRIPCION_ORDEN"] = cellValue; break;
+                                                case 10: row["MONEDA"] = cellValue; break;
+                                                case 11: row["MONTO_TOTAL_ORDEN_ORIGINAL"] = cellValue; break;
+                                                case 12: row["OBJETOCONTRACTUAL"] = cellValue; break;
+                                                case 13: row["ESTADOCONTRATACION"] = cellValue; break;
+                                                case 14: row["TIPODECONTRATACION"] = cellValue; break;
+                                                case 15: row["DEPARTAMENTO__ENTIDAD"] = cellValue; break;
+                                                case 16: row["RUC_CONTRATISTA"] = cellValue; break;
+                                                case 17: row["NOMBRE_RAZON_CONTRATISTA"] = cellValue; break;
+                                                default: break;
+                                            }
+                                            index++;
+                                        }
+
+                                        if (contador < 5)
+                                        {
+                                            if (!(ExcelLN.VerificarOrden(new OrdenCompraBE
+                                            {
+                                                ANIO = Convert.ToString(row["ANIO"]),
+                                                MES = Convert.ToString(row["MES"]),
+                                                ORDEN = Convert.ToString(row["ORDEN"])
+                                            })))
+                                            {
+                                                dt.Rows.Add(row);
+                                            }
+                                            else
+                                            {
+                                                esNuevo = false;
+                                                msg = "El Orden: " + Convert.ToString(row["ORDEN"]) + " del año " + Convert.ToString(row["ANIO"]) + " y mes " + Convert.ToString(row["MES"]) + ", ya se encuentra registrado.";
+                                                break;
+                                            }
+                                            contador++;
                                         }
                                         else
-                                            cellValue = cell.InnerText;
-
-                                        switch (index)
-                                        {
-                                            case 0: row["ENTIDAD"] = cellValue; break;
-                                            case 1: row["RUC_ENTIDAD"] = cellValue; break;
-                                            case 2: row["FECHA_REGISTRO"] = cellValue; break;
-                                            case 3: row["FECHA_DE_EMISION"] = cellValue; break;
-                                            case 4: row["FECHA_COMPROMISO_PRESUPUESTAL"] = cellValue; break;
-                                            case 5: row["FECHA_DE_NOTIFICACION"] = cellValue; break;
-                                            case 6: row["TIPOORDEN"] = cellValue; break;
-                                            case 7: row["NRO_DE_ORDEN"] = cellValue; break;
-                                            case 8: row["ORDEN"] = cellValue; break;
-                                            case 9: row["DESCRIPCION_ORDEN"] = cellValue; break;
-                                            case 10: row["MONEDA"] = cellValue; break;
-                                            case 11: row["MONTO_TOTAL_ORDEN_ORIGINAL"] = cellValue; break;
-                                            case 12: row["OBJETOCONTRACTUAL"] = cellValue; break;
-                                            case 13: row["ESTADOCONTRATACION"] = cellValue; break;
-                                            case 14: row["TIPODECONTRATACION"] = cellValue; break;
-                                            case 15: row["DEPARTAMENTO__ENTIDAD"] = cellValue; break;
-                                            case 16: row["RUC_CONTRATISTA"] = cellValue; break;
-                                            case 17: row["NOMBRE_RAZON_CONTRATISTA"] = cellValue; break;
-                                            default: break;
-                                        }
-                                        index++;
-                                    }
-
-                                    if (contador < 5)
-                                    {
-                                        if (!(ExcelLN.VerificarOrden(new OrdenCompraBE
-                                        {
-                                            ANIO = Convert.ToString(row["ANIO"]),
-                                            MES = Convert.ToString(row["MES"]),
-                                            ORDEN = Convert.ToString(row["ORDEN"])
-                                        })))
                                         {
                                             dt.Rows.Add(row);
                                         }
-                                        else
-                                        {
-                                            esNuevo = false;
-                                            msg = "El Orden: " + Convert.ToString(row["ORDEN"]) + " del año " + Convert.ToString(row["ANIO"]) + " y mes " + Convert.ToString(row["MES"]) + ", ya se encuentra registrado.";
-                                            break;
-                                        }
-                                        contador++;
-                                    }
-                                    else
-                                    {
-                                        dt.Rows.Add(row);
                                     }
                                 }
+                                else
+                                {
+                                    if (r.RowIndex > fin)
+                                    {
+                                        continua = true;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        if (esNuevo)
+                        {
+                            int filas = dt.Rows.Count;
+                            if (filas == 0)
+                            {
+                                esNuevo = false;
+                                msg = "No se obtuvieron los datos de la hoja excel, por favor verificar si la hoja tiene los datos a cargar";
                             }
                             else
                             {
-                                if (r.RowIndex > fin)
-                                {
-                                    continua = true;
-                                    break;
-                                }
+                                esNuevo = ExcelLN.GuardarDatosExcel(dt);
+                                if (!esNuevo) msg = "Ocurrió un problema al guardar los datos";
                             }
+
                         }
+                        //if (esNuevo)
+                        //    ExcelLN.GuardarDatosExcel(dt);
                     }
-                    if (esNuevo)
-                    {
-                        int filas = dt.Rows.Count;
-                        if (filas == 0)
-                        {
-                            esNuevo = false;
-                            msg = "No se obtuvieron los datos de la hoja excel, por favor verificar si la hoja tiene los datos a cargar";
-                        }
-                        else
-                        {
-                            esNuevo = ExcelLN.GuardarDatosExcel(dt);
-                            if (!esNuevo) msg = "Ocurrió un problema al guardar los datos";
-                        }
-                            
-                    }
-                    //if (esNuevo)
-                    //    ExcelLN.GuardarDatosExcel(dt);
                 }
             }
+            catch (Exception ex)
+            {
+                msg = ex.ToString();
+                esNuevo = false;
+                Log.Error(ex);
+            }            
             return esNuevo;
         }
 

@@ -39,18 +39,22 @@ namespace MINEM.MIGI.Web.Filter
                 base.OnActionExecuting(filterContext);
 
                 UsuarioBE usuario = (UsuarioBE)HttpContext.Current.Session["user"];
+                var id = HttpContext.Current.Request.Cookies["idusuario"];
 
                 if (usuario == null)
                 {
-                    if (filterContext.Controller is InicioController == false)
+                    if (filterContext.Controller is ExcelController == false)
                     {
-                        //filterContext.HttpContext.Response.Redirect("~/Security/Login");
-                        filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+                        if (filterContext.Controller is InicioController == false)
                         {
-                            controller = "Inicio",
-                            action = "Index"
-                        }));
-                    }
+                            //filterContext.HttpContext.Response.Redirect("~/Security/Login");
+                            filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+                            {
+                                controller = "Inicio",
+                                action = "Index"
+                            }));
+                        }
+                    }                        
                 }
             }
             catch (Exception)
